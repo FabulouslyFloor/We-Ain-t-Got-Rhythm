@@ -1,3 +1,4 @@
+This file contains the names of all group members: 
 Sidney kaeb
 Summer Whitley
 Florian Hulbert
