@@ -1,8 +1,17 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://OverworldTileset.tres" type="TileSet" id=1]
-[ext_resource path="res://showtune-resident.png" type="Texture" id=2]
-[ext_resource path="res://Sprite.gd" type="Script" id=3]
+[ext_resource path="res://Sprites/showtune-resident.png" type="Texture" id=2]
+[ext_resource path="res://MainCharacter.gd" type="Script" id=3]
+[ext_resource path="res://Sprites/radio-head.png" type="Texture" id=4]
+[ext_resource path="res://PondMan.gd" type="Script" id=5]
+[ext_resource path="res://SpeechBubble.png" type="Texture" id=6]
+
+[sub_resource type="CircleShape2D" id=1]
+radius = 399.603
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 319.797, 363.611 )
 
 [node name="Node2D" type="TileMap"]
 tile_set = ExtResource( 1 )
@@ -17,3 +26,56 @@ script = ExtResource( 3 )
 
 [node name="Camera2D" type="Camera2D" parent="Sprite"]
 current = true
+
+[node name="KinematicBody2D" type="KinematicBody2D" parent="Sprite"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite/KinematicBody2D"]
+scale = Vector2( 1, 1 )
+shape = SubResource( 1 )
+
+[node name="PathMan" type="Sprite" parent="."]
+position = Vector2( 1151, -603 )
+scale = Vector2( 0.197, 0.189 )
+texture = ExtResource( 4 )
+
+[node name="Area2D" type="Area2D" parent="PathMan"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PathMan/Area2D"]
+position = Vector2( -10.1538, 3.82251 )
+scale = Vector2( 0.999999, 0.999999 )
+shape = SubResource( 2 )
+
+[node name="CornerMan" type="Sprite" parent="."]
+position = Vector2( -31.9999, -597 )
+scale = Vector2( 0.197, 0.189 )
+texture = ExtResource( 4 )
+
+[node name="Area2D" type="Area2D" parent="CornerMan"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CornerMan/Area2D"]
+position = Vector2( -10.1538, 3.82251 )
+scale = Vector2( 0.999999, 0.999999 )
+shape = SubResource( 2 )
+
+[node name="PondMan" type="Sprite" parent="."]
+position = Vector2( 678, 23.9999 )
+scale = Vector2( 0.197, 0.189 )
+texture = ExtResource( 4 )
+script = ExtResource( 5 )
+
+[node name="SpeechBubble" type="Sprite" parent="PondMan"]
+visible = false
+position = Vector2( -421.32, -481.481 )
+scale = Vector2( 0.840066, 0.944822 )
+texture = ExtResource( 6 )
+
+[node name="Area2D" type="Area2D" parent="PondMan"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PondMan/Area2D"]
+position = Vector2( -10.1538, 3.82251 )
+scale = Vector2( 0.999999, 0.999999 )
+shape = SubResource( 2 )
+
+[connection signal="draw" from="PondMan" to="PondMan" method="_on_PondMan_draw"]
+[connection signal="draw" from="PondMan/SpeechBubble" to="PondMan" method="_on_SpeechBubble_draw"]
+[connection signal="body_entered" from="PondMan/Area2D" to="PondMan" method="_on_Area2D_body_entered"]
