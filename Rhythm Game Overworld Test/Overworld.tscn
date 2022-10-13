@@ -83,3 +83,4 @@ shape = SubResource( 2 )
 [connection signal="draw" from="PondMan" to="PondMan" method="_on_PondMan_draw"]
 [connection signal="draw" from="PondMan/SpeechBubble" to="PondMan" method="_on_SpeechBubble_draw"]
 [connection signal="body_entered" from="PondMan/Area2D" to="PondMan" method="_on_Area2D_body_entered"]
+[connection signal="body_exited" from="PondMan/Area2D" to="PondMan" method="_on_Area2D_body_exited"]
