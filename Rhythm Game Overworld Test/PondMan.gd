@@ -16,5 +16,11 @@ func _ready():
 
 
 func _on_Area2D_body_entered(body):
-	self.position.x += 100
+	get_node("SpeechBubble").show()
+	
+	
+
+
+func _on_Area2D_body_exited(body):
+	get_node("SpeechBubble").hide()
 	
