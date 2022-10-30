@@ -1,0 +1,23 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Sprites/mc-idle-frame1.png" type="Texture" id=1]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 303, 378 )
+scale = Vector2( 0.284, 0.234286 )
+texture = ExtResource( 1 )
+
+[node name="RemoteTransform2D" type="RemoteTransform2D" parent="Sprite"]
+remote_path = NodePath("../../Camera2D")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2( 303, 378 )
+scale = Vector2( 0.284, 0.234286 )
+current = true
+limit_left = -817
+limit_top = -470
+limit_right = 1082
+limit_bottom = 756
+editor_draw_limits = true

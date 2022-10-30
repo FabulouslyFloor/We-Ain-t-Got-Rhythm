@@ -1,0 +1,126 @@
+[gd_scene load_steps=14 format=2]
+
+[ext_resource path="res://OverworldTileSet.tres" type="TileSet" id=1]
+[ext_resource path="res://Sprites/showtune-resident.png" type="Texture" id=2]
+[ext_resource path="res://MainCharacter.gd" type="Script" id=3]
+[ext_resource path="res://Sprites/radio-head.png" type="Texture" id=4]
+[ext_resource path="res://PondMan.gd" type="Script" id=5]
+[ext_resource path="res://Sprites/SpeechBubble.png" type="Texture" id=6]
+[ext_resource path="res://Sounds/Single-footstep-in-grass-G-www.fesliyanstudios.com.mp3" type="AudioStream" id=7]
+[ext_resource path="res://Overworld/showtune-city-ROUGH.png" type="Texture" id=8]
+[ext_resource path="res://Sprites/mc-idle-frame1.png" type="Texture" id=9]
+[ext_resource path="res://Overworld.gd" type="Script" id=10]
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 319.797, 363.611 )
+
+[sub_resource type="CircleShape2D" id=3]
+radius = 397.806
+
+[sub_resource type="CircleShape2D" id=1]
+radius = 399.603
+
+[node name="Node2D" type="Node2D"]
+__meta__ = {
+"_edit_horizontal_guides_": [ -1214.0 ]
+}
+
+[node name="Node2D" type="TileMap" parent="."]
+tile_set = ExtResource( 1 )
+format = 1
+tile_data = PoolIntArray( -720899, 2, 0, -786432, 2, 0, -786429, 2, 0, -786426, 2, 0, -786423, 13, 0, -786420, 2, 0, -786417, 2, 0, -786414, 2, 0, -786411, 2, 0, -786408, 2, 0, -786405, 2, 0, -786402, 2, 0, -786399, 2, 0, -786396, 2, 0, -524291, 1, 0, -589824, -1073741811, 0, -589821, 8, 0, -589818, 8, 0, -589815, 6, 0, -589812, 8, 0, -589809, 8, 0, -589806, -1610612727, 0, -589803, 2, 0, -589800, 2, 0, -589797, 1, 0, -589794, 2, 0, -589791, 2, 0, -589788, 2, 0, -327683, 2, 0, -393216, 0, 0, -393213, 0, 0, -393210, -1610612729, 0, -393207, -1073741817, 0, -393204, 2, 0, -393201, 0, 0, -393198, 5, 0, -393195, 2, 0, -393192, 2, 0, -393189, 4, 0, -393186, 3, 0, -393183, 2, 0, -393180, 3, 0, -131075, 2, 0, -196608, 2, 0, -196605, 2, 0, -196602, 7, 0, -196599, 15, 0, -196596, 2, 0, -196593, 2, 0, -196590, 5, 0, -196587, 2, 0, -196584, 2, 0, -196581, -1610612729, 0, -196578, 8, 0, -196575, 15, 0, -196572, 4, 0, 65533, 2, 0, 0, 2, 0, 3, 2, 0, 6, 4, 0, 9, 1, 0, 12, 4, 0, 15, 2, 0, 18, 5, 0, 21, 2, 0, 24, 0, 0, 27, 5, 0, 30, 0, 0, 33, 2, 0, 36, 2, 0, 262141, 2, 0, 196608, 2, 0, 196611, -1073741811, 0, 196614, 8, 0, 196617, 8, 0, 196620, 8, 0, 196623, 8, 0, 196626, 11, 0, 196629, 8, 0, 196632, 8, 0, 196635, -1073741817, 0, 196638, 2, 0, 196641, 2, 0, 196644, 2, 0, 458749, 2, 0, 393216, 0, 0, 393219, 2, 0, 393222, 2, 0, 393225, 2, 0, 393228, 2, 0, 393231, 2, 0, 393234, 0, 0, 393237, 2, 0, 393240, 2, 0, 393243, 2, 0, 393246, 2, 0, 393249, 2, 0, 393252, 2, 0 )
+script = ExtResource( 10 )
+
+[node name="PathMan" type="Sprite" parent="."]
+position = Vector2( 1151, -603 )
+scale = Vector2( 0.197, 0.189 )
+texture = ExtResource( 4 )
+
+[node name="Area2D" type="Area2D" parent="PathMan"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PathMan/Area2D"]
+position = Vector2( -10.1538, 3.82251 )
+scale = Vector2( 0.999999, 0.999999 )
+shape = SubResource( 2 )
+
+[node name="CornerMan" type="Sprite" parent="."]
+position = Vector2( -31.9999, -597 )
+scale = Vector2( 0.197, 0.189 )
+texture = ExtResource( 4 )
+
+[node name="Area2D" type="Area2D" parent="CornerMan"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CornerMan/Area2D"]
+position = Vector2( -10.1538, 3.82251 )
+scale = Vector2( 0.999999, 0.999999 )
+shape = SubResource( 2 )
+
+[node name="PondMan" type="Sprite" parent="."]
+position = Vector2( 678, 23.9999 )
+scale = Vector2( 0.197, 0.189 )
+texture = ExtResource( 4 )
+script = ExtResource( 5 )
+
+[node name="SpeechBubble" type="Sprite" parent="PondMan"]
+visible = false
+position = Vector2( -421.32, -481.481 )
+scale = Vector2( 0.840066, 0.944822 )
+texture = ExtResource( 6 )
+
+[node name="Area2D" type="Area2D" parent="PondMan"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PondMan/Area2D"]
+position = Vector2( -10.1538, 3.82251 )
+scale = Vector2( 0.999999, 0.999999 )
+shape = SubResource( 2 )
+
+[node name="ShowtuneCity" type="Sprite" parent="."]
+position = Vector2( 2166, -381 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 8 )
+
+[node name="ShowtuneResident" type="Sprite" parent="."]
+position = Vector2( 2209, -146 )
+scale = Vector2( 0.197, 0.189 )
+texture = ExtResource( 2 )
+
+[node name="Area2D" type="Area2D" parent="ShowtuneResident"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ShowtuneResident/Area2D"]
+shape = SubResource( 3 )
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 582, 322 )
+rotation = 3.14159
+scale = Vector2( 0.197, -0.189 )
+texture = ExtResource( 9 )
+script = ExtResource( 3 )
+
+[node name="KinematicBody2D" type="KinematicBody2D" parent="Sprite"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite/KinematicBody2D"]
+shape = SubResource( 1 )
+
+[node name="SoundWalk" type="AudioStreamPlayer2D" parent="Sprite"]
+stream = ExtResource( 7 )
+volume_db = -12.0
+
+[node name="RemoteTransform2D" type="RemoteTransform2D" parent="Sprite"]
+remote_path = NodePath("../../Camera2D")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2( 582, 322 )
+rotation = 3.14159
+scale = Vector2( 0.197, -0.189 )
+current = true
+limit_left = -188
+limit_top = -749
+limit_right = 2502
+limit_bottom = 565
+smoothing_enabled = true
+editor_draw_limits = true
+
+[connection signal="draw" from="PondMan" to="PondMan" method="_on_PondMan_draw"]
+[connection signal="draw" from="PondMan/SpeechBubble" to="PondMan" method="_on_SpeechBubble_draw"]
+[connection signal="body_entered" from="PondMan/Area2D" to="PondMan" method="_on_Area2D_body_entered"]
+[connection signal="body_exited" from="PondMan/Area2D" to="PondMan" method="_on_Area2D_body_exited"]
