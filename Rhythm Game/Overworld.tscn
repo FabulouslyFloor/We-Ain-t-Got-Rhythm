@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=2]
+[gd_scene load_steps=23 format=2]
 
 [ext_resource path="res://OverworldTileSet.tres" type="TileSet" id=1]
 [ext_resource path="res://Sprites/showtune-resident.png" type="Texture" id=2]
@@ -9,15 +9,15 @@
 [ext_resource path="res://Sounds/Single-footstep-in-grass-G-www.fesliyanstudios.com.mp3" type="AudioStream" id=7]
 [ext_resource path="res://Overworld/showtune-city-ROUGH.png" type="Texture" id=8]
 [ext_resource path="res://Sprites/Animations/mc-idle-frame1.png" type="Texture" id=9]
-[ext_resource path="res://PauseMenu.tscn" type="PackedScene" id=12]
 [ext_resource path="res://Overworld.gd" type="Script" id=10]
 [ext_resource path="res://Sprites/Animations/mc-idle-frame2.png" type="Texture" id=11]
-[ext_resource path="res://Sprites/Animations/mc-run-frame4.png" type="Texture" id=12]
+[ext_resource path="res://PauseMenu.tscn" type="PackedScene" id=12]
 [ext_resource path="res://Sprites/Animations/mc-run-frame1.png" type="Texture" id=13]
 [ext_resource path="res://Sprites/Animations/mc-run-frame2.png" type="Texture" id=14]
 [ext_resource path="res://Sprites/Animations/mc-run-frame6.png" type="Texture" id=15]
 [ext_resource path="res://Sprites/Animations/mc-run-frame5.png" type="Texture" id=16]
 [ext_resource path="res://Sprites/Animations/mc-run-frame3.png" type="Texture" id=17]
+[ext_resource path="res://Sprites/Animations/mc-run-frame4.png" type="Texture" id=18]
 
 [sub_resource type="RectangleShape2D" id=2]
 extents = Vector2( 319.797, 363.611 )
@@ -32,7 +32,7 @@ animations = [ {
 "name": "idle",
 "speed": 4.0
 }, {
-"frames": [ ExtResource( 13 ), ExtResource( 17 ), ExtResource( 12 ), ExtResource( 14 ), ExtResource( 16 ), ExtResource( 15 ) ],
+"frames": [ ExtResource( 13 ), ExtResource( 17 ), ExtResource( 18 ), ExtResource( 14 ), ExtResource( 16 ), ExtResource( 15 ) ],
 "loop": true,
 "name": "run",
 "speed": 8.0
@@ -46,7 +46,7 @@ __meta__ = {
 "_edit_horizontal_guides_": [ -1214.0 ]
 }
 
-[node name="OverworldMusic" type="AudioStreamPlayer2D" parent="."] 
+[node name="OverworldMusic" type="AudioStreamPlayer2D" parent="."]
 
 [node name="Node2D" type="TileMap" parent="."]
 tile_set = ExtResource( 1 )
@@ -119,12 +119,10 @@ scale = Vector2( 0.197, -0.189 )
 script = ExtResource( 3 )
 
 [node name="SoundWalk" type="AudioStreamPlayer2D" parent="KinematicBody2D"]
-scale = Vector2( 1, 1 )
 stream = ExtResource( 7 )
 volume_db = -12.0
 
 [node name="animated_sprite" type="AnimatedSprite" parent="KinematicBody2D"]
-scale = Vector2( 1, 1 )
 frames = SubResource( 4 )
 animation = "idle"
 frame = 1
@@ -146,6 +144,10 @@ limit_right = 2502
 limit_bottom = 565
 smoothing_enabled = true
 editor_draw_limits = true
+
+[node name="PauseMenuGUI" type="CanvasLayer" parent="."]
+
+[node name="PauseMenu" parent="PauseMenuGUI" instance=ExtResource( 12 )]
 
 [connection signal="draw" from="PondMan" to="PondMan" method="_on_PondMan_draw"]
 [connection signal="draw" from="PondMan/SpeechBubble" to="PondMan" method="_on_SpeechBubble_draw"]

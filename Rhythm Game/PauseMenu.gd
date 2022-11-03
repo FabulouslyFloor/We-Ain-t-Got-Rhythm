@@ -20,3 +20,4 @@ func _on_ResumeBtn_pressed():
 
 func _on_QuitBtn_pressed():
 	get_tree().quit()
+	
