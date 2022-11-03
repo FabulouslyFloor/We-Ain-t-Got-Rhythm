@@ -46,6 +46,8 @@ __meta__ = {
 "_edit_horizontal_guides_": [ -1214.0 ]
 }
 
+[node name="OverworldMusic" type="AudioStreamPlayer2D" parent="."] 
+
 [node name="Node2D" type="TileMap" parent="."]
 tile_set = ExtResource( 1 )
 format = 1
