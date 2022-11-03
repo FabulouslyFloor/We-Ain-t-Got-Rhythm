@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=2]
+[gd_scene load_steps=22 format=2]
 
 [ext_resource path="res://OverworldTileSet.tres" type="TileSet" id=1]
 [ext_resource path="res://Sprites/showtune-resident.png" type="Texture" id=2]
@@ -8,15 +8,34 @@
 [ext_resource path="res://Sprites/SpeechBubble.png" type="Texture" id=6]
 [ext_resource path="res://Sounds/Single-footstep-in-grass-G-www.fesliyanstudios.com.mp3" type="AudioStream" id=7]
 [ext_resource path="res://Overworld/showtune-city-ROUGH.png" type="Texture" id=8]
-[ext_resource path="res://Sprites/mc-idle-frame1.png" type="Texture" id=9]
+[ext_resource path="res://Sprites/Animations/mc-idle-frame1.png" type="Texture" id=9]
 [ext_resource path="res://Overworld.gd" type="Script" id=10]
-[ext_resource path="res://PauseMenu.tscn" type="PackedScene" id=12]
+[ext_resource path="res://Sprites/Animations/mc-idle-frame2.png" type="Texture" id=11]
+[ext_resource path="res://Sprites/Animations/mc-run-frame4.png" type="Texture" id=12]
+[ext_resource path="res://Sprites/Animations/mc-run-frame1.png" type="Texture" id=13]
+[ext_resource path="res://Sprites/Animations/mc-run-frame2.png" type="Texture" id=14]
+[ext_resource path="res://Sprites/Animations/mc-run-frame6.png" type="Texture" id=15]
+[ext_resource path="res://Sprites/Animations/mc-run-frame5.png" type="Texture" id=16]
+[ext_resource path="res://Sprites/Animations/mc-run-frame3.png" type="Texture" id=17]
 
 [sub_resource type="RectangleShape2D" id=2]
 extents = Vector2( 319.797, 363.611 )
 
 [sub_resource type="CircleShape2D" id=3]
 radius = 397.806
+
+[sub_resource type="SpriteFrames" id=4]
+animations = [ {
+"frames": [ ExtResource( 9 ), ExtResource( 11 ) ],
+"loop": true,
+"name": "idle",
+"speed": 4.0
+}, {
+"frames": [ ExtResource( 13 ), ExtResource( 17 ), ExtResource( 12 ), ExtResource( 14 ), ExtResource( 16 ), ExtResource( 15 ) ],
+"loop": true,
+"name": "run",
+"speed": 8.0
+} ]
 
 [sub_resource type="CircleShape2D" id=1]
 radius = 399.603
@@ -25,8 +44,6 @@ radius = 399.603
 __meta__ = {
 "_edit_horizontal_guides_": [ -1214.0 ]
 }
-
-[node name="OverworldMusic" type="AudioStreamPlayer2D" parent="."]
 
 [node name="Node2D" type="TileMap" parent="."]
 tile_set = ExtResource( 1 )
@@ -92,24 +109,28 @@ texture = ExtResource( 2 )
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ShowtuneResident/Area2D"]
 shape = SubResource( 3 )
 
-[node name="Sprite" type="Sprite" parent="."]
+[node name="KinematicBody2D" type="KinematicBody2D" parent="."]
 position = Vector2( 582, 322 )
 rotation = 3.14159
 scale = Vector2( 0.197, -0.189 )
-texture = ExtResource( 9 )
 script = ExtResource( 3 )
 
-[node name="KinematicBody2D" type="KinematicBody2D" parent="Sprite"]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite/KinematicBody2D"]
-shape = SubResource( 1 )
-
-[node name="SoundWalk" type="AudioStreamPlayer2D" parent="Sprite"]
+[node name="SoundWalk" type="AudioStreamPlayer2D" parent="KinematicBody2D"]
+scale = Vector2( 1, 1 )
 stream = ExtResource( 7 )
 volume_db = -12.0
 
-[node name="RemoteTransform2D" type="RemoteTransform2D" parent="Sprite"]
-remote_path = NodePath("../../Camera2D")
+[node name="animated_sprite" type="AnimatedSprite" parent="KinematicBody2D"]
+scale = Vector2( 1, 1 )
+frames = SubResource( 4 )
+animation = "idle"
+frame = 1
+
+[node name="RemoteTransform2D" type="RemoteTransform2D" parent="KinematicBody2D/animated_sprite"]
+remote_path = NodePath("../../../Camera2D")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="KinematicBody2D"]
+shape = SubResource( 1 )
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2( 582, 322 )
@@ -122,14 +143,6 @@ limit_right = 2502
 limit_bottom = 565
 smoothing_enabled = true
 editor_draw_limits = true
-
-[node name="GUI" type="CanvasLayer" parent="."]
-
-[node name="PauseMenu" type="Control" parent="GUI"]
-margin_right = 40.0
-margin_bottom = 40.0
-
-[node name="PauseMenu2" parent="GUI" instance=ExtResource( 12 )]
 
 [connection signal="draw" from="PondMan" to="PondMan" method="_on_PondMan_draw"]
 [connection signal="draw" from="PondMan/SpeechBubble" to="PondMan" method="_on_SpeechBubble_draw"]
