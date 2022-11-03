@@ -1,0 +1,423 @@
+[gd_scene load_steps=12 format=2]
+
+[ext_resource path="res://Settings Menu/UI Assets/fonts/Handwritten_custom-Regular.otf" type="DynamicFontData" id=1]
+[ext_resource path="res://Settings Menu/UI Assets/fonts/keyboard-button.png" type="Texture" id=2]
+[ext_resource path="res://Settings Menu/UI Assets/button-clicked.png" type="Texture" id=3]
+[ext_resource path="res://Settings Menu/UI Assets/button-unclicked.png" type="Texture" id=4]
+[ext_resource path="res://Settings Menu/UI Assets/settings-menu.png" type="Texture" id=5]
+[ext_resource path="res://Settings Menu/UI Assets/fonts/handwritten-44.tres" type="DynamicFont" id=6]
+[ext_resource path="res://Settings Menu/UI Assets/fonts/handwritten-setting-60.tres" type="DynamicFont" id=7]
+[ext_resource path="res://Settings Menu/UI Assets/fonts/handwritten-50.tres" type="DynamicFont" id=8]
+
+[sub_resource type="DynamicFont" id=2]
+size = 30
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFontData" id=3]
+font_path = "res://UI Assets/Handwritten_custom-Regular.otf"
+
+[sub_resource type="DynamicFont" id=4]
+size = 24
+font_data = SubResource( 3 )
+
+[node name="optionsMenu" type="Node2D"]
+
+[node name="CenterContainer" type="CenterContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_scale = Vector2( 0.532518, 0.557381 )
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="menu-sprite" type="TextureRect" parent="CenterContainer"]
+margin_right = 1920.0
+margin_bottom = 1080.0
+texture = ExtResource( 5 )
+
+[node name="Settings" type="Label" parent="."]
+margin_left = 389.0
+margin_top = 63.0
+margin_right = 610.0
+margin_bottom = 106.0
+rect_pivot_offset = Vector2( -333, -81 )
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_colors/font_color = Color( 0.301961, 0.0509804, 0.0509804, 1 )
+custom_fonts/font = ExtResource( 8 )
+text = "Settings"
+align = 1
+valign = 2
+uppercase = true
+
+[node name="Video" type="Label" parent="."]
+margin_left = 162.0
+margin_top = 111.0
+margin_right = 337.0
+margin_bottom = 155.0
+rect_pivot_offset = Vector2( -333, -81 )
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_colors/font_color = Color( 0.301961, 0.0509804, 0.0509804, 1 )
+custom_fonts/font = ExtResource( 6 )
+text = "video"
+align = 1
+valign = 2
+uppercase = true
+
+[node name="Visual" type="HBoxContainer" parent="."]
+margin_left = 176.0
+margin_top = 161.0
+margin_right = 708.0
+margin_bottom = 1075.0
+rect_scale = Vector2( 0.312171, 0.30546 )
+
+[node name="Labels" type="VBoxContainer" parent="Visual"]
+margin_right = 309.0
+margin_bottom = 914.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="resolution" type="Label" parent="Visual/Labels"]
+margin_right = 309.0
+margin_bottom = 225.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_colors/font_color = Color( 0.247059, 0.0196078, 0.0196078, 1 )
+custom_fonts/font = ExtResource( 7 )
+text = "Resolution"
+align = 1
+valign = 1
+
+[node name="screen-prompts" type="Label" parent="Visual/Labels"]
+margin_top = 229.0
+margin_right = 309.0
+margin_bottom = 455.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_colors/font_color = Color( 0.25098, 0.0431373, 0.0431373, 1 )
+custom_fonts/font = ExtResource( 7 )
+text = "On-Screen
+Prompts"
+align = 1
+valign = 1
+
+[node name="epilepsy" type="Label" parent="Visual/Labels"]
+margin_top = 459.0
+margin_right = 309.0
+margin_bottom = 684.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_colors/font_color = Color( 0.227451, 0.0392157, 0.0392157, 1 )
+custom_fonts/font = ExtResource( 7 )
+text = "Epilepsy
+Friendly
+Mode"
+align = 1
+valign = 1
+
+[node name="music-vis" type="Label" parent="Visual/Labels"]
+margin_top = 688.0
+margin_right = 309.0
+margin_bottom = 914.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_colors/font_color = Color( 0.196078, 0.0235294, 0.0235294, 1 )
+custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
+custom_fonts/font = ExtResource( 7 )
+text = " Song Visual 
+Effects"
+align = 1
+valign = 1
+
+[node name="Selections" type="VBoxContainer" parent="Visual"]
+margin_left = 313.0
+margin_right = 532.0
+margin_bottom = 914.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="resolution" type="OptionButton" parent="Visual/Selections"]
+margin_right = 219.0
+margin_bottom = 225.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+align = 1
+icon_align = 1
+
+[node name="prompts" type="TextureButton" parent="Visual/Selections"]
+margin_top = 229.0
+margin_right = 219.0
+margin_bottom = 455.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+toggle_mode = true
+pressed = true
+texture_normal = ExtResource( 4 )
+texture_pressed = ExtResource( 3 )
+expand = true
+stretch_mode = 5
+
+[node name="epilepsy" type="TextureButton" parent="Visual/Selections"]
+margin_top = 459.0
+margin_right = 219.0
+margin_bottom = 684.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+toggle_mode = true
+texture_normal = ExtResource( 4 )
+texture_pressed = ExtResource( 3 )
+expand = true
+stretch_mode = 5
+
+[node name="music-vis" type="TextureButton" parent="Visual/Selections"]
+margin_top = 688.0
+margin_right = 219.0
+margin_bottom = 914.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+toggle_mode = true
+pressed = true
+texture_normal = ExtResource( 4 )
+texture_pressed = ExtResource( 3 )
+expand = true
+stretch_mode = 5
+
+[node name="Audio" type="Label" parent="."]
+margin_left = 670.0
+margin_top = 114.0
+margin_right = 845.0
+margin_bottom = 158.0
+rect_pivot_offset = Vector2( -1007, 224 )
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_colors/font_color = Color( 0.301961, 0.0509804, 0.0509804, 1 )
+custom_fonts/font = ExtResource( 6 )
+text = "Audio"
+align = 1
+valign = 2
+uppercase = true
+
+[node name="Auditory" type="VBoxContainer" parent="."]
+margin_left = 663.0
+margin_top = 157.0
+margin_right = 854.0
+margin_bottom = 341.0
+
+[node name="master" type="Label" parent="Auditory"]
+margin_right = 191.0
+margin_bottom = 38.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_colors/font_color = Color( 0.270588, 0.027451, 0.027451, 1 )
+custom_fonts/font = SubResource( 2 )
+text = "Master Volume"
+align = 1
+valign = 2
+
+[node name="master-volume" type="HSlider" parent="Auditory"]
+margin_top = 42.0
+margin_right = 191.0
+margin_bottom = 58.0
+size_flags_horizontal = 3
+size_flags_vertical = 4
+tick_count = 10
+
+[node name="sound" type="Label" parent="Auditory"]
+margin_top = 62.0
+margin_right = 191.0
+margin_bottom = 101.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_colors/font_color = Color( 0.270588, 0.027451, 0.027451, 1 )
+custom_fonts/font = SubResource( 2 )
+text = "Sound Effects"
+align = 1
+valign = 2
+
+[node name="sound-effect" type="HSlider" parent="Auditory"]
+margin_top = 105.0
+margin_right = 191.0
+margin_bottom = 121.0
+size_flags_horizontal = 3
+size_flags_vertical = 4
+tick_count = 10
+
+[node name="music" type="Label" parent="Auditory"]
+margin_top = 125.0
+margin_right = 191.0
+margin_bottom = 164.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_colors/font_color = Color( 0.270588, 0.027451, 0.027451, 1 )
+custom_fonts/font = SubResource( 2 )
+text = "Music Volume"
+align = 1
+valign = 2
+
+[node name="music-volume" type="HSlider" parent="Auditory"]
+margin_top = 168.0
+margin_right = 191.0
+margin_bottom = 184.0
+size_flags_horizontal = 3
+size_flags_vertical = 4
+tick_count = 10
+
+[node name="Controls" type="HBoxContainer" parent="."]
+margin_left = 391.0
+margin_top = 321.0
+margin_right = 609.0
+margin_bottom = 437.0
+
+[node name="walk-song" type="GridContainer" parent="Controls"]
+margin_right = 107.0
+margin_bottom = 116.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_constants/vseparation = -25
+columns = 3
+
+[node name="blank" type="Label" parent="Controls/walk-song"]
+margin_top = 28.0
+margin_right = 33.0
+margin_bottom = 42.0
+size_flags_horizontal = 3
+size_flags_vertical = 6
+
+[node name="up" type="TextureButton" parent="Controls/walk-song"]
+margin_left = 37.0
+margin_right = 70.0
+margin_bottom = 71.0
+rect_pivot_offset = Vector2( 932, 526 )
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture_normal = ExtResource( 2 )
+expand = true
+stretch_mode = 5
+
+[node name="show-up" type="Label" parent="Controls/walk-song/up"]
+margin_left = -7.0
+margin_top = 5.0
+margin_right = 45.0
+margin_bottom = 65.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "W"
+align = 1
+valign = 1
+
+[node name="blank2" type="Label" parent="Controls/walk-song"]
+margin_left = 74.0
+margin_top = 28.0
+margin_right = 107.0
+margin_bottom = 42.0
+size_flags_horizontal = 3
+size_flags_vertical = 6
+
+[node name="left" type="TextureButton" parent="Controls/walk-song"]
+margin_top = 46.0
+margin_right = 33.0
+margin_bottom = 116.0
+rect_pivot_offset = Vector2( 932, 526 )
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture_normal = ExtResource( 2 )
+expand = true
+stretch_mode = 5
+
+[node name="show-left" type="Label" parent="Controls/walk-song/left"]
+margin_left = 9.0
+margin_top = 15.0
+margin_right = 26.0
+margin_bottom = 55.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "A"
+align = 1
+valign = 1
+
+[node name="down" type="TextureButton" parent="Controls/walk-song"]
+margin_left = 37.0
+margin_top = 46.0
+margin_right = 70.0
+margin_bottom = 116.0
+rect_pivot_offset = Vector2( 932, 526 )
+size_flags_horizontal = 7
+texture_normal = ExtResource( 2 )
+expand = true
+stretch_mode = 5
+
+[node name="show-down" type="Label" parent="Controls/walk-song/down"]
+margin_left = -7.0
+margin_top = 20.0
+margin_right = 45.0
+margin_bottom = 65.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "S
+"
+align = 1
+valign = 1
+
+[node name="right" type="TextureButton" parent="Controls/walk-song"]
+margin_left = 74.0
+margin_top = 46.0
+margin_right = 107.0
+margin_bottom = 116.0
+rect_pivot_offset = Vector2( 932, 526 )
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture_normal = ExtResource( 2 )
+expand = true
+stretch_mode = 5
+
+[node name="show-up" type="Label" parent="Controls/walk-song/right"]
+margin_left = -7.0
+margin_top = 5.0
+margin_right = 45.0
+margin_bottom = 65.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "D"
+align = 1
+valign = 1
+
+[node name="interact" type="VBoxContainer" parent="Controls"]
+margin_left = 111.0
+margin_right = 218.0
+margin_bottom = 116.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="interact-label" type="Label" parent="Controls/interact"]
+margin_left = 49.0
+margin_right = 57.0
+margin_bottom = 7.0
+size_flags_horizontal = 4
+size_flags_vertical = 0
+custom_colors/font_color = Color( 0.180392, 0.0196078, 0.0196078, 1 )
+custom_fonts/font = SubResource( 4 )
+text = "
+Interact"
+valign = 2
+
+[node name="interact" type="TextureButton" parent="Controls/interact"]
+margin_top = 11.0
+margin_right = 107.0
+margin_bottom = 116.0
+rect_pivot_offset = Vector2( -799, 92 )
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture_normal = ExtResource( 2 )
+expand = true
+stretch_mode = 5
+
+[node name="show-inter" type="Label" parent="Controls/interact/interact"]
+margin_left = 30.0
+margin_top = -6.0
+margin_right = 82.0
+margin_bottom = 54.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "E"
+align = 1
+valign = 1

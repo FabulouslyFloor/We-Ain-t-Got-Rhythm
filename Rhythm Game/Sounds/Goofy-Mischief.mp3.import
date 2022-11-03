@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Goofy-Mischief.mp3-8ed7617e3265cc06f9f38558a5a70c07.mp3str"
+
+[deps]
+
+source_file="res://Sounds/Goofy-Mischief.mp3"
+dest_files=[ "res://.import/Goofy-Mischief.mp3-8ed7617e3265cc06f9f38558a5a70c07.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0
