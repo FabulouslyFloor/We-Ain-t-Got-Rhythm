@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=2]
+[gd_scene load_steps=24 format=2]
 
 [ext_resource path="res://Sprites/Tiles/OverworldTileSet.tres" type="TileSet" id=1]
 [ext_resource path="res://Overworld/PondMan.gd" type="Script" id=2]
@@ -18,6 +18,7 @@
 [ext_resource path="res://Sprites/Animations/mc-run-frame6.png" type="Texture" id=16]
 [ext_resource path="res://Sprites/Animations/mc-idle-frame2.png" type="Texture" id=17]
 [ext_resource path="res://Sounds/Goofy-Mischief.mp3" type="AudioStream" id=18]
+[ext_resource path="res://Menus/Pause Menu/PauseMenu.tscn" type="PackedScene" id=19]
 
 [sub_resource type="RectangleShape2D" id=2]
 extents = Vector2( 319.797, 363.611 )
@@ -147,6 +148,10 @@ limit_right = 2502
 limit_bottom = 565
 smoothing_enabled = true
 editor_draw_limits = true
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="PauseMenu" parent="CanvasLayer" instance=ExtResource( 19 )]
 
 [connection signal="draw" from="PondMan" to="PondMan" method="_on_PondMan_draw"]
 [connection signal="draw" from="PondMan/SpeechBubble" to="PondMan" method="_on_SpeechBubble_draw"]
