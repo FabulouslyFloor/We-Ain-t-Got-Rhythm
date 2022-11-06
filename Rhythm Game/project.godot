@@ -11,8 +11,12 @@ config_version=4
 [application]
 
 config/name="Rhythm Game Overworld Test"
-run/main_scene="res://Overworld.tscn"
+run/main_scene="res://Overworld/Overworld.tscn"
 config/icon="res://icon.png"
+
+[audio]
+
+default_bus_layout="res://Sounds/default_bus_layout.tres"
 
 [gui]
 
