@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=2]
+[gd_scene load_steps=28 format=2]
 
 [ext_resource path="res://Sprites/Tiles/OverworldTileSet.tres" type="TileSet" id=1]
 [ext_resource path="res://Overworld/PondMan.gd" type="Script" id=2]
@@ -42,6 +42,18 @@ animations = [ {
 [sub_resource type="CircleShape2D" id=1]
 radius = 399.603
 
+[sub_resource type="RectangleShape2D" id=5]
+extents = Vector2( 1395, 36.75 )
+
+[sub_resource type="RectangleShape2D" id=6]
+extents = Vector2( 32.75, 723.75 )
+
+[sub_resource type="RectangleShape2D" id=7]
+extents = Vector2( 1393, 27 )
+
+[sub_resource type="RectangleShape2D" id=8]
+extents = Vector2( 25, 712.5 )
+
 [node name="Node2D" type="Node2D"]
 __meta__ = {
 "_edit_horizontal_guides_": [ -1214.0 ]
@@ -54,7 +66,7 @@ autoplay = true
 [node name="Node2D" type="TileMap" parent="."]
 tile_set = ExtResource( 1 )
 format = 1
-tile_data = PoolIntArray( -720899, 2, 0, -786432, 2, 0, -786429, 2, 0, -786426, 2, 0, -786423, 13, 0, -786420, 2, 0, -786417, 2, 0, -786414, 2, 0, -786411, 2, 0, -786408, 2, 0, -786405, 2, 0, -786402, 2, 0, -786399, 2, 0, -786396, 2, 0, -524291, 1, 0, -589824, -1073741811, 0, -589821, 8, 0, -589818, 8, 0, -589815, 6, 0, -589812, 8, 0, -589809, 8, 0, -589806, -1610612727, 0, -589803, 2, 0, -589800, 2, 0, -589797, 1, 0, -589794, 2, 0, -589791, 2, 0, -589788, 2, 0, -327683, 2, 0, -393216, 0, 0, -393213, 0, 0, -393210, -1610612729, 0, -393207, -1073741817, 0, -393204, 2, 0, -393201, 0, 0, -393198, 5, 0, -393195, 2, 0, -393192, 2, 0, -393189, 4, 0, -393186, 3, 0, -393183, 2, 0, -393180, 3, 0, -131075, 2, 0, -196608, 2, 0, -196605, 2, 0, -196602, 7, 0, -196599, 15, 0, -196596, 2, 0, -196593, 2, 0, -196590, 5, 0, -196587, 2, 0, -196584, 2, 0, -196581, -1610612729, 0, -196578, 8, 0, -196575, 15, 0, -196572, 4, 0, 65533, 2, 0, 0, 2, 0, 3, 2, 0, 6, 4, 0, 9, 1, 0, 12, 4, 0, 15, 2, 0, 18, 5, 0, 21, 2, 0, 24, 0, 0, 27, 5, 0, 30, 0, 0, 33, 2, 0, 36, 2, 0, 262141, 2, 0, 196608, 2, 0, 196611, -1073741811, 0, 196614, 8, 0, 196617, 8, 0, 196620, 8, 0, 196623, 8, 0, 196626, 11, 0, 196629, 8, 0, 196632, 8, 0, 196635, -1073741817, 0, 196638, 2, 0, 196641, 2, 0, 196644, 2, 0, 458749, 2, 0, 393216, 0, 0, 393219, 2, 0, 393222, 2, 0, 393225, 2, 0, 393228, 2, 0, 393231, 2, 0, 393234, 0, 0, 393237, 2, 0, 393240, 2, 0, 393243, 2, 0, 393246, 2, 0, 393249, 2, 0, 393252, 2, 0 )
+tile_data = PoolIntArray( -720899, 2, 0, -786432, 2, 0, -786429, 2, 0, -786426, 2, 0, -786423, 13, 0, -786420, 2, 0, -786417, 2, 0, -786414, 2, 0, -786411, 2, 0, -786408, 2, 0, -786405, 2, 0, -786402, 2, 0, -786399, 2, 0, -786396, 2, 0, -524291, 1, 0, -589824, 536870927, 0, -589821, 8, 0, -589818, 8, 0, -589815, 6, 0, -589812, 8, 0, -589809, 8, 0, -589806, 536870921, 0, -589803, 2, 0, -589800, 2, 0, -589797, 1, 0, -589794, 2, 0, -589791, 2, 0, -589788, 2, 0, -327683, 2, 0, -393216, 0, 0, -393213, 0, 0, -393210, 9, 0, -393207, 536870919, 0, -393204, 2, 0, -393201, 0, 0, -393198, 5, 0, -393195, 2, 0, -393192, 2, 0, -393189, 4, 0, -393186, 3, 0, -393183, 2, 0, -393180, 3, 0, -131075, 2, 0, -196608, 2, 0, -196605, 2, 0, -196602, 7, 0, -196599, 15, 0, -196596, 2, 0, -196593, 2, 0, -196590, 5, 0, -196587, 2, 0, -196584, 2, 0, -196581, 9, 0, -196578, 8, 0, -196575, 15, 0, -196572, 4, 0, 65533, 2, 0, 0, 2, 0, 3, 2, 0, 6, 4, 0, 9, 1, 0, 12, 4, 0, 15, 2, 0, 18, 5, 0, 21, 2, 0, 24, 0, 0, 27, 5, 0, 30, 0, 0, 33, 2, 0, 36, 2, 0, 262141, 2, 0, 196608, 2, 0, 196611, 536870927, 0, 196614, 8, 0, 196617, 8, 0, 196620, 8, 0, 196623, 8, 0, 196626, 11, 0, 196629, 8, 0, 196632, 8, 0, 196635, 536870919, 0, 196638, 2, 0, 196641, 2, 0, 196644, 2, 0, 458749, 2, 0, 393216, 0, 0, 393219, 2, 0, 393222, 2, 0, 393225, 2, 0, 393228, 2, 0, 393231, 2, 0, 393234, 0, 0, 393237, 2, 0, 393240, 2, 0, 393243, 2, 0, 393246, 2, 0, 393249, 2, 0, 393252, 2, 0 )
 script = ExtResource( 3 )
 
 [node name="PathMan" type="Sprite" parent="."]
@@ -152,6 +164,30 @@ editor_draw_limits = true
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="PauseMenu" parent="CanvasLayer" instance=ExtResource( 19 )]
+
+[node name="StaticBody2D4" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D4"]
+position = Vector2( 1164, -790.25 )
+shape = SubResource( 5 )
+
+[node name="StaticBody2D3" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D3"]
+position = Vector2( 2523.25, -100.25 )
+shape = SubResource( 6 )
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2"]
+position = Vector2( 1160, 594 )
+shape = SubResource( 7 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2( -204, -92.5 )
+shape = SubResource( 8 )
 
 [connection signal="draw" from="PondMan" to="PondMan" method="_on_PondMan_draw"]
 [connection signal="draw" from="PondMan/SpeechBubble" to="PondMan" method="_on_SpeechBubble_draw"]
