@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=2]
+[gd_scene load_steps=16 format=2]
 
 [ext_resource path="res://Menus/UI Assets/fonts/Handwritten_custom-Regular.otf" type="DynamicFontData" id=1]
 [ext_resource path="res://Menus/UI Assets/fonts/keyboard-button.png" type="Texture" id=2]
@@ -11,7 +11,6 @@
 [ext_resource path="res://Menus/UI Assets/fonts/handwritten-20.tres" type="DynamicFont" id=9]
 [ext_resource path="res://Menus/UI Assets/fonts/handwritten-36.tres" type="DynamicFont" id=10]
 [ext_resource path="res://Menus/Settings Menu/options_Menu.gd" type="Script" id=11]
-[ext_resource path="res://Sounds/Goofy-Mischief.mp3" type="AudioStream" id=12]
 
 [sub_resource type="DynamicFont" id=2]
 size = 30
@@ -30,11 +29,6 @@ font_data = SubResource( 3 )
 
 [node name="optionsMenu" type="Node2D"]
 script = ExtResource( 11 )
-
-[node name="OverworldMusic" type="AudioStreamPlayer2D" parent="."]
-position = Vector2( 505, 243 )
-stream = ExtResource( 12 )
-autoplay = true
 
 [node name="CenterContainer" type="CenterContainer" parent="."]
 anchor_right = 1.0

@@ -1,8 +1,8 @@
 extends Timer
 
-var ArrowTop = preload("res://ArrowTopScene.tscn")
-var ArrowMiddle = preload("res://ArrowMiddleScene.tscn")
-var ArrowBottom = preload("res://ArrowBottomScene.tscn")
+var ArrowTop = preload("res://LevelSpawningCode/ArrowTopScene.tscn")
+var ArrowMiddle = preload("res://LevelSpawningCode/ArrowMiddleScene.tscn")
+var ArrowBottom = preload("res://LevelSpawningCode/ArrowBottomScene.tscn")
 
 func _ready():
 	#wait_time = rand_range(0,1)
