@@ -19,4 +19,5 @@ func _on_ResumeBtn_pressed():
 
 
 func _on_QuitBtn_pressed():
-	get_tree().quit()
+	self.is_paused = false
+	get_tree().change_scene("res://Menus/Title Menu/titleMenu.tscn")
