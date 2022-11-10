@@ -1,7 +1,6 @@
 [gd_scene load_steps=2 format=2]
 
-[ext_resource path="res://Sprites/kisspng-computer-icons-left-arrow-5ac5bc942aa851.2815393015229083081747.png" type="Texture" id=1]
-
+[ext_resource path="res://kisspng-computer-icons-left-arrow-5ac5bc942aa851.2815393015229083081747.png" type="Texture" id=1]
 
 [node name="ArrowBottom" type="Node2D"]
 
