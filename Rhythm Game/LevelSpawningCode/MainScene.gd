@@ -17,5 +17,5 @@ func _process(_delta):
 	if time_elapsed > 5000 && time_elapsed < 5020:
 		var player = AudioStreamPlayer.new()
 		self.add_child(player)
-		player.stream = load("res://1-13 Wait For It.mp3")
+		player.stream = load("res://LevelSpawningCode/1-13 Wait For It.mp3")
 		player.play()

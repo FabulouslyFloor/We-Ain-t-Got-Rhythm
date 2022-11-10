@@ -3,9 +3,9 @@ extends Timer
 var time_start = 0
 var time_now = 0
 var score = 0
-var ArrowTop = preload("res://ArrowTopScene.tscn")
-var ArrowMiddle = preload("res://ArrowMiddleScene.tscn")
-var ArrowBottom = preload("res://ArrowBottomScene.tscn")
+var ArrowTop = preload("res://LevelSpawningCode/ArrowTopScene.tscn")
+var ArrowMiddle = preload("res://LevelSpawningCode/ArrowMiddleScene.tscn")
+var ArrowBottom = preload("res://LevelSpawningCode/ArrowBottomScene.tscn")
 
 func _ready():
 	time_start = OS.get_ticks_msec()
