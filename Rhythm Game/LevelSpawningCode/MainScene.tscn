@@ -1,13 +1,28 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=7 format=2]
 
-[ext_resource path="res://LevelSpawningCode/Timer.gd" type="Script" id=1]
+[ext_resource path="res://MainScene.gd" type="Script" id=1]
+[ext_resource path="res://Node2D.gd" type="Script" id=2]
+[ext_resource path="res://ArrowOpenTop.gd" type="Script" id=3]
+[ext_resource path="res://ArrowOpenMiddle.gd" type="Script" id=4]
+[ext_resource path="res://ArrowOpenBottom.gd" type="Script" id=5]
+[ext_resource path="res://left.png" type="Texture" id=6]
 
 [node name="Node2D" type="Node2D"]
-
-[node name="Timer" type="Timer" parent="."]
-pause_mode = 2
-wait_time = 5.0
-one_shot = true
 script = ExtResource( 1 )
 
-[connection signal="timeout" from="Timer" to="Timer" method="_on_Timer_timeout"]
+[node name="ArrowOpenTop" type="Sprite" parent="."]
+rotation = 1.56397
+texture = ExtResource( 6 )
+script = ExtResource( 3 )
+
+[node name="ArrowOpenBottom" type="Sprite" parent="."]
+rotation = -1.56102
+texture = ExtResource( 6 )
+script = ExtResource( 5 )
+
+[node name="ArrowOpenMiddle" type="Sprite" parent="."]
+texture = ExtResource( 6 )
+script = ExtResource( 4 )
+
+[node name="Spawner" type="Node2D" parent="."]
+script = ExtResource( 2 )
