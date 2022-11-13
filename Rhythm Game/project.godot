@@ -11,7 +11,7 @@ config_version=4
 [application]
 
 config/name="Rhythm Game Overworld Test"
-run/main_scene="res://Menus/Title Menu/titleMenu.tscn"
+run/main_scene="res://LevelSpawningCode/MainScene.tscn"
 config/icon="res://icon.png"
 
 [audio]
