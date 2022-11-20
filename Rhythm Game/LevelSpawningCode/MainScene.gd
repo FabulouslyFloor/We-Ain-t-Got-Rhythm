@@ -2,9 +2,10 @@ extends Node2D
 
 var time_now = 0
 var time_start = 0
-var ArrowTopOpen = preload("res://LevelSpawningCode/ArrowOpenTop.gd")
-var ArrowBottomOpen = preload("res://LevelSpawningCode/ArrowOpenBottom.gd")
-var ArrowMiddleOpen = preload("res://LevelSpawningCode/ArrowOpenMiddle.gd")
+var ArrowTopOpen = preload("res://LevelSpawningCode/ArrowOpenTopScene.tscn")
+var ArrowBottomOpen = preload("res://LevelSpawningCode/ArrowOpenBottomScene.tscn")
+var ArrowMiddleOpen = preload("res://LevelSpawningCode/ArrowOpenMiddleScene.tscn")
+#var ArrowTopOpen = preload("res://LevelSpawningCode/ArrowTopScene.tscn")
 
 
 
@@ -22,17 +23,17 @@ func _ready():
 
 	#Setting Open Arrow on the top
 	ArrowTopOpenInstance.position = Vector2(get_viewport().size.x/4, get_viewport().size.y*2/3)
-	ArrowTopOpenInstance.scale = Vector2(0.17,0.17)
+	ArrowTopOpenInstance.scale = Vector2(0.8,0.8)
 	add_child(ArrowTopOpenInstance)
 	
 	#Setting Open Arrow on the Middle
 	ArrowMiddleOpenInstance.position = Vector2(get_viewport().size.x/4, get_viewport().size.y/2)
-	ArrowMiddleOpenInstance.scale = Vector2(0.17,0.17)
+	ArrowMiddleOpenInstance.scale = Vector2(0.8,0.8)
 	add_child(ArrowMiddleOpenInstance)
 	
 	#Setting Open Arrow on the Bottom
 	ArrowBottomOpenInstance.position = Vector2(get_viewport().size.x/4, get_viewport().size.y/3)
-	ArrowBottomOpenInstance.scale = Vector2(0.17,0.17)
+	ArrowBottomOpenInstance.scale = Vector2(0.8,0.8)
 	add_child(ArrowBottomOpenInstance)
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
