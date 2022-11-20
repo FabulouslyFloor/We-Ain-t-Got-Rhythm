@@ -104,9 +104,10 @@ func _ready():
 func _process(delta):
 	var time_now = OS.get_ticks_msec()
 	var time_elapsed = time_now - time_start
-	print(time_elapsed)
+	#print(time_elapsed)
 	if Input.is_key_pressed(KEY_SPACE):
-		print("HERE")
+		print(time_elapsed)
+		print(" ")
 	
 	
 
@@ -155,7 +156,7 @@ func _process(delta):
 
 	#ArrowTop 1
 	if time_elapsed > 1000:
-		if time_elapsed > 1346 && time_elapsed < 1366: #|| time_elapsed > 9000 && time_elapsed < 9020:
+		if time_elapsed > 1102 && time_elapsed < 1122: #|| time_elapsed > 9000 && time_elapsed < 9020:
 			flagUp1 = true
 			ArrowTopInstance1 = ArrowTop.instance()	#create a new instance
 			ArrowTopInstance1.position = Vector2(get_viewport().size.x, get_viewport().size.y*2/3)
@@ -177,7 +178,7 @@ func _process(delta):
 						
 	#ArrowTop 2
 	if time_elapsed > 1000:
-		if time_elapsed > 2613 && time_elapsed < 2633: #|| time_elapsed > 9000 && time_elapsed < 9020:
+		if time_elapsed > 2362 && time_elapsed < 2382: #|| time_elapsed > 9000 && time_elapsed < 9020:
 			flagUp2 = true
 			ArrowTopInstance2 = ArrowTop.instance()	#create a new instance
 			ArrowTopInstance2.position = Vector2(get_viewport().size.x, get_viewport().size.y*2/3)
@@ -199,7 +200,7 @@ func _process(delta):
 						
 	#ArrowTop 3
 	if time_elapsed > 1000:
-		if time_elapsed > 3680 && time_elapsed < 3400: #|| time_elapsed > 9000 && time_elapsed < 9020:
+		if time_elapsed > 3622 && time_elapsed < 3642: #|| time_elapsed > 9000 && time_elapsed < 9020:
 			flagUp3 = true
 			ArrowTopInstance3 = ArrowTop.instance()	#create a new instance
 			ArrowTopInstance3.position = Vector2(get_viewport().size.x, get_viewport().size.y*2/3)
@@ -221,7 +222,7 @@ func _process(delta):
 			
 	#Arrow Top 4					
 	if time_elapsed > 1000:
-		if time_elapsed > 4000 && time_elapsed < 4020: #|| time_elapsed > 9000 && time_elapsed < 9020:
+		if time_elapsed > 5000 && time_elapsed < 5020: #|| time_elapsed > 9000 && time_elapsed < 9020:
 			flagUp4 = true
 			ArrowTopInstance4 = ArrowTop.instance()	#create a new instance
 			ArrowTopInstance4.position = Vector2(get_viewport().size.x, get_viewport().size.y*2/3)
@@ -243,7 +244,7 @@ func _process(delta):
 			
 	#ArrowTop 5					
 	if time_elapsed > 1000:
-		if time_elapsed > 5000 && time_elapsed < 5020: #|| time_elapsed > 9000 && time_elapsed < 9020:
+		if time_elapsed > 6290 && time_elapsed < 6310: #|| time_elapsed > 9000 && time_elapsed < 9020:
 			flagUp5 = true
 			ArrowTopInstance5 = ArrowTop.instance()	#create a new instance
 			ArrowTopInstance5.position = Vector2(get_viewport().size.x, get_viewport().size.y*2/3)
@@ -265,7 +266,7 @@ func _process(delta):
 					
 	#ArrowTop 6				
 	if time_elapsed > 1000:
-		if time_elapsed > 6000 && time_elapsed < 6020: #|| time_elapsed > 9000 && time_elapsed < 9020:
+		if time_elapsed > 7580 && time_elapsed < 7600: #|| time_elapsed > 9000 && time_elapsed < 9020:
 			flagUp6 = true
 			ArrowTopInstance6 = ArrowTop.instance()	#create a new instance
 			ArrowTopInstance6.position = Vector2(get_viewport().size.x, get_viewport().size.y*2/3)
@@ -286,7 +287,7 @@ func _process(delta):
 						pass					
 	#ArrowTop 7					
 	if time_elapsed > 1000:
-		if time_elapsed > 7000 && time_elapsed < 7020: #|| time_elapsed > 9000 && time_elapsed < 9020:
+		if time_elapsed > 8870 && time_elapsed < 8890: #|| time_elapsed > 9000 && time_elapsed < 9020:
 			flagUp7 = true
 			ArrowTopInstance7 = ArrowTop.instance()	#create a new instance
 			ArrowTopInstance7.position = Vector2(get_viewport().size.x, get_viewport().size.y*2/3)
@@ -307,7 +308,7 @@ func _process(delta):
 						pass					
 	#ArrowTop 8					
 	if time_elapsed > 1000:
-		if time_elapsed > 8000 && time_elapsed < 8020: #|| time_elapsed > 9000 && time_elapsed < 9020:
+		if time_elapsed > 10160 && time_elapsed < 10180: #|| time_elapsed > 9000 && time_elapsed < 9020:
 			flagUp8 = true
 			ArrowTopInstance8 = ArrowTop.instance()	#create a new instance
 			ArrowTopInstance8.position = Vector2(get_viewport().size.x, get_viewport().size.y*2/3)
@@ -328,7 +329,7 @@ func _process(delta):
 						pass					
 	#ArrowTop 9					
 	if time_elapsed > 1000:
-		if time_elapsed > 9000 && time_elapsed < 9020: #|| time_elapsed > 9000 && time_elapsed < 9020:
+		if time_elapsed > 11450 && time_elapsed < 11470: #|| time_elapsed > 9000 && time_elapsed < 9020:
 			flagUp9 = true
 			ArrowTopInstance9 = ArrowTop.instance()	#create a new instance
 			ArrowTopInstance9.position = Vector2(get_viewport().size.x, get_viewport().size.y*2/3)
