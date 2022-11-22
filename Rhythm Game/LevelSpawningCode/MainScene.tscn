@@ -12,10 +12,12 @@ rotation = 2.54354
 texture = ExtResource( 6 )
 
 [node name="ArrowOpenBottom" type="Sprite" parent="."]
+position = Vector2( 136, -63 )
 rotation = -1.56102
 texture = ExtResource( 6 )
 
 [node name="ArrowOpenMiddle" type="Sprite" parent="."]
+position = Vector2( -3, 151 )
 texture = ExtResource( 6 )
 
 [node name="Spawner" type="Node2D" parent="."]
