@@ -118,7 +118,6 @@ func _process(delta):
 			ArrowMiddleInstance = ArrowMiddle.instance()	#create a new instance
 			ArrowMiddleInstance.position = Vector2(get_viewport().size.x, get_viewport().size.y/2)
 			ArrowMiddleInstance.scale = Vector2(0.17,0.17)
-			ArrowMiddleInstance.show_on_top
 			add_child(ArrowMiddleInstance)
 		if flag2 == true:	
 			ArrowMiddleInstance.translate(Vector2(-100 * delta*1.8,0))
