@@ -22,19 +22,19 @@ func _ready():
 	var ArrowBottomOpenInstance = ArrowBottomOpen.instance()
 
 	#Setting Open Arrow on the top
-	ArrowTopOpenInstance.position = Vector2(get_viewport().size.x/4, get_viewport().size.y*2/3)
-	ArrowTopOpenInstance.scale = Vector2(0.8,0.8)
-	add_child(ArrowTopOpenInstance)
-	
-	#Setting Open Arrow on the Middle
-	ArrowMiddleOpenInstance.position = Vector2(get_viewport().size.x/4, get_viewport().size.y/2)
-	ArrowMiddleOpenInstance.scale = Vector2(0.8,0.8)
-	add_child(ArrowMiddleOpenInstance)
-	
-	#Setting Open Arrow on the Bottom
-	ArrowBottomOpenInstance.position = Vector2(get_viewport().size.x/4, get_viewport().size.y/3)
-	ArrowBottomOpenInstance.scale = Vector2(0.8,0.8)
-	add_child(ArrowBottomOpenInstance)
+#	ArrowTopOpenInstance.position = Vector2(get_viewport().size.x/4, get_viewport().size.y*2/3)
+#	ArrowTopOpenInstance.scale = Vector2(0.8,0.8)
+#	add_child(ArrowTopOpenInstance)
+#
+#	#Setting Open Arrow on the Middle
+#	ArrowMiddleOpenInstance.position = Vector2(get_viewport().size.x/4, get_viewport().size.y/2)
+#	ArrowMiddleOpenInstance.scale = Vector2(0.8,0.8)
+#	add_child(ArrowMiddleOpenInstance)
+#
+#	#Setting Open Arrow on the Bottom
+#	ArrowBottomOpenInstance.position = Vector2(get_viewport().size.x/4, get_viewport().size.y/3)
+#	ArrowBottomOpenInstance.scale = Vector2(0.8,0.8)
+#	add_child(ArrowBottomOpenInstance)
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta):
