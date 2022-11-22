@@ -51,6 +51,7 @@ var flag6 = true
 var ArrowTop = preload("res://LevelSpawningCode/ArrowTopScene.tscn")
 var ArrowMiddle = preload("res://LevelSpawningCode/ArrowMiddleScene.tscn")
 var ArrowBottom = preload("res://LevelSpawningCode/ArrowBottomScene.tscn")
+
 var ArrowTopInstance1 = ArrowTop.instance()
 var ArrowTopInstance2 = ArrowTop.instance()
 var ArrowTopInstance3 = ArrowTop.instance()
@@ -113,7 +114,7 @@ func _process(delta):
 
 
 	if time_elapsed > 1000:
-		if time_elapsed > 9000 && time_elapsed < 9020:
+		if time_elapsed > 2000 && time_elapsed < 2020:
 			flag2 = true
 			ArrowMiddleInstance = ArrowMiddle.instance()	#create a new instance
 			ArrowMiddleInstance.position = Vector2(get_viewport().size.x, get_viewport().size.y/2)
@@ -139,7 +140,29 @@ func _process(delta):
 	
 	
 	
-
+	if time_elapsed > 1000:
+		if time_elapsed > 2000 && time_elapsed < 2020:
+			flag2 = true
+			ArrowBottomInstance = ArrowBottom.instance()	#create a new instance
+			ArrowBottomInstance.position = Vector2(get_viewport().size.x, get_viewport().size.y/3)
+			ArrowBottomInstance.scale = Vector2(0.17,0.17)
+			add_child(ArrowBottomInstance)
+		if flag2 == true:	
+			ArrowBottomInstance.translate(Vector2(-100 * delta*1.8,0))
+			if(ArrowBottomInstance.position.x < get_viewport().size.x/3 && ArrowBottomInstance.position.x > get_viewport().size.x/9):
+				if Input.is_key_pressed(KEY_LEFT):
+					if(ArrowBottomInstance.position.x > get_viewport().size.x/4.2 && ArrowBottomInstance.position.x < get_viewport().size.x/3.8):
+						score += 1
+						print(score)
+						#ArrowMiddleInstance.hide()
+						ArrowBottomInstance.free()
+						flag2 = false
+					else:
+						#print("LOSER YOU MISSED")	
+						#ArrowMiddleInstance.hide()
+						ArrowBottomInstance.free()
+						flag2 = false
+						pass		
 
 
 
