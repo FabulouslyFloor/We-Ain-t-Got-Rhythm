@@ -8,19 +8,19 @@
 script = ExtResource( 1 )
 
 [node name="ArrowOpenTop" type="Sprite" parent="."]
-position = Vector2( 257, 400 )
+position = Vector2( 269, 400 )
 rotation = 1.55954
 scale = Vector2( 0.803435, 0.787151 )
 texture = ExtResource( 6 )
 
 [node name="ArrowOpenBottom" type="Sprite" parent="."]
-position = Vector2( 254.993, 201.721 )
+position = Vector2( 268, 202 )
 rotation = -1.56102
 scale = Vector2( 0.783829, 0.788125 )
 texture = ExtResource( 6 )
 
 [node name="ArrowOpenMiddle" type="Sprite" parent="."]
-position = Vector2( 256, 302 )
+position = Vector2( 268, 301 )
 scale = Vector2( 0.78125, 0.789062 )
 texture = ExtResource( 6 )
 
