@@ -896,29 +896,29 @@ func _process(delta):
 						pass						
 										
 	#Arrow Bottom 8
-#	if time_elapsed > 1000:
-#		if time_elapsed > 24200 && time_elapsed < 24220:
-#			flagDown8 = true
-#			ArrowBottomInstance8 = ArrowBottom.instance()	#create a new instance
-#			ArrowBottomInstance8.position = Vector2(get_viewport().size.x, get_viewport().size.y/3)
-#			ArrowBottomInstance8.scale = Vector2(0.17,0.17)
-#			add_child(ArrowBottomInstance8)
-#		if flagDown8 == true:	
-#			ArrowBottomInstance8.translate(Vector2(-100 * delta*1.8,0))
-#			if(ArrowBottomInstance8.position.x < get_viewport().size.x/3 && ArrowBottomInstance8.position.x > get_viewport().size.x/9):
-#				if Input.is_key_pressed(KEY_DOWN):
-#					if(ArrowBottomInstance8.position.x > get_viewport().size.x/4.2 && ArrowBottomInstance8.position.x < get_viewport().size.x/3.8):
-#						score += 1
-#						print(score)
-#						#ArrowMiddleInstance.hide()
-#						ArrowBottomInstance8.free()
-#						flagDown8 = false
-#					else:
-#						#print("LOSER YOU MISSED")	
-#						#ArrowMiddleInstance.hide()
-#						ArrowBottomInstance8.free()
-#						flagDown8 = false
-#						pass						
+	if time_elapsed > 1000:
+		if time_elapsed > 25467 && time_elapsed < 25487:
+			flagDown8 = true
+			ArrowBottomInstance8 = ArrowBottom.instance()	#create a new instance
+			ArrowBottomInstance8.position = Vector2(get_viewport().size.x, get_viewport().size.y/3)
+			ArrowBottomInstance8.scale = Vector2(0.17,0.17)
+			add_child(ArrowBottomInstance8)
+		if flagDown8 == true:	
+			ArrowBottomInstance8.translate(Vector2(-100 * delta*1.8,0))
+			if(ArrowBottomInstance8.position.x < get_viewport().size.x/3 && ArrowBottomInstance8.position.x > get_viewport().size.x/9):
+				if Input.is_key_pressed(KEY_DOWN):
+					if(ArrowBottomInstance8.position.x > get_viewport().size.x/4.2 && ArrowBottomInstance8.position.x < get_viewport().size.x/3.8):
+						score += 1
+						print(score)
+						#ArrowMiddleInstance.hide()
+						ArrowBottomInstance8.free()
+						flagDown8 = false
+					else:
+						#print("LOSER YOU MISSED")	
+						#ArrowMiddleInstance.hide()
+						ArrowBottomInstance8.free()
+						flagDown8 = false
+						pass						
 									
 	#ArrowTop 11					
 	if time_elapsed > 1000:
@@ -944,7 +944,7 @@ func _process(delta):
 						
 	#Arrow Middle 9
 	if time_elapsed > 0:
-		if time_elapsed > 25467 && time_elapsed < 25487:
+		if time_elapsed > 26000 && time_elapsed < 26020:
 			flagMiddle9 = true
 			ArrowMiddleInstance9 = ArrowMiddle.instance()	#create a new instance
 			ArrowMiddleInstance9.position = Vector2(get_viewport().size.x, get_viewport().size.y/2)
@@ -1589,29 +1589,29 @@ func _process(delta):
 						pass	
 
 	#Arrow Bottom 16
-	if time_elapsed > 1000:
-		if time_elapsed > 54909 && time_elapsed < 54929:
-			flagDown16 = true
-			ArrowBottomInstance16 = ArrowBottom.instance()	#create a new instance
-			ArrowBottomInstance16.position = Vector2(get_viewport().size.x, get_viewport().size.y/3)
-			ArrowBottomInstance16.scale = Vector2(0.17,0.17)
-			add_child(ArrowBottomInstance16)
-		if flagDown16 == true:	
-			ArrowBottomInstance16.translate(Vector2(-100 * delta*1.8,0))
-			if(ArrowBottomInstance16.position.x < get_viewport().size.x/3 && ArrowBottomInstance16.position.x > get_viewport().size.x/9):
-				if Input.is_key_pressed(KEY_DOWN):
-					if(ArrowBottomInstance16.position.x > get_viewport().size.x/4.2 && ArrowBottomInstance16.position.x < get_viewport().size.x/3.8):
-						score += 1
-						print(score)
-						#ArrowMiddleInstance.hide()
-						ArrowBottomInstance16.free()
-						flagDown16 = false
-					else:
-						#print("LOSER YOU MISSED")	
-						#ArrowMiddleInstance.hide()
-						ArrowBottomInstance16.free()
-						flagDown16 = false
-						pass	
+#	if time_elapsed > 1000:
+#		if time_elapsed > 54909 && time_elapsed < 54929:
+#			flagDown16 = true
+#			ArrowBottomInstance16 = ArrowBottom.instance()	#create a new instance
+#			ArrowBottomInstance16.position = Vector2(get_viewport().size.x, get_viewport().size.y/3)
+#			ArrowBottomInstance16.scale = Vector2(0.17,0.17)
+#			add_child(ArrowBottomInstance16)
+#		if flagDown16 == true:	
+#			ArrowBottomInstance16.translate(Vector2(-100 * delta*1.8,0))
+#			if(ArrowBottomInstance16.position.x < get_viewport().size.x/3 && ArrowBottomInstance16.position.x > get_viewport().size.x/9):
+#				if Input.is_key_pressed(KEY_DOWN):
+#					if(ArrowBottomInstance16.position.x > get_viewport().size.x/4.2 && ArrowBottomInstance16.position.x < get_viewport().size.x/3.8):
+#						score += 1
+#						print(score)
+#						#ArrowMiddleInstance.hide()
+#						ArrowBottomInstance16.free()
+#						flagDown16 = false
+#					else:
+#						#print("LOSER YOU MISSED")	
+#						#ArrowMiddleInstance.hide()
+#						ArrowBottomInstance16.free()
+#						flagDown16 = false
+#						pass	
 
 	#Arrow Middle 20
 	if time_elapsed > 0:
@@ -2201,7 +2201,7 @@ func _process(delta):
 
 	#Arrow Bottom 24
 	if time_elapsed > 1000:
-		if time_elapsed > 88143 && time_elapsed < 88163:
+		if time_elapsed > 87843 && time_elapsed < 87863:
 			flagDown24 = true
 			ArrowBottomInstance24 = ArrowBottom.instance()	#create a new instance
 			ArrowBottomInstance24.position = Vector2(get_viewport().size.x, get_viewport().size.y/3)
@@ -2226,7 +2226,7 @@ func _process(delta):
 
 	#Arrow Bottom 25
 	if time_elapsed > 1000:
-		if time_elapsed > 89327 && time_elapsed < 89347:
+		if time_elapsed > 89027 && time_elapsed < 89047:
 			flagDown25 = true
 			ArrowBottomInstance25 = ArrowBottom.instance()	#create a new instance
 			ArrowBottomInstance25.position = Vector2(get_viewport().size.x, get_viewport().size.y/3)
