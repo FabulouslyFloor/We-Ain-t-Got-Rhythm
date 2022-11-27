@@ -42,6 +42,10 @@ var flagUp37 = true
 var flagUp38 = true
 var flagUp39 = true
 var flagUp40 = true
+var flagUp41 = true
+var flagUp42 = true
+var flagUp43 = true
+var flagUp44 = true
 
 var flagDown1 = true
 var flagDown2 = true
@@ -83,6 +87,9 @@ var flagDown37 = true
 var flagDown38 = true
 var flagDown39 = true
 var flagDown40 = true
+var flagDown41 = true
+var flagDown42 = true
+var flagDown43 = true
 
 var flagMiddle1 = true
 var flagMiddle2 = true
@@ -124,6 +131,9 @@ var flagMiddle37 = true
 var flagMiddle38 = true
 var flagMiddle39 = true
 var flagMiddle40 = true
+var flagMiddle41 = true
+var flagMiddle42 = true
+var flagMiddle43 = true
 
 
 var ArrowTop = preload("res://LevelSpawningCode/ArrowTopScene.tscn")
@@ -169,6 +179,10 @@ var ArrowTopInstance37 = ArrowTop.instance()
 var ArrowTopInstance38 = ArrowTop.instance()
 var ArrowTopInstance39 = ArrowTop.instance()
 var ArrowTopInstance40 = ArrowTop.instance()
+var ArrowTopInstance41 = ArrowTop.instance()
+var ArrowTopInstance42 = ArrowTop.instance()
+var ArrowTopInstance43 = ArrowTop.instance()
+var ArrowTopInstance44 = ArrowTop.instance()
 
 
 var ArrowBottomInstance1 = ArrowBottom.instance()
@@ -211,6 +225,9 @@ var ArrowBottomInstance37 = ArrowBottom.instance()
 var ArrowBottomInstance38 = ArrowBottom.instance()
 var ArrowBottomInstance39 = ArrowBottom.instance()
 var ArrowBottomInstance40 = ArrowBottom.instance()
+var ArrowBottomInstance41 = ArrowBottom.instance()
+var ArrowBottomInstance42 = ArrowBottom.instance()
+var ArrowBottomInstance43 = ArrowBottom.instance()
 
 var ArrowMiddleInstance1  = ArrowMiddle.instance()
 var ArrowMiddleInstance2  = ArrowMiddle.instance()
@@ -3245,13 +3262,237 @@ func _process(delta):
 
 
 
-#144695
-#146128
-#147529
-#148812
-#150112
-#151262
-#152545
+
+
+
+
+
+
 #153746
 #155079
 #156345
+
+
+
+
+#	#ArrowTop 41
+	if time_elapsed > 1000:
+		if time_elapsed > 141375 && time_elapsed < 141395: #|| time_elapsed > 9000 && time_elapsed < 9020:
+			flagUp41 = true
+			ArrowTopInstance41 = ArrowTop.instance()	#create a new instance
+			ArrowTopInstance41.position = Vector2(get_viewport().size.x, get_viewport().size.y*2/3)
+			ArrowTopInstance41.scale = Vector2(0.17,0.17)
+			add_child(ArrowTopInstance41)
+		if flagUp41 == true:	
+			ArrowTopInstance41.translate(Vector2(-100 * delta*1.8,0))
+			if(ArrowTopInstance41.position.x < get_viewport().size.x/3 && ArrowTopInstance41.position.x > get_viewport().size.x/9):
+				if Input.is_key_pressed(KEY_UP):
+					if(ArrowTopInstance41.position.x > get_viewport().size.x/4.2 && ArrowTopInstance41.position.x < get_viewport().size.x/3.8):
+						score += 1
+						print(score)
+						ArrowTopInstance41.free()
+						flagUp41 = false
+					else:
+						ArrowTopInstance41.free()
+						flagUp41 = false
+						pass		
+
+	#Arrow Middle 41
+	if time_elapsed > 0:
+		if time_elapsed > 144695 && time_elapsed < 144715:
+			flagMiddle41 = true
+			ArrowMiddleInstance41 = ArrowMiddle.instance()	#create a new instance
+			ArrowMiddleInstance41.position = Vector2(get_viewport().size.x, get_viewport().size.y/2)
+			ArrowMiddleInstance41.scale = Vector2(0.17,0.17)
+			add_child(ArrowMiddleInstance41)
+		if flagMiddle41 == true:	
+			ArrowMiddleInstance41.translate(Vector2(-100 * delta*1.8,0))
+			if(ArrowMiddleInstance41.position.x < get_viewport().size.x/3 && ArrowMiddleInstance41.position.x > get_viewport().size.x/9):
+				if Input.is_key_pressed(KEY_LEFT):
+					if(ArrowMiddleInstance41.position.x > get_viewport().size.x/4.2 && ArrowMiddleInstance41.position.x < get_viewport().size.x/3.8):
+						score += 1
+						print(score)
+						#ArrowMiddleInstance.hide()
+						ArrowMiddleInstance41.free()
+						flagMiddle41 = false
+					else:
+						#print("LOSER YOU MISSED")	
+						#ArrowMiddleInstance.hide()
+						ArrowMiddleInstance41.free()
+						flagMiddle41 = false
+						pass	
+						
+	#Arrow Middle 42
+	if time_elapsed > 0:
+		if time_elapsed > 146128 && time_elapsed < 146148:
+			flagMiddle42 = true
+			ArrowMiddleInstance42 = ArrowMiddle.instance()	#create a new instance
+			ArrowMiddleInstance42.position = Vector2(get_viewport().size.x, get_viewport().size.y/2)
+			ArrowMiddleInstance42.scale = Vector2(0.17,0.17)
+			add_child(ArrowMiddleInstance42)
+		if flagMiddle42 == true:	
+			ArrowMiddleInstance42.translate(Vector2(-100 * delta*1.8,0))
+			if(ArrowMiddleInstance42.position.x < get_viewport().size.x/3 && ArrowMiddleInstance42.position.x > get_viewport().size.x/9):
+				if Input.is_key_pressed(KEY_LEFT):
+					if(ArrowMiddleInstance42.position.x > get_viewport().size.x/4.2 && ArrowMiddleInstance42.position.x < get_viewport().size.x/3.8):
+						score += 1
+						print(score)
+						#ArrowMiddleInstance.hide()
+						ArrowMiddleInstance42.free()
+						flagMiddle42 = false
+					else:
+						#print("LOSER YOU MISSED")	
+						#ArrowMiddleInstance.hide()
+						ArrowMiddleInstance42.free()
+						flagMiddle42 = false
+						pass	
+
+	#Arrow Bottom 41
+	if time_elapsed > 1000:
+		if time_elapsed > 147529 && time_elapsed < 147549:
+			flagDown41 = true
+			ArrowBottomInstance41 = ArrowBottom.instance()	#create a new instance
+			ArrowBottomInstance41.position = Vector2(get_viewport().size.x, get_viewport().size.y/3)
+			ArrowBottomInstance41.scale = Vector2(0.17,0.17)
+			add_child(ArrowBottomInstance41)
+		if flagDown41 == true:	
+			ArrowBottomInstance41.translate(Vector2(-100 * delta*1.8,0))
+			if(ArrowBottomInstance41.position.x < get_viewport().size.x/3 && ArrowBottomInstance41.position.x > get_viewport().size.x/9):
+				if Input.is_key_pressed(KEY_DOWN):
+					if(ArrowBottomInstance41.position.x > get_viewport().size.x/4.2 && ArrowBottomInstance41.position.x < get_viewport().size.x/3.8):
+						score += 1
+						print(score)
+						ArrowBottomInstance41.free()
+						flagDown41 = false
+					else:
+						ArrowBottomInstance41.free()
+						flagDown41 = false
+						pass	
+						
+						
+	#Arrow Middle 43
+	if time_elapsed > 0:
+		if time_elapsed > 148812 && time_elapsed < 148832:
+			flagMiddle43 = true
+			ArrowMiddleInstance43 = ArrowMiddle.instance()	#create a new instance
+			ArrowMiddleInstance43.position = Vector2(get_viewport().size.x, get_viewport().size.y/2)
+			ArrowMiddleInstance43.scale = Vector2(0.17,0.17)
+			add_child(ArrowMiddleInstance43)
+		if flagMiddle43 == true:	
+			ArrowMiddleInstance43.translate(Vector2(-100 * delta*1.8,0))
+			if(ArrowMiddleInstance43.position.x < get_viewport().size.x/3 && ArrowMiddleInstance43.position.x > get_viewport().size.x/9):
+				if Input.is_key_pressed(KEY_LEFT):
+					if(ArrowMiddleInstance43.position.x > get_viewport().size.x/4.2 && ArrowMiddleInstance43.position.x < get_viewport().size.x/3.8):
+						score += 1
+						print(score)
+						#ArrowMiddleInstance.hide()
+						ArrowMiddleInstance43.free()
+						flagMiddle43 = false
+					else:
+						#print("LOSER YOU MISSED")	
+						#ArrowMiddleInstance.hide()
+						ArrowMiddleInstance43.free()
+						flagMiddle43 = false
+						pass						
+						
+	#Arrow Bottom 42
+	if time_elapsed > 1000:
+		if time_elapsed > 150112 && time_elapsed < 150132:
+			flagDown42 = true
+			ArrowBottomInstance42 = ArrowBottom.instance()	#create a new instance
+			ArrowBottomInstance42.position = Vector2(get_viewport().size.x, get_viewport().size.y/3)
+			ArrowBottomInstance42.scale = Vector2(0.17,0.17)
+			add_child(ArrowBottomInstance42)
+		if flagDown42 == true:	
+			ArrowBottomInstance42.translate(Vector2(-100 * delta*1.8,0))
+			if(ArrowBottomInstance42.position.x < get_viewport().size.x/3 && ArrowBottomInstance42.position.x > get_viewport().size.x/9):
+				if Input.is_key_pressed(KEY_DOWN):
+					if(ArrowBottomInstance42.position.x > get_viewport().size.x/4.2 && ArrowBottomInstance42.position.x < get_viewport().size.x/3.8):
+						score += 1
+						print(score)
+						ArrowBottomInstance42.free()
+						flagDown42 = false
+					else:
+						ArrowBottomInstance42.free()
+						flagDown42 = false
+						pass	
+						
+						
+	#	#ArrowTop 42
+	if time_elapsed > 1000:
+		if time_elapsed > 151262 && time_elapsed < 151282: #|| time_elapsed > 9000 && time_elapsed < 9020:
+			flagUp42 = true
+			ArrowTopInstance42 = ArrowTop.instance()	#create a new instance
+			ArrowTopInstance42.position = Vector2(get_viewport().size.x, get_viewport().size.y*2/3)
+			ArrowTopInstance42.scale = Vector2(0.17,0.17)
+			add_child(ArrowTopInstance42)
+		if flagUp42 == true:	
+			ArrowTopInstance42.translate(Vector2(-100 * delta*1.8,0))
+			if(ArrowTopInstance42.position.x < get_viewport().size.x/3 && ArrowTopInstance42.position.x > get_viewport().size.x/9):
+				if Input.is_key_pressed(KEY_UP):
+					if(ArrowTopInstance42.position.x > get_viewport().size.x/4.2 && ArrowTopInstance42.position.x < get_viewport().size.x/3.8):
+						score += 1
+						print(score)
+						ArrowTopInstance42.free()
+						flagUp42 = false
+					else:
+						ArrowTopInstance42.free()
+						flagUp42 = false
+						pass							
+						
+	#Arrow Bottom 43
+	if time_elapsed > 1000:
+		if time_elapsed > 152545 && time_elapsed < 152565:
+			flagDown43 = true
+			ArrowBottomInstance43 = ArrowBottom.instance()	#create a new instance
+			ArrowBottomInstance43.position = Vector2(get_viewport().size.x, get_viewport().size.y/3)
+			ArrowBottomInstance43.scale = Vector2(0.17,0.17)
+			add_child(ArrowBottomInstance43)
+		if flagDown43 == true:	
+			ArrowBottomInstance43.translate(Vector2(-100 * delta*1.8,0))
+			if(ArrowBottomInstance43.position.x < get_viewport().size.x/3 && ArrowBottomInstance43.position.x > get_viewport().size.x/9):
+				if Input.is_key_pressed(KEY_DOWN):
+					if(ArrowBottomInstance43.position.x > get_viewport().size.x/4.2 && ArrowBottomInstance43.position.x < get_viewport().size.x/3.8):
+						score += 1
+						print(score)
+						ArrowBottomInstance43.free()
+						flagDown43 = false
+					else:
+						ArrowBottomInstance43.free()
+						flagDown43 = false
+						pass	
+
+
+#	#ArrowTop 43
+	if time_elapsed > 1000:
+		if time_elapsed > 152545 && time_elapsed < 152565: #|| time_elapsed > 9000 && time_elapsed < 9020:
+			flagUp43 = true
+			ArrowTopInstance43 = ArrowTop.instance()	#create a new instance
+			ArrowTopInstance43.position = Vector2(get_viewport().size.x, get_viewport().size.y*2/3)
+			ArrowTopInstance43.scale = Vector2(0.17,0.17)
+			add_child(ArrowTopInstance43)
+		if flagUp43 == true:	
+			ArrowTopInstance43.translate(Vector2(-100 * delta*1.8,0))
+			if(ArrowTopInstance43.position.x < get_viewport().size.x/3 && ArrowTopInstance43.position.x > get_viewport().size.x/9):
+				if Input.is_key_pressed(KEY_UP):
+					if(ArrowTopInstance43.position.x > get_viewport().size.x/4.2 && ArrowTopInstance43.position.x < get_viewport().size.x/3.8):
+						score += 1
+						print(score)
+						ArrowTopInstance43.free()
+						flagUp43 = false
+					else:
+						ArrowTopInstance43.free()
+						flagUp43 = false
+						pass		
+
+
+
+
+
+
+
+
+
+
+
+
