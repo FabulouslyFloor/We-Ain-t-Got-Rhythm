@@ -134,6 +134,7 @@ var flagMiddle40 = true
 var flagMiddle41 = true
 var flagMiddle42 = true
 var flagMiddle43 = true
+var flagMiddle44 = true
 
 
 var ArrowTop = preload("res://LevelSpawningCode/ArrowTopScene.tscn")
@@ -2412,26 +2413,26 @@ func _process(delta):
 	#Arrow Middle 30
 	if time_elapsed > 0:
 		if time_elapsed > 98304 && time_elapsed < 98324:
-			flagMiddle30 = true
-			ArrowMiddleInstance30 = ArrowMiddle.instance()	#create a new instance
-			ArrowMiddleInstance30.position = Vector2(get_viewport().size.x, get_viewport().size.y/2)
-			ArrowMiddleInstance30.scale = Vector2(0.17,0.17)
-			add_child(ArrowMiddleInstance30)
-		if flagMiddle30 == true:	
-			ArrowMiddleInstance30.translate(Vector2(-100 * delta*1.9,0))
-			if(ArrowMiddleInstance30.position.x < get_viewport().size.x/3 && ArrowMiddleInstance30.position.x > get_viewport().size.x/9):
+			flagMiddle44 = true
+			ArrowMiddleInstance44 = ArrowMiddle.instance()	#create a new instance
+			ArrowMiddleInstance44.position = Vector2(get_viewport().size.x, get_viewport().size.y/2)
+			ArrowMiddleInstance44.scale = Vector2(0.17,0.17)
+			add_child(ArrowMiddleInstance44)
+		if flagMiddle44 == true:	
+			ArrowMiddleInstance44.translate(Vector2(-100 * delta*1.9,0))
+			if(ArrowMiddleInstance44.position.x < get_viewport().size.x/3 && ArrowMiddleInstance44.position.x > get_viewport().size.x/9):
 				if Input.is_key_pressed(KEY_LEFT):
-					if(ArrowMiddleInstance30.position.x > get_viewport().size.x/4.2 && ArrowMiddleInstance30.position.x < get_viewport().size.x/3.8):
+					if(ArrowMiddleInstance44.position.x > get_viewport().size.x/4.2 && ArrowMiddleInstance44.position.x < get_viewport().size.x/3.8):
 						score += 1
 						print(score)
 						#ArrowMiddleInstance.hide()
-						ArrowMiddleInstance30.free()
-						flagMiddle30 = false
+						ArrowMiddleInstance44.free()
+						flagMiddle44 = false
 					else:
 						#print("LOSER YOU MISSED")	
 						#ArrowMiddleInstance.hide()
-						ArrowMiddleInstance30.free()
-						flagMiddle30 = false
+						ArrowMiddleInstance44.free()
+						flagMiddle44 = false
 						pass								
 
 
