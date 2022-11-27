@@ -304,8 +304,6 @@ func _process(delta):
 #START START START START START START
 
 
-
-
 	#ArrowTop 1
 	if time_elapsed > 1000:
 		if time_elapsed > 1317 && time_elapsed < 1337: #|| time_elapsed > 9000 && time_elapsed < 9020:
