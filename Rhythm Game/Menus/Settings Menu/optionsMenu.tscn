@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=2]
+[gd_scene load_steps=17 format=2]
 
 [ext_resource path="res://Menus/UI Assets/fonts/Handwritten_custom-Regular.otf" type="DynamicFontData" id=1]
 [ext_resource path="res://Menus/UI Assets/fonts/keyboard-button.png" type="Texture" id=2]
@@ -11,6 +11,7 @@
 [ext_resource path="res://Menus/UI Assets/fonts/handwritten-20.tres" type="DynamicFont" id=9]
 [ext_resource path="res://Menus/UI Assets/fonts/handwritten-36.tres" type="DynamicFont" id=10]
 [ext_resource path="res://Menus/Settings Menu/options_Menu.gd" type="Script" id=11]
+[ext_resource path="res://Menus/UI Assets/title-screen-background.png" type="Texture" id=12]
 
 [sub_resource type="DynamicFont" id=2]
 size = 30
@@ -40,6 +41,11 @@ size_flags_horizontal = 3
 size_flags_vertical = 3
 
 [node name="menu-sprite" type="TextureRect" parent="CenterContainer"]
+margin_right = 1920.0
+margin_bottom = 1080.0
+texture = ExtResource( 12 )
+
+[node name="background" type="TextureRect" parent="CenterContainer"]
 margin_right = 1920.0
 margin_bottom = 1080.0
 texture = ExtResource( 5 )

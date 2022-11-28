@@ -1,6 +1,0 @@
-[gd_scene format=2]
-
-[node name="ArrowBottom" type="Node2D"]
-
-[node name="Sprite" type="Sprite" parent="."]
-rotation = -1.5709

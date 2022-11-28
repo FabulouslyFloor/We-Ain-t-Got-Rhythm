@@ -1,7 +1,0 @@
-[gd_scene format=2]
-
-[node name="Node2D" type="Node2D"]
-
-[node name="Timer" type="Timer" parent="."]
-
-[connection signal="timeout" from="Timer" to="Timer" method="_on_Timer_timeout"]
