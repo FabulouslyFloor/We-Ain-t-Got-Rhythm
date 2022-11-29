@@ -46,6 +46,7 @@ var flagUp41 = true
 var flagUp42 = true
 var flagUp43 = true
 var flagUp44 = true
+var flagUp45 = true
 
 var flagDown1 = true
 var flagDown2 = true
@@ -134,6 +135,7 @@ var flagMiddle40 = true
 var flagMiddle41 = true
 var flagMiddle42 = true
 var flagMiddle43 = true
+var flagMiddle44 = true
 
 
 var ArrowTop = preload("res://LevelSpawningCode/ArrowTopScene.tscn")
@@ -183,6 +185,7 @@ var ArrowTopInstance41 = ArrowTop.instance()
 var ArrowTopInstance42 = ArrowTop.instance()
 var ArrowTopInstance43 = ArrowTop.instance()
 var ArrowTopInstance44 = ArrowTop.instance()
+var ArrowTopInstance45 = ArrowTop.instance()
 
 
 var ArrowBottomInstance1 = ArrowBottom.instance()
@@ -2529,29 +2532,29 @@ func _process(delta):
 						flagUp33 = false
 						pass		
 
-	#Arrow Middle 30
+	#Arrow Middle 44
 	if time_elapsed > 0:
 		if time_elapsed > 103378 && time_elapsed < 103398:
-			flagMiddle30 = true
-			ArrowMiddleInstance30 = ArrowMiddle.instance()	#create a new instance
-			ArrowMiddleInstance30.position = Vector2(get_viewport().size.x, get_viewport().size.y/2)
-			ArrowMiddleInstance30.scale = Vector2(0.17,0.17)
-			add_child(ArrowMiddleInstance30)
-		if flagMiddle30 == true:	
-			ArrowMiddleInstance30.translate(Vector2(-100 * delta*1.8,0))
-			if(ArrowMiddleInstance30.position.x < get_viewport().size.x/3 && ArrowMiddleInstance30.position.x > get_viewport().size.x/9):
+			flagMiddle44 = true
+			ArrowMiddleInstance44 = ArrowMiddle.instance()	#create a new instance
+			ArrowMiddleInstance44.position = Vector2(get_viewport().size.x, get_viewport().size.y/2)
+			ArrowMiddleInstance44.scale = Vector2(0.17,0.17)
+			add_child(ArrowMiddleInstance44)
+		if flagMiddle44 == true:	
+			ArrowMiddleInstance44.translate(Vector2(-100 * delta*1.8,0))
+			if(ArrowMiddleInstance44.position.x < get_viewport().size.x/3 && ArrowMiddleInstance44.position.x > get_viewport().size.x/9):
 				if Input.is_key_pressed(KEY_LEFT):
-					if(ArrowMiddleInstance30.position.x > get_viewport().size.x/4.2 && ArrowMiddleInstance30.position.x < get_viewport().size.x/3.8):
+					if(ArrowMiddleInstance44.position.x > get_viewport().size.x/4.2 && ArrowMiddleInstance44.position.x < get_viewport().size.x/3.8):
 						score += 1
 						print(score)
 						#ArrowMiddleInstance.hide()
-						ArrowMiddleInstance30.free()
-						flagMiddle30 = false
+						ArrowMiddleInstance44.free()
+						flagMiddle44 = false
 					else:
 						#print("LOSER YOU MISSED")	
 						#ArrowMiddleInstance.hide()
-						ArrowMiddleInstance30.free()
-						flagMiddle30 = false
+						ArrowMiddleInstance44.free()
+						flagMiddle44 = false
 						pass		
 
 	#Arrow Middle 31
@@ -2751,12 +2754,12 @@ func _process(delta):
 	#Arrow Middle 34
 	if time_elapsed > 0:
 		if time_elapsed > 114879 && time_elapsed < 114899:
-			flagDown34 = true
+			flagMiddle34 = true
 			ArrowMiddleInstance34 = ArrowMiddle.instance()	#create a new instance
 			ArrowMiddleInstance34.position = Vector2(get_viewport().size.x, get_viewport().size.y/2)
 			ArrowMiddleInstance34.scale = Vector2(0.17,0.17)
 			add_child(ArrowMiddleInstance34)
-		if flagDown34 == true:	
+		if flagMiddle34 == true:	
 			ArrowMiddleInstance34.translate(Vector2(-100 * delta*1.8,0))
 			if(ArrowMiddleInstance34.position.x < get_viewport().size.x/3 && ArrowMiddleInstance34.position.x > get_viewport().size.x/9):
 				if Input.is_key_pressed(KEY_LEFT):
@@ -2765,12 +2768,12 @@ func _process(delta):
 						print(score)
 						#ArrowMiddleInstance.hide()
 						ArrowMiddleInstance34.free()
-						flagDown34 = false
+						flagMiddle34 = false
 					else:
 						#print("LOSER YOU MISSED")	
 						#ArrowMiddleInstance.hide()
 						ArrowMiddleInstance34.free()
-						flagDown34 = false
+						flagMiddle34 = false
 						pass											
 #
 #	#ArrowTop 36
@@ -3251,27 +3254,6 @@ func _process(delta):
 						ArrowBottomInstance40.free()
 						flagDown40 = false
 						pass	
-#
-#
-#	if Input.is_key_pressed(KEY_Q):
-#		get_tree().quit()
-#
-
-
-
-
-
-
-
-
-
-
-#153746
-#155079
-#156345
-
-
-
 
 #	#ArrowTop 41
 	if time_elapsed > 1000:
@@ -3485,8 +3467,61 @@ func _process(delta):
 
 
 
-
-
+	if Input.is_key_pressed(KEY_Q):
+		get_tree().quit()
+	
+#	if time_elapsed > 1000:
+#		if score < 0:
+#			stop the game	
+#	if time_elapsed > 10000:		
+#		if score < 6:
+#			stop the game
+#	if time_elapsed > 20000:		
+#		if score < 17:
+#			stop the game
+#	if time_elapsed > 30000:		
+#		if score < 27:
+#			stop the game
+#	if time_elapsed > 40000:		
+#		if score < 36:
+#			stop the game
+#	if time_elapsed > 50000:		
+#		if score < 45:
+#			stop the game
+#	if time_elapsed > 60000:		
+#		if score < 52:
+#			stop the game
+#	if time_elapsed > 70000:		
+#		if score < 59:
+#			stop the game
+#	if time_elapsed > 80000:		
+#		if score < 66:
+#			stop the game
+#	if time_elapsed > 90000:		
+#		if score < 73:
+#			stop the game
+#	if time_elapsed > 100000:		
+#		if score < 78:
+#			stop the game
+#	if time_elapsed > 110000:		
+#		if score < 85:
+#			stop the game
+#	if time_elapsed > 120000:		
+#		if score < 93:
+#			stop the game
+#	if time_elapsed > 130000:		
+#		if score < 101:
+#			stop the game
+#	if time_elapsed > 140000:		
+#		if score < 108:
+#			stop the game
+#	if time_elapsed > 150000:		
+#		if score < 115:
+#			stop the game
+#	if time_elapsed > 160000:		
+#		if score < 121:
+#			stop the game
+					
 
 
 
