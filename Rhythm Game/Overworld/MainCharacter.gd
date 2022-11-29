@@ -63,5 +63,6 @@ func _process(delta):
 		animated_sprite.play("idle")
 	
 
+
 func _on_Area2D_body_entered(body):
-	pass # Replace with function body.
+	get_tree().change_scene("res://LevelSpawningCode/MainScene.tscn")
