@@ -2424,16 +2424,16 @@ func _process(delta):
 			ArrowMiddleInstance30.translate(Vector2(-100 * delta*1.8,0))
 			if(ArrowMiddleInstance30.position.x < get_viewport().size.x/3 && ArrowMiddleInstance30.position.x > get_viewport().size.x/9):
 				if Input.is_key_pressed(KEY_LEFT):
-					if(ArrowMiddleInstance44.position.x > get_viewport().size.x/4.2 && ArrowMiddleInstance44.position.x < get_viewport().size.x/3.8):
+					if(ArrowMiddleInstance30.position.x > get_viewport().size.x/4.2 && ArrowMiddleInstance30.position.x < get_viewport().size.x/3.8):
 						score += 1
 						print(score)
 						#ArrowMiddleInstance.hide()
-						ArrowMiddleInstance44.free()
+						ArrowMiddleInstance30.free()
 						flagMiddle44 = false
 					else:
 						#print("LOSER YOU MISSED")	
 						#ArrowMiddleInstance.hide()
-						ArrowMiddleInstance44.free()
+						ArrowMiddleInstance30.free()
 						flagMiddle44 = false
 						pass								
 
