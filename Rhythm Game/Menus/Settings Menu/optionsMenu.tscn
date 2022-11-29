@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=2]
+[gd_scene load_steps=17 format=2]
 
 [ext_resource path="res://Menus/UI Assets/fonts/Handwritten_custom-Regular.otf" type="DynamicFontData" id=1]
 [ext_resource path="res://Menus/UI Assets/fonts/keyboard-button.png" type="Texture" id=2]
@@ -11,6 +11,7 @@
 [ext_resource path="res://Menus/UI Assets/fonts/handwritten-20.tres" type="DynamicFont" id=9]
 [ext_resource path="res://Menus/UI Assets/fonts/handwritten-36.tres" type="DynamicFont" id=10]
 [ext_resource path="res://Menus/Settings Menu/options_Menu.gd" type="Script" id=11]
+[ext_resource path="res://Menus/UI Assets/title-screen-background.png" type="Texture" id=12]
 
 [sub_resource type="DynamicFont" id=2]
 size = 30
@@ -38,6 +39,11 @@ margin_bottom = 1080.0
 rect_scale = Vector2( 0.532518, 0.557381 )
 size_flags_horizontal = 3
 size_flags_vertical = 3
+
+[node name="background" type="TextureRect" parent="CenterContainer"]
+margin_right = 1920.0
+margin_bottom = 1080.0
+texture = ExtResource( 12 )
 
 [node name="menu-sprite" type="TextureRect" parent="CenterContainer"]
 margin_right = 1920.0
@@ -482,8 +488,8 @@ text = "Back"
 flat = true
 
 [connection signal="value_changed" from="Auditory/master-volume" to="." method="_on_mastervolume_value_changed"]
-[connection signal="value_changed" from="Auditory/background-volume" to="." method="_on_backgroundvolume_value_changed"]
 [connection signal="value_changed" from="Auditory/background-volume" to="." method="_on_musicvolume_value_changed"]
+[connection signal="value_changed" from="Auditory/background-volume" to="." method="_on_backgroundvolume_value_changed"]
 [connection signal="value_changed" from="Auditory/sound-effect" to="." method="_on_soundeffect_value_changed"]
 [connection signal="value_changed" from="Auditory/music-volume" to="." method="_on_musicvolume_value_changed"]
 [connection signal="pressed" from="backButton" to="." method="_on_backButton_pressed"]
