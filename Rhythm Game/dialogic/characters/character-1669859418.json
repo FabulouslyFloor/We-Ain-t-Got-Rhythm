@@ -1,0 +1,21 @@
+{
+	"color": "#ff17c47f",
+	"description": "",
+	"display_name": "",
+	"display_name_bool": false,
+	"id": "character-1669859418.json",
+	"mirror_portraits": false,
+	"name": "ShowtownSnake",
+	"nickname": "",
+	"nickname_bool": false,
+	"offset_x": 0,
+	"offset_y": 0,
+	"portraits": [
+		{
+			"name": "Default",
+			"path": "res://Sprites/showtune-resident.png"
+		}
+	],
+	"scale": 100,
+	"theme": ""
+}

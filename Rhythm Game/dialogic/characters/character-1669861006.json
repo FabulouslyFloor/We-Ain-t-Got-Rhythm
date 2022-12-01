@@ -1,0 +1,21 @@
+{
+	"color": "#ffaa6e27",
+	"description": "",
+	"display_name": "",
+	"display_name_bool": false,
+	"id": "character-1669861006.json",
+	"mirror_portraits": false,
+	"name": "LilMan",
+	"nickname": "",
+	"nickname_bool": false,
+	"offset_x": 0,
+	"offset_y": 0,
+	"portraits": [
+		{
+			"name": "Default",
+			"path": "res://Sprites/mc-idle-frame1.png"
+		}
+	],
+	"scale": 100,
+	"theme": ""
+}

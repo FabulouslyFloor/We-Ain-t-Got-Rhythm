@@ -1,5 +1,8 @@
 extends Sprite
 
+var npc = "Pondman"
+var index = 0
+
 # Declare member variables here. Examples:
 # var a = 2
 # var b = "text"
@@ -16,11 +19,12 @@ func _ready():
 
 
 func _on_Area2D_body_entered(body):
-	get_node("SpeechBubble").show()
-	
+	var dialog = Dialogic.start("PondmanInteraction")
+	add_child(dialog)
+
 	
 
 
 func _on_Area2D_body_exited(body):
-	get_node("SpeechBubble").hide()
+	pass
 	
