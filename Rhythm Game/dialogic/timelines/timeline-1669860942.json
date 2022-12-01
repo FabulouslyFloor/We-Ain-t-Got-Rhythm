@@ -1,0 +1,89 @@
+{
+	"events": [
+		{
+			"animation": "[Default]",
+			"animation_length": 0,
+			"change_mirror_portrait": false,
+			"change_z_index": false,
+			"character": "character-1669859418.json",
+			"event_id": "dialogic_002",
+			"mirror_portrait": false,
+			"portrait": "Default",
+			"portrait_definition": "",
+			"position": {
+				"0": false,
+				"1": false,
+				"2": false,
+				"3": false,
+				"4": true
+			},
+			"type": 0,
+			"z_index": 0
+		},
+		{
+			"animation": "[Default]",
+			"animation_length": 0,
+			"change_mirror_portrait": false,
+			"change_z_index": false,
+			"character": "character-1669861006.json",
+			"event_id": "dialogic_002",
+			"mirror_portrait": false,
+			"portrait": "Default",
+			"portrait_definition": "",
+			"position": {
+				"0": true,
+				"1": false,
+				"2": false,
+				"3": false,
+				"4": false
+			},
+			"type": 0,
+			"z_index": 0
+		},
+		{
+			"character": "character-1669859418.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Who are you?"
+		},
+		{
+			"character": "character-1669861006.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "I'm Lil'Man, I need to speak to someone about all the soldiers running around."
+		},
+		{
+			"character": "character-1669859418.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Nope! No non-citizens shall enter the kingdom. Queens orders!"
+		},
+		{
+			"character": "character-1669861006.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "I just want to know what's going on, an army destroyed my farm."
+		},
+		{
+			"character": "character-1669859418.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "If you don't leave me be I will have to make you leave."
+		},
+		{
+			"character": "character-1669861006.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "I'm not leaving."
+		},
+		{
+			"change_scene": "res://LevelSpawningCode/MainScene.tscn",
+			"event_id": "dialogic_041"
+		}
+	],
+	"metadata": {
+		"dialogic-version": "1.4.5",
+		"file": "timeline-1669860942.json",
+		"name": "ShowtownInteraction"
+	}
+}
