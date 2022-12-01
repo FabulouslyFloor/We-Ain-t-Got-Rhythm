@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://LevelSpawningCode/MainScene.gd" type="Script" id=1]
 [ext_resource path="res://LevelSpawningCode/Node2D.gd" type="Script" id=2]
+[ext_resource path="res://Menus/UI Assets/fonts/handwritten-setting-60.tres" type="DynamicFont" id=3]
 [ext_resource path="res://LevelSpawningCode/left.png" type="Texture" id=6]
 
 [node name="Node2D" type="Node2D"]
@@ -27,3 +28,17 @@ texture = ExtResource( 6 )
 
 [node name="Spawner" type="Node2D" parent="."]
 script = ExtResource( 2 )
+
+[node name="scoreLabel" type="Label" parent="Spawner"]
+anchor_top = 1.0
+anchor_bottom = 1.0
+margin_left = 391.0
+margin_top = 49.0
+margin_right = 670.0
+margin_bottom = 100.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_fonts/font = ExtResource( 3 )
+text = "0"
+align = 1
+valign = 2

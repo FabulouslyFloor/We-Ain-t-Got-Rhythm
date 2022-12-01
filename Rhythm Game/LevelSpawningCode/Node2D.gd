@@ -1,5 +1,4 @@
 extends Node2D
-
 var time_start = 0
 var score = 0
 var flagUp1 = true
@@ -290,6 +289,7 @@ func _ready():
 	
 
 func _process(delta):
+	var scoreLabel = get_node("scoreLabel")
 	var time_now = OS.get_ticks_msec()
 	var time_elapsed = time_now - time_start
 	#print(time_elapsed)
@@ -320,8 +320,8 @@ func _process(delta):
 			if(ArrowTopInstance1.position.x < get_viewport().size.x/3 && ArrowTopInstance1.position.x > get_viewport().size.x/9):
 				if Input.is_key_pressed(KEY_UP):
 					if(ArrowTopInstance1.position.x > get_viewport().size.x/4.2 && ArrowTopInstance1.position.x < get_viewport().size.x/3.8):
-						score += 1
-						print(score)
+						score += 15
+						scoreLabel.text = str(score)
 						ArrowTopInstance1.free()
 						flagUp1 = false
 					else:
@@ -343,8 +343,8 @@ func _process(delta):
 			if(ArrowBottomInstance1.position.x < get_viewport().size.x/3 && ArrowBottomInstance1.position.x > get_viewport().size.x/9):
 				if Input.is_key_pressed(KEY_DOWN):
 					if(ArrowBottomInstance1.position.x > get_viewport().size.x/4.2 && ArrowBottomInstance1.position.x < get_viewport().size.x/3.8):
-						score += 1
-						print(score)
+						score += 15
+						scoreLabel.text = str(score)
 						#ArrowMiddleInstance.hide()
 						ArrowBottomInstance1.free()
 						flagDown1 = false
@@ -369,8 +369,8 @@ func _process(delta):
 			if(ArrowTopInstance2.position.x < get_viewport().size.x/3 && ArrowTopInstance2.position.x > get_viewport().size.x/9):
 				if Input.is_key_pressed(KEY_UP):
 					if(ArrowTopInstance2.position.x > get_viewport().size.x/4.2 && ArrowTopInstance2.position.x < get_viewport().size.x/3.8):
-						score += 1
-						print(score)
+						score += 15
+						scoreLabel.text = str(score)
 						ArrowTopInstance2.free()
 						flagUp2 = false
 					else:
@@ -391,8 +391,8 @@ func _process(delta):
 			if(ArrowMiddleInstance1.position.x < get_viewport().size.x/3 && ArrowMiddleInstance1.position.x > get_viewport().size.x/9):
 				if Input.is_key_pressed(KEY_LEFT):
 					if(ArrowMiddleInstance1.position.x > get_viewport().size.x/4.2 && ArrowMiddleInstance1.position.x < get_viewport().size.x/3.8):
-						score += 1
-						print(score)
+						score += 15
+						scoreLabel.text = str(score)
 						#ArrowMiddleInstance.hide()
 						ArrowMiddleInstance1.free()
 						flagMiddle1 = false
@@ -416,8 +416,8 @@ func _process(delta):
 			if(ArrowBottomInstance2.position.x < get_viewport().size.x/3 && ArrowBottomInstance2.position.x > get_viewport().size.x/9):
 				if Input.is_key_pressed(KEY_DOWN):
 					if(ArrowBottomInstance2.position.x > get_viewport().size.x/4.2 && ArrowBottomInstance2.position.x < get_viewport().size.x/3.8):
-						score += 1
-						print(score)
+						score += 15
+						scoreLabel.text = str(score)
 						#ArrowMiddleInstance.hide()
 						ArrowBottomInstance2.free()
 						flagDown2 = false
@@ -442,8 +442,8 @@ func _process(delta):
 			if(ArrowMiddleInstance2.position.x < get_viewport().size.x/3 && ArrowMiddleInstance2.position.x > get_viewport().size.x/9):
 				if Input.is_key_pressed(KEY_LEFT):
 					if(ArrowMiddleInstance2.position.x > get_viewport().size.x/4.2 && ArrowMiddleInstance2.position.x < get_viewport().size.x/3.8):
-						score += 1
-						print(score)
+						score += 15
+						scoreLabel.text = str(score)
 						#ArrowMiddleInstance.hide()
 						ArrowMiddleInstance2.free()
 						flagMiddle2 = false
@@ -469,8 +469,8 @@ func _process(delta):
 			if(ArrowBottomInstance3.position.x < get_viewport().size.x/3 && ArrowBottomInstance3.position.x > get_viewport().size.x/9):
 				if Input.is_key_pressed(KEY_DOWN):
 					if(ArrowBottomInstance3.position.x > get_viewport().size.x/4.2 && ArrowBottomInstance3.position.x < get_viewport().size.x/3.8):
-						score += 1
-						print(score)
+						score += 15
+						scoreLabel.text = str(score)
 						#ArrowMiddleInstance.hide()
 						ArrowBottomInstance3.free()
 						flagDown3 = false
@@ -495,8 +495,8 @@ func _process(delta):
 			if(ArrowTopInstance3.position.x < get_viewport().size.x/3 && ArrowTopInstance3.position.x > get_viewport().size.x/9):
 				if Input.is_key_pressed(KEY_UP):
 					if(ArrowTopInstance3.position.x > get_viewport().size.x/4.2 && ArrowTopInstance3.position.x < get_viewport().size.x/3.8):
-						score += 1
-						print(score)
+						score += 15
+						scoreLabel.text = str(score)
 						ArrowTopInstance3.free()
 						flagUp3 = false
 					else:
@@ -517,8 +517,8 @@ func _process(delta):
 			if(ArrowTopInstance4.position.x < get_viewport().size.x/3 && ArrowTopInstance4.position.x > get_viewport().size.x/9):
 				if Input.is_key_pressed(KEY_UP):
 					if(ArrowTopInstance4.position.x > get_viewport().size.x/4.2 && ArrowTopInstance4.position.x < get_viewport().size.x/3.8):
-						score += 1
-						print(score)
+						score += 15
+						scoreLabel.text = str(score)
 						ArrowTopInstance4.free()
 						flagUp4 = false
 					else:
@@ -539,8 +539,8 @@ func _process(delta):
 			if(ArrowMiddleInstance3.position.x < get_viewport().size.x/3 && ArrowMiddleInstance3.position.x > get_viewport().size.x/9):
 				if Input.is_key_pressed(KEY_LEFT):
 					if(ArrowMiddleInstance3.position.x > get_viewport().size.x/4.2 && ArrowMiddleInstance3.position.x < get_viewport().size.x/3.8):
-						score += 1
-						print(score)
+						score += 15
+						scoreLabel.text = str(score)
 						#ArrowMiddleInstance.hide()
 						ArrowMiddleInstance3.free()
 						flagMiddle3 = false
@@ -565,8 +565,8 @@ func _process(delta):
 			if(ArrowTopInstance5.position.x < get_viewport().size.x/3 && ArrowTopInstance5.position.x > get_viewport().size.x/9):
 				if Input.is_key_pressed(KEY_UP):
 					if(ArrowTopInstance5.position.x > get_viewport().size.x/4.2 && ArrowTopInstance5.position.x < get_viewport().size.x/3.8):
-						score += 1
-						print(score)
+						score += 15
+						scoreLabel.text = str(score)
 						ArrowTopInstance5.free()
 						flagUp5 = false
 					else:
@@ -588,8 +588,8 @@ func _process(delta):
 			if(ArrowBottomInstance4.position.x < get_viewport().size.x/3 && ArrowBottomInstance4.position.x > get_viewport().size.x/9):
 				if Input.is_key_pressed(KEY_DOWN):
 					if(ArrowBottomInstance4.position.x > get_viewport().size.x/4.2 && ArrowBottomInstance4.position.x < get_viewport().size.x/3.8):
-						score += 1
-						print(score)
+						score += 15
+						scoreLabel.text = str(score)
 						#ArrowMiddleInstance.hide()
 						ArrowBottomInstance4.free()
 						flagDown4 = false
@@ -614,8 +614,8 @@ func _process(delta):
 			if(ArrowTopInstance6.position.x < get_viewport().size.x/3 && ArrowTopInstance6.position.x > get_viewport().size.x/9):
 				if Input.is_key_pressed(KEY_UP):
 					if(ArrowTopInstance6.position.x > get_viewport().size.x/4.2 && ArrowTopInstance6.position.x < get_viewport().size.x/3.8):
-						score += 1
-						print(score)
+						score += 15
+						scoreLabel.text = str(score)
 						ArrowTopInstance6.free()
 						flagUp6 = false
 					else:
@@ -636,8 +636,8 @@ func _process(delta):
 			if(ArrowBottomInstance5.position.x < get_viewport().size.x/3 && ArrowBottomInstance5.position.x > get_viewport().size.x/9):
 				if Input.is_key_pressed(KEY_DOWN):
 					if(ArrowBottomInstance5.position.x > get_viewport().size.x/4.2 && ArrowBottomInstance5.position.x < get_viewport().size.x/3.8):
-						score += 1
-						print(score)
+						score += 15
+						scoreLabel.text = str(score)
 						#ArrowMiddleInstance.hide()
 						ArrowBottomInstance5.free()
 						flagDown5 = false
@@ -661,8 +661,8 @@ func _process(delta):
 			if(ArrowTopInstance7.position.x < get_viewport().size.x/3 && ArrowTopInstance7.position.x > get_viewport().size.x/9):
 				if Input.is_key_pressed(KEY_UP):
 					if(ArrowTopInstance7.position.x > get_viewport().size.x/4.2 && ArrowTopInstance7.position.x < get_viewport().size.x/3.8):
-						score += 1
-						print(score)
+						score += 15
+						scoreLabel.text = str(score)
 						ArrowTopInstance7.free()
 						flagUp7 = false
 					else:
@@ -684,8 +684,8 @@ func _process(delta):
 			if(ArrowMiddleInstance4.position.x < get_viewport().size.x/3 && ArrowMiddleInstance4.position.x > get_viewport().size.x/9):
 				if Input.is_key_pressed(KEY_LEFT):
 					if(ArrowMiddleInstance4.position.x > get_viewport().size.x/4.2 && ArrowMiddleInstance4.position.x < get_viewport().size.x/3.8):
-						score += 1
-						print(score)
+						score += 15
+						scoreLabel.text = str(score)
 						#ArrowMiddleInstance.hide()
 						ArrowMiddleInstance4.free()
 						flagMiddle4 = false
@@ -709,8 +709,8 @@ func _process(delta):
 			if(ArrowBottomInstance6.position.x < get_viewport().size.x/3 && ArrowBottomInstance6.position.x > get_viewport().size.x/9):
 				if Input.is_key_pressed(KEY_DOWN):
 					if(ArrowBottomInstance6.position.x > get_viewport().size.x/4.2 && ArrowBottomInstance6.position.x < get_viewport().size.x/3.8):
-						score += 1
-						print(score)
+						score += 15
+						scoreLabel.text = str(score)
 						#ArrowMiddleInstance.hide()
 						ArrowBottomInstance6.free()
 						flagDown6 = false
@@ -734,8 +734,8 @@ func _process(delta):
 			if(ArrowTopInstance8.position.x < get_viewport().size.x/3 && ArrowTopInstance8.position.x > get_viewport().size.x/9):
 				if Input.is_key_pressed(KEY_UP):
 					if(ArrowTopInstance8.position.x > get_viewport().size.x/4.2 && ArrowTopInstance8.position.x < get_viewport().size.x/3.8):
-						score += 1
-						print(score)
+						score += 15
+						scoreLabel.text = str(score)
 						ArrowTopInstance8.free()
 						flagUp8 = false
 					else:
@@ -755,8 +755,8 @@ func _process(delta):
 			if(ArrowTopInstance9.position.x < get_viewport().size.x/3 && ArrowTopInstance9.position.x > get_viewport().size.x/9):
 				if Input.is_key_pressed(KEY_UP):
 					if(ArrowTopInstance9.position.x > get_viewport().size.x/4.2 && ArrowTopInstance9.position.x < get_viewport().size.x/3.8):
-						score += 1
-						print(score)
+						score += 15
+						scoreLabel.text = str(score)
 						ArrowTopInstance9.free()
 						flagUp9 = false
 					else:
@@ -778,8 +778,8 @@ func _process(delta):
 			if(ArrowMiddleInstance5.position.x < get_viewport().size.x/3 && ArrowMiddleInstance5.position.x > get_viewport().size.x/9):
 				if Input.is_key_pressed(KEY_LEFT):
 					if(ArrowMiddleInstance5.position.x > get_viewport().size.x/4.2 && ArrowMiddleInstance5.position.x < get_viewport().size.x/3.8):
-						score += 1
-						print(score)
+						score += 15
+						scoreLabel.text = str(score)
 						#ArrowMiddleInstance.hide()
 						ArrowMiddleInstance5.free()
 						flagMiddle5 = false
@@ -803,8 +803,8 @@ func _process(delta):
 			if(ArrowBottomInstance7.position.x < get_viewport().size.x/3 && ArrowBottomInstance7.position.x > get_viewport().size.x/9):
 				if Input.is_key_pressed(KEY_DOWN):
 					if(ArrowBottomInstance7.position.x > get_viewport().size.x/4.2 && ArrowBottomInstance7.position.x < get_viewport().size.x/3.8):
-						score += 1
-						print(score)
+						score += 15
+						scoreLabel.text = str(score)
 						#ArrowMiddleInstance.hide()
 						ArrowBottomInstance7.free()
 						flagDown7 = false
@@ -828,8 +828,8 @@ func _process(delta):
 			if(ArrowMiddleInstance6.position.x < get_viewport().size.x/3 && ArrowMiddleInstance6.position.x > get_viewport().size.x/9):
 				if Input.is_key_pressed(KEY_LEFT):
 					if(ArrowMiddleInstance6.position.x > get_viewport().size.x/4.2 && ArrowMiddleInstance6.position.x < get_viewport().size.x/3.8):
-						score += 1
-						print(score)
+						score += 15
+						scoreLabel.text = str(score)
 						#ArrowMiddleInstance.hide()
 						ArrowMiddleInstance6.free()
 						flagMiddle6 = false
@@ -853,8 +853,8 @@ func _process(delta):
 			if(ArrowTopInstance10.position.x < get_viewport().size.x/3 && ArrowTopInstance10.position.x > get_viewport().size.x/9):
 				if Input.is_key_pressed(KEY_UP):
 					if(ArrowTopInstance10.position.x > get_viewport().size.x/4.2 && ArrowTopInstance10.position.x < get_viewport().size.x/3.8):
-						score += 1
-						print(score)
+						score += 15
+						scoreLabel.text = str(score)
 						ArrowTopInstance10.free()
 						flagUp10 = false
 					else:
@@ -875,8 +875,8 @@ func _process(delta):
 			if(ArrowMiddleInstance7.position.x < get_viewport().size.x/3 && ArrowMiddleInstance7.position.x > get_viewport().size.x/9):
 				if Input.is_key_pressed(KEY_LEFT):
 					if(ArrowMiddleInstance7.position.x > get_viewport().size.x/4.2 && ArrowMiddleInstance7.position.x < get_viewport().size.x/3.8):
-						score += 1
-						print(score)
+						score += 15
+						scoreLabel.text = str(score)
 						#ArrowMiddleInstance.hide()
 						ArrowMiddleInstance7.free()
 						flagMiddle7 = false
@@ -901,8 +901,8 @@ func _process(delta):
 			if(ArrowMiddleInstance8.position.x < get_viewport().size.x/3 && ArrowMiddleInstance8.position.x > get_viewport().size.x/9):
 				if Input.is_key_pressed(KEY_LEFT):
 					if(ArrowMiddleInstance8.position.x > get_viewport().size.x/4.2 && ArrowMiddleInstance8.position.x < get_viewport().size.x/3.8):
-						score += 1
-						print(score)
+						score += 15
+						scoreLabel.text = str(score)
 						#ArrowMiddleInstance.hide()
 						ArrowMiddleInstance8.free()
 						flagMiddle8 = false
@@ -926,8 +926,8 @@ func _process(delta):
 			if(ArrowBottomInstance8.position.x < get_viewport().size.x/3 && ArrowBottomInstance8.position.x > get_viewport().size.x/9):
 				if Input.is_key_pressed(KEY_DOWN):
 					if(ArrowBottomInstance8.position.x > get_viewport().size.x/4.2 && ArrowBottomInstance8.position.x < get_viewport().size.x/3.8):
-						score += 1
-						print(score)
+						score += 15
+						scoreLabel.text = str(score)
 						#ArrowMiddleInstance.hide()
 						ArrowBottomInstance8.free()
 						flagDown8 = false
@@ -951,8 +951,8 @@ func _process(delta):
 			if(ArrowTopInstance11.position.x < get_viewport().size.x/3 && ArrowTopInstance11.position.x > get_viewport().size.x/9):
 				if Input.is_key_pressed(KEY_UP):
 					if(ArrowTopInstance11.position.x > get_viewport().size.x/4.2 && ArrowTopInstance11.position.x < get_viewport().size.x/3.8):
-						score += 1
-						print(score)
+						score += 15
+						scoreLabel.text = str(score)
 						ArrowTopInstance11.free()
 						flagUp11 = false
 					else:
@@ -973,8 +973,8 @@ func _process(delta):
 			if(ArrowMiddleInstance9.position.x < get_viewport().size.x/3 && ArrowMiddleInstance9.position.x > get_viewport().size.x/9):
 				if Input.is_key_pressed(KEY_LEFT):
 					if(ArrowMiddleInstance9.position.x > get_viewport().size.x/4.2 && ArrowMiddleInstance9.position.x < get_viewport().size.x/3.8):
-						score += 1
-						print(score)
+						score += 15
+						scoreLabel.text = str(score)
 						#ArrowMiddleInstance.hide()
 						ArrowMiddleInstance9.free()
 						flagMiddle9 = false
@@ -998,8 +998,8 @@ func _process(delta):
 			if(ArrowMiddleInstance10.position.x < get_viewport().size.x/3 && ArrowMiddleInstance10.position.x > get_viewport().size.x/9):
 				if Input.is_key_pressed(KEY_LEFT):
 					if(ArrowMiddleInstance10.position.x > get_viewport().size.x/4.2 && ArrowMiddleInstance10.position.x < get_viewport().size.x/3.8):
-						score += 1
-						print(score)
+						score += 15
+						scoreLabel.text = str(score)
 						#ArrowMiddleInstance.hide()
 						ArrowMiddleInstance10.free()
 						flagMiddle10 = false
@@ -1023,8 +1023,8 @@ func _process(delta):
 			if(ArrowBottomInstance9.position.x < get_viewport().size.x/3 && ArrowBottomInstance9.position.x > get_viewport().size.x/9):
 				if Input.is_key_pressed(KEY_DOWN):
 					if(ArrowBottomInstance9.position.x > get_viewport().size.x/4.2 && ArrowBottomInstance9.position.x < get_viewport().size.x/3.8):
-						score += 1
-						print(score)
+						score += 15
+						scoreLabel.text = str(score)
 						#ArrowMiddleInstance.hide()
 						ArrowBottomInstance9.free()
 						flagDown9 = false
@@ -1048,8 +1048,8 @@ func _process(delta):
 			if(ArrowMiddleInstance11.position.x < get_viewport().size.x/3 && ArrowMiddleInstance11.position.x > get_viewport().size.x/9):
 				if Input.is_key_pressed(KEY_LEFT):
 					if(ArrowMiddleInstance11.position.x > get_viewport().size.x/4.2 && ArrowMiddleInstance11.position.x < get_viewport().size.x/3.8):
-						score += 1
-						print(score)
+						score += 15
+						scoreLabel.text = str(score)
 						#ArrowMiddleInstance.hide()
 						ArrowMiddleInstance11.free()
 						flagMiddle11 = false
@@ -1073,8 +1073,8 @@ func _process(delta):
 			if(ArrowBottomInstance10.position.x < get_viewport().size.x/3 && ArrowBottomInstance10.position.x > get_viewport().size.x/9):
 				if Input.is_key_pressed(KEY_DOWN):
 					if(ArrowBottomInstance10.position.x > get_viewport().size.x/4.2 && ArrowBottomInstance10.position.x < get_viewport().size.x/3.8):
-						score += 1
-						print(score)
+						score += 15
+						scoreLabel.text = str(score)
 						#ArrowMiddleInstance.hide()
 						ArrowBottomInstance10.free()
 						flagDown10 = false
@@ -1098,8 +1098,8 @@ func _process(delta):
 			if(ArrowMiddleInstance12.position.x < get_viewport().size.x/3 && ArrowMiddleInstance12.position.x > get_viewport().size.x/9):
 				if Input.is_key_pressed(KEY_LEFT):
 					if(ArrowMiddleInstance12.position.x > get_viewport().size.x/4.2 && ArrowMiddleInstance12.position.x < get_viewport().size.x/3.8):
-						score += 1
-						print(score)
+						score += 15
+						scoreLabel.text = str(score)
 						#ArrowMiddleInstance.hide()
 						ArrowMiddleInstance12.free()
 						flagMiddle12 = false
@@ -1123,8 +1123,8 @@ func _process(delta):
 			if(ArrowTopInstance12.position.x < get_viewport().size.x/3 && ArrowTopInstance12.position.x > get_viewport().size.x/9):
 				if Input.is_key_pressed(KEY_UP):
 					if(ArrowTopInstance12.position.x > get_viewport().size.x/4.2 && ArrowTopInstance12.position.x < get_viewport().size.x/3.8):
-						score += 1
-						print(score)
+						score += 15
+						scoreLabel.text = str(score)
 						ArrowTopInstance12.free()
 						flagUp12 = false
 					else:
@@ -1146,8 +1146,8 @@ func _process(delta):
 			if(ArrowBottomInstance11.position.x < get_viewport().size.x/3 && ArrowBottomInstance11.position.x > get_viewport().size.x/9):
 				if Input.is_key_pressed(KEY_DOWN):
 					if(ArrowBottomInstance11.position.x > get_viewport().size.x/4.2 && ArrowBottomInstance11.position.x < get_viewport().size.x/3.8):
-						score += 1
-						print(score)
+						score += 15
+						scoreLabel.text = str(score)
 						#ArrowMiddleInstance.hide()
 						ArrowBottomInstance11.free()
 						flagDown11 = false
@@ -1171,8 +1171,8 @@ func _process(delta):
 			if(ArrowMiddleInstance13.position.x < get_viewport().size.x/3 && ArrowMiddleInstance13.position.x > get_viewport().size.x/9):
 				if Input.is_key_pressed(KEY_LEFT):
 					if(ArrowMiddleInstance13.position.x > get_viewport().size.x/4.2 && ArrowMiddleInstance13.position.x < get_viewport().size.x/3.8):
-						score += 1
-						print(score)
+						score += 15
+						scoreLabel.text = str(score)
 						#ArrowMiddleInstance.hide()
 						ArrowMiddleInstance13.free()
 						flagMiddle13 = false
@@ -1196,8 +1196,8 @@ func _process(delta):
 			if(ArrowTopInstance13.position.x < get_viewport().size.x/3 && ArrowTopInstance13.position.x > get_viewport().size.x/9):
 				if Input.is_key_pressed(KEY_UP):
 					if(ArrowTopInstance13.position.x > get_viewport().size.x/4.2 && ArrowTopInstance13.position.x < get_viewport().size.x/3.8):
-						score += 1
-						print(score)
+						score += 15
+						scoreLabel.text = str(score)
 						ArrowTopInstance13.free()
 						flagUp13 = false
 					else:
@@ -1219,8 +1219,8 @@ func _process(delta):
 			if(ArrowBottomInstance12.position.x < get_viewport().size.x/3 && ArrowBottomInstance12.position.x > get_viewport().size.x/9):
 				if Input.is_key_pressed(KEY_DOWN):
 					if(ArrowBottomInstance12.position.x > get_viewport().size.x/4.2 && ArrowBottomInstance12.position.x < get_viewport().size.x/3.8):
-						score += 1
-						print(score)
+						score += 15
+						scoreLabel.text = str(score)
 						#ArrowMiddleInstance.hide()
 						ArrowBottomInstance12.free()
 						flagDown12 = false
@@ -1244,8 +1244,8 @@ func _process(delta):
 			if(ArrowTopInstance14.position.x < get_viewport().size.x/3 && ArrowTopInstance14.position.x > get_viewport().size.x/9):
 				if Input.is_key_pressed(KEY_UP):
 					if(ArrowTopInstance14.position.x > get_viewport().size.x/4.2 && ArrowTopInstance14.position.x < get_viewport().size.x/3.8):
-						score += 1
-						print(score)
+						score += 15
+						scoreLabel.text = str(score)
 						ArrowTopInstance14.free()
 						flagUp14 = false
 					else:
@@ -1266,8 +1266,8 @@ func _process(delta):
 			if(ArrowTopInstance15.position.x < get_viewport().size.x/3 && ArrowTopInstance15.position.x > get_viewport().size.x/9):
 				if Input.is_key_pressed(KEY_UP):
 					if(ArrowTopInstance15.position.x > get_viewport().size.x/4.2 && ArrowTopInstance15.position.x < get_viewport().size.x/3.8):
-						score += 1
-						print(score)
+						score += 15
+						scoreLabel.text = str(score)
 						ArrowTopInstance15.free()
 						flagUp15 = false
 					else:
@@ -1288,8 +1288,8 @@ func _process(delta):
 			if(ArrowMiddleInstance14.position.x < get_viewport().size.x/3 && ArrowMiddleInstance14.position.x > get_viewport().size.x/9):
 				if Input.is_key_pressed(KEY_LEFT):
 					if(ArrowMiddleInstance14.position.x > get_viewport().size.x/4.2 && ArrowMiddleInstance14.position.x < get_viewport().size.x/3.8):
-						score += 1
-						print(score)
+						score += 15
+						scoreLabel.text = str(score)
 						#ArrowMiddleInstance.hide()
 						ArrowMiddleInstance14.free()
 						flagMiddle14 = false
@@ -1313,8 +1313,8 @@ func _process(delta):
 			if(ArrowTopInstance16.position.x < get_viewport().size.x/3 && ArrowTopInstance16.position.x > get_viewport().size.x/9):
 				if Input.is_key_pressed(KEY_UP):
 					if(ArrowTopInstance16.position.x > get_viewport().size.x/4.2 && ArrowTopInstance16.position.x < get_viewport().size.x/3.8):
-						score += 1
-						print(score)
+						score += 15
+						scoreLabel.text = str(score)
 						ArrowTopInstance16.free()
 						flagUp16 = false
 					else:
@@ -1335,8 +1335,8 @@ func _process(delta):
 			if(ArrowMiddleInstance15.position.x < get_viewport().size.x/3 && ArrowMiddleInstance15.position.x > get_viewport().size.x/9):
 				if Input.is_key_pressed(KEY_LEFT):
 					if(ArrowMiddleInstance15.position.x > get_viewport().size.x/4.2 && ArrowMiddleInstance15.position.x < get_viewport().size.x/3.8):
-						score += 1
-						print(score)
+						score += 15
+						scoreLabel.text = str(score)
 						#ArrowMiddleInstance.hide()
 						ArrowMiddleInstance15.free()
 						flagMiddle15 = false
@@ -1360,8 +1360,8 @@ func _process(delta):
 			if(ArrowMiddleInstance16.position.x < get_viewport().size.x/3 && ArrowMiddleInstance16.position.x > get_viewport().size.x/9):
 				if Input.is_key_pressed(KEY_LEFT):
 					if(ArrowMiddleInstance16.position.x > get_viewport().size.x/4.2 && ArrowMiddleInstance16.position.x < get_viewport().size.x/3.8):
-						score += 1
-						print(score)
+						score += 15
+						scoreLabel.text = str(score)
 						#ArrowMiddleInstance.hide()
 						ArrowMiddleInstance16.free()
 						flagMiddle16 = false
@@ -1385,8 +1385,8 @@ func _process(delta):
 			if(ArrowBottomInstance13.position.x < get_viewport().size.x/3 && ArrowBottomInstance13.position.x > get_viewport().size.x/9):
 				if Input.is_key_pressed(KEY_DOWN):
 					if(ArrowBottomInstance13.position.x > get_viewport().size.x/4.2 && ArrowBottomInstance13.position.x < get_viewport().size.x/3.8):
-						score += 1
-						print(score)
+						score += 15
+						scoreLabel.text = str(score)
 						#ArrowMiddleInstance.hide()
 						ArrowBottomInstance13.free()
 						flagDown13 = false
@@ -1410,8 +1410,8 @@ func _process(delta):
 			if(ArrowBottomInstance14.position.x < get_viewport().size.x/3 && ArrowBottomInstance14.position.x > get_viewport().size.x/9):
 				if Input.is_key_pressed(KEY_DOWN):
 					if(ArrowBottomInstance14.position.x > get_viewport().size.x/4.2 && ArrowBottomInstance14.position.x < get_viewport().size.x/3.8):
-						score += 1
-						print(score)
+						score += 15
+						scoreLabel.text = str(score)
 						#ArrowMiddleInstance.hide()
 						ArrowBottomInstance14.free()
 						flagDown14 = false
@@ -1436,8 +1436,8 @@ func _process(delta):
 			if(ArrowMiddleInstance18.position.x < get_viewport().size.x/3 && ArrowMiddleInstance18.position.x > get_viewport().size.x/9):
 				if Input.is_key_pressed(KEY_LEFT):
 					if(ArrowMiddleInstance18.position.x > get_viewport().size.x/4.2 && ArrowMiddleInstance18.position.x < get_viewport().size.x/3.8):
-						score += 1
-						print(score)
+						score += 15
+						scoreLabel.text = str(score)
 						#ArrowMiddleInstance.hide()
 						ArrowMiddleInstance18.free()
 						flagMiddle18 = false
@@ -1461,8 +1461,8 @@ func _process(delta):
 			if(ArrowBottomInstance15.position.x < get_viewport().size.x/3 && ArrowBottomInstance15.position.x > get_viewport().size.x/9):
 				if Input.is_key_pressed(KEY_DOWN):
 					if(ArrowBottomInstance15.position.x > get_viewport().size.x/4.2 && ArrowBottomInstance15.position.x < get_viewport().size.x/3.8):
-						score += 1
-						print(score)
+						score += 15
+						scoreLabel.text = str(score)
 						#ArrowMiddleInstance.hide()
 						ArrowBottomInstance15.free()
 						flagDown15 = false
@@ -1487,8 +1487,8 @@ func _process(delta):
 			if(ArrowTopInstance18.position.x < get_viewport().size.x/3 && ArrowTopInstance18.position.x > get_viewport().size.x/9):
 				if Input.is_key_pressed(KEY_UP):
 					if(ArrowTopInstance18.position.x > get_viewport().size.x/4.2 && ArrowTopInstance18.position.x < get_viewport().size.x/3.8):
-						score += 1
-						print(score)
+						score += 15
+						scoreLabel.text = str(score)
 						ArrowTopInstance18.free()
 						flagUp18 = false
 					else:
@@ -1518,8 +1518,8 @@ func _process(delta):
 			if(ArrowTopInstance17.position.x < get_viewport().size.x/3 && ArrowTopInstance17.position.x > get_viewport().size.x/9):
 				if Input.is_key_pressed(KEY_UP):
 					if(ArrowTopInstance17.position.x > get_viewport().size.x/4.2 && ArrowTopInstance17.position.x < get_viewport().size.x/3.8):
-						score += 1
-						print(score)
+						score += 15
+						scoreLabel.text = str(score)
 						ArrowTopInstance17.free()
 						flagUp17 = false
 					else:
@@ -1545,8 +1545,8 @@ func _process(delta):
 			if(ArrowTopInstance19.position.x < get_viewport().size.x/3 && ArrowTopInstance19.position.x > get_viewport().size.x/9):
 				if Input.is_key_pressed(KEY_UP):
 					if(ArrowTopInstance19.position.x > get_viewport().size.x/4.2 && ArrowTopInstance19.position.x < get_viewport().size.x/3.8):
-						score += 1
-						print(score)
+						score += 15
+						scoreLabel.text = str(score)
 						ArrowTopInstance19.free()
 						flagUp19 = false
 					else:
@@ -1567,8 +1567,8 @@ func _process(delta):
 			if(ArrowMiddleInstance19.position.x < get_viewport().size.x/3 && ArrowMiddleInstance19.position.x > get_viewport().size.x/9):
 				if Input.is_key_pressed(KEY_LEFT):
 					if(ArrowMiddleInstance19.position.x > get_viewport().size.x/4.2 && ArrowMiddleInstance19.position.x < get_viewport().size.x/3.8):
-						score += 1
-						print(score)
+						score += 15
+						scoreLabel.text = str(score)
 						#ArrowMiddleInstance.hide()
 						ArrowMiddleInstance19.free()
 						flagMiddle19 = false
@@ -1592,8 +1592,8 @@ func _process(delta):
 			if(ArrowBottomInstance16.position.x < get_viewport().size.x/3 && ArrowBottomInstance16.position.x > get_viewport().size.x/9):
 				if Input.is_key_pressed(KEY_DOWN):
 					if(ArrowBottomInstance16.position.x > get_viewport().size.x/4.2 && ArrowBottomInstance16.position.x < get_viewport().size.x/3.8):
-						score += 1
-						print(score)
+						score += 15
+						scoreLabel.text = str(score)
 						#ArrowMiddleInstance.hide()
 						ArrowBottomInstance16.free()
 						flagDown16 = false
@@ -1617,8 +1617,8 @@ func _process(delta):
 			if(ArrowMiddleInstance20.position.x < get_viewport().size.x/3 && ArrowMiddleInstance20.position.x > get_viewport().size.x/9):
 				if Input.is_key_pressed(KEY_LEFT):
 					if(ArrowMiddleInstance20.position.x > get_viewport().size.x/4.2 && ArrowMiddleInstance20.position.x < get_viewport().size.x/3.8):
-						score += 1
-						print(score)
+						score += 15
+						scoreLabel.text = str(score)
 						#ArrowMiddleInstance.hide()
 						ArrowMiddleInstance20.free()
 						flagMiddle20 = false
@@ -1642,8 +1642,8 @@ func _process(delta):
 			if(ArrowTopInstance20.position.x < get_viewport().size.x/3 && ArrowTopInstance20.position.x > get_viewport().size.x/9):
 				if Input.is_key_pressed(KEY_UP):
 					if(ArrowTopInstance20.position.x > get_viewport().size.x/4.2 && ArrowTopInstance20.position.x < get_viewport().size.x/3.8):
-						score += 1
-						print(score)
+						score += 15
+						scoreLabel.text = str(score)
 						ArrowTopInstance20.free()
 						flagUp20 = false
 					else:
@@ -1664,8 +1664,8 @@ func _process(delta):
 			if(ArrowBottomInstance17.position.x < get_viewport().size.x/3 && ArrowBottomInstance17.position.x > get_viewport().size.x/9):
 				if Input.is_key_pressed(KEY_DOWN):
 					if(ArrowBottomInstance17.position.x > get_viewport().size.x/4.2 && ArrowBottomInstance17.position.x < get_viewport().size.x/3.8):
-						score += 1
-						print(score)
+						score += 15
+						scoreLabel.text = str(score)
 						#ArrowMiddleInstance.hide()
 						ArrowBottomInstance17.free()
 						flagDown17 = false
@@ -1689,8 +1689,8 @@ func _process(delta):
 			if(ArrowTopInstance21.position.x < get_viewport().size.x/3 && ArrowTopInstance21.position.x > get_viewport().size.x/9):
 				if Input.is_key_pressed(KEY_UP):
 					if(ArrowTopInstance21.position.x > get_viewport().size.x/4.2 && ArrowTopInstance21.position.x < get_viewport().size.x/3.8):
-						score += 1
-						print(score)
+						score += 15
+						scoreLabel.text = str(score)
 						ArrowTopInstance21.free()
 						flagUp21 = false
 					else:
@@ -1711,8 +1711,8 @@ func _process(delta):
 			if(ArrowMiddleInstance21.position.x < get_viewport().size.x/3 && ArrowMiddleInstance21.position.x > get_viewport().size.x/9):
 				if Input.is_key_pressed(KEY_LEFT):
 					if(ArrowMiddleInstance21.position.x > get_viewport().size.x/4.2 && ArrowMiddleInstance21.position.x < get_viewport().size.x/3.8):
-						score += 1
-						print(score)
+						score += 15
+						scoreLabel.text = str(score)
 						#ArrowMiddleInstance.hide()
 						ArrowMiddleInstance21.free()
 						flagMiddle21 = false
@@ -1736,8 +1736,8 @@ func _process(delta):
 			if(ArrowTopInstance22.position.x < get_viewport().size.x/3 && ArrowTopInstance22.position.x > get_viewport().size.x/9):
 				if Input.is_key_pressed(KEY_UP):
 					if(ArrowTopInstance22.position.x > get_viewport().size.x/4.2 && ArrowTopInstance22.position.x < get_viewport().size.x/3.8):
-						score += 1
-						print(score)
+						score += 15
+						scoreLabel.text = str(score)
 						ArrowTopInstance22.free()
 						flagUp22 = false
 					else:
@@ -1758,8 +1758,8 @@ func _process(delta):
 			if(ArrowMiddleInstance22.position.x < get_viewport().size.x/3 && ArrowMiddleInstance22.position.x > get_viewport().size.x/9):
 				if Input.is_key_pressed(KEY_LEFT):
 					if(ArrowMiddleInstance22.position.x > get_viewport().size.x/4.2 && ArrowMiddleInstance22.position.x < get_viewport().size.x/3.8):
-						score += 1
-						print(score)
+						score += 15
+						scoreLabel.text = str(score)
 						#ArrowMiddleInstance.hide()
 						ArrowMiddleInstance22.free()
 						flagMiddle22 = false
@@ -1783,8 +1783,8 @@ func _process(delta):
 			if(ArrowMiddleInstance23.position.x < get_viewport().size.x/3 && ArrowMiddleInstance23.position.x > get_viewport().size.x/9):
 				if Input.is_key_pressed(KEY_LEFT):
 					if(ArrowMiddleInstance23.position.x > get_viewport().size.x/4.2 && ArrowMiddleInstance23.position.x < get_viewport().size.x/3.8):
-						score += 1
-						print(score)
+						score += 15
+						scoreLabel.text = str(score)
 						#ArrowMiddleInstance.hide()
 						ArrowMiddleInstance23.free()
 						flagMiddle23 = false
@@ -1808,8 +1808,8 @@ func _process(delta):
 			if(ArrowMiddleInstance24.position.x < get_viewport().size.x/3 && ArrowMiddleInstance24.position.x > get_viewport().size.x/9):
 				if Input.is_key_pressed(KEY_LEFT):
 					if(ArrowMiddleInstance24.position.x > get_viewport().size.x/4.2 && ArrowMiddleInstance24.position.x < get_viewport().size.x/3.8):
-						score += 1
-						print(score)
+						score += 15
+						scoreLabel.text = str(score)
 						#ArrowMiddleInstance.hide()
 						ArrowMiddleInstance24.free()
 						flagMiddle24 = false
@@ -1833,8 +1833,8 @@ func _process(delta):
 			if(ArrowMiddleInstance17.position.x < get_viewport().size.x/3 && ArrowMiddleInstance17.position.x > get_viewport().size.x/9):
 				if Input.is_key_pressed(KEY_LEFT):
 					if(ArrowMiddleInstance17.position.x > get_viewport().size.x/4.2 && ArrowMiddleInstance17.position.x < get_viewport().size.x/3.8):
-						score += 1
-						print(score)
+						score += 15
+						scoreLabel.text = str(score)
 						#ArrowMiddleInstance.hide()
 						ArrowMiddleInstance17.free()
 						flagMiddle17 = false
@@ -1858,8 +1858,8 @@ func _process(delta):
 			if(ArrowBottomInstance19.position.x < get_viewport().size.x/3 && ArrowBottomInstance19.position.x > get_viewport().size.x/9):
 				if Input.is_key_pressed(KEY_DOWN):
 					if(ArrowBottomInstance19.position.x > get_viewport().size.x/4.2 && ArrowBottomInstance19.position.x < get_viewport().size.x/3.8):
-						score += 1
-						print(score)
+						score += 15
+						scoreLabel.text = str(score)
 						#ArrowMiddleInstance.hide()
 						ArrowBottomInstance19.free()
 						flagDown19 = false
@@ -1884,8 +1884,8 @@ func _process(delta):
 			if(ArrowTopInstance23.position.x < get_viewport().size.x/3 && ArrowTopInstance23.position.x > get_viewport().size.x/9):
 				if Input.is_key_pressed(KEY_UP):
 					if(ArrowTopInstance23.position.x > get_viewport().size.x/4.2 && ArrowTopInstance23.position.x < get_viewport().size.x/3.8):
-						score += 1
-						print(score)
+						score += 15
+						scoreLabel.text = str(score)
 						ArrowTopInstance23.free()
 						flagUp23 = false
 					else:
@@ -1906,8 +1906,8 @@ func _process(delta):
 			if(ArrowBottomInstance18.position.x < get_viewport().size.x/3 && ArrowBottomInstance18.position.x > get_viewport().size.x/9):
 				if Input.is_key_pressed(KEY_DOWN):
 					if(ArrowBottomInstance18.position.x > get_viewport().size.x/4.2 && ArrowBottomInstance18.position.x < get_viewport().size.x/3.8):
-						score += 1
-						print(score)
+						score += 15
+						scoreLabel.text = str(score)
 						#ArrowMiddleInstance.hide()
 						ArrowBottomInstance18.free()
 						flagDown18 = false
@@ -1931,8 +1931,8 @@ func _process(delta):
 			if(ArrowTopInstance24.position.x < get_viewport().size.x/3 && ArrowTopInstance24.position.x > get_viewport().size.x/9):
 				if Input.is_key_pressed(KEY_UP):
 					if(ArrowTopInstance24.position.x > get_viewport().size.x/4.2 && ArrowTopInstance24.position.x < get_viewport().size.x/3.8):
-						score += 1
-						print(score)
+						score += 15
+						scoreLabel.text = str(score)
 						ArrowTopInstance24.free()
 						flagUp24 = false
 					else:
@@ -1953,8 +1953,8 @@ func _process(delta):
 			if(ArrowMiddleInstance25.position.x < get_viewport().size.x/3 && ArrowMiddleInstance25.position.x > get_viewport().size.x/9):
 				if Input.is_key_pressed(KEY_LEFT):
 					if(ArrowMiddleInstance25.position.x > get_viewport().size.x/4.2 && ArrowMiddleInstance25.position.x < get_viewport().size.x/3.8):
-						score += 1
-						print(score)
+						score += 15
+						scoreLabel.text = str(score)
 						ArrowMiddleInstance25.free()
 						flagMiddle25 = false
 					else:
@@ -1975,8 +1975,8 @@ func _process(delta):
 			if(ArrowTopInstance25.position.x < get_viewport().size.x/3 && ArrowTopInstance25.position.x > get_viewport().size.x/9):
 				if Input.is_key_pressed(KEY_UP):
 					if(ArrowTopInstance25.position.x > get_viewport().size.x/4.2 && ArrowTopInstance25.position.x < get_viewport().size.x/3.8):
-						score += 1
-						print(score)
+						score += 15
+						scoreLabel.text = str(score)
 						ArrowTopInstance25.free()
 						flagUp25 = false
 					else:
@@ -1997,8 +1997,8 @@ func _process(delta):
 			if(ArrowBottomInstance20.position.x < get_viewport().size.x/3 && ArrowBottomInstance20.position.x > get_viewport().size.x/9):
 				if Input.is_key_pressed(KEY_DOWN):
 					if(ArrowBottomInstance20.position.x > get_viewport().size.x/4.2 && ArrowBottomInstance20.position.x < get_viewport().size.x/3.8):
-						score += 1
-						print(score)
+						score += 15
+						scoreLabel.text = str(score)
 						ArrowBottomInstance20.free()
 						flagDown20 = false
 					else:
@@ -2020,8 +2020,8 @@ func _process(delta):
 			if(ArrowTopInstance26.position.x < get_viewport().size.x/3 && ArrowTopInstance26.position.x > get_viewport().size.x/9):
 				if Input.is_key_pressed(KEY_UP):
 					if(ArrowTopInstance26.position.x > get_viewport().size.x/4.2 && ArrowTopInstance26.position.x < get_viewport().size.x/3.8):
-						score += 1
-						print(score)
+						score += 15
+						scoreLabel.text = str(score)
 						ArrowTopInstance26.free()
 						flagUp26 = false
 					else:
@@ -2042,8 +2042,8 @@ func _process(delta):
 			if(ArrowBottomInstance21.position.x < get_viewport().size.x/3 && ArrowBottomInstance21.position.x > get_viewport().size.x/9):
 				if Input.is_key_pressed(KEY_DOWN):
 					if(ArrowBottomInstance21.position.x > get_viewport().size.x/4.2 && ArrowBottomInstance21.position.x < get_viewport().size.x/3.8):
-						score += 1
-						print(score)
+						score += 15
+						scoreLabel.text = str(score)
 						ArrowBottomInstance21.free()
 						flagDown21 = false
 					else:
@@ -2064,8 +2064,8 @@ func _process(delta):
 			if(ArrowBottomInstance22.position.x < get_viewport().size.x/3 && ArrowBottomInstance22.position.x > get_viewport().size.x/9):
 				if Input.is_key_pressed(KEY_DOWN):
 					if(ArrowBottomInstance22.position.x > get_viewport().size.x/4.2 && ArrowBottomInstance22.position.x < get_viewport().size.x/3.8):
-						score += 1
-						print(score)
+						score += 15
+						scoreLabel.text = str(score)
 						ArrowBottomInstance22.free()
 						flagDown22 = false
 					else:
@@ -2086,8 +2086,8 @@ func _process(delta):
 			if(ArrowMiddleInstance26.position.x < get_viewport().size.x/3 && ArrowMiddleInstance26.position.x > get_viewport().size.x/9):
 				if Input.is_key_pressed(KEY_LEFT):
 					if(ArrowMiddleInstance26.position.x > get_viewport().size.x/4.2 && ArrowMiddleInstance26.position.x < get_viewport().size.x/3.8):
-						score += 1
-						print(score)
+						score += 15
+						scoreLabel.text = str(score)
 						#ArrowMiddleInstance.hide()
 						ArrowMiddleInstance26.free()
 						flagMiddle26 = false
@@ -2111,8 +2111,8 @@ func _process(delta):
 			if(ArrowTopInstance27.position.x < get_viewport().size.x/3 && ArrowTopInstance27.position.x > get_viewport().size.x/9):
 				if Input.is_key_pressed(KEY_UP):
 					if(ArrowTopInstance27.position.x > get_viewport().size.x/4.2 && ArrowTopInstance27.position.x < get_viewport().size.x/3.8):
-						score += 1
-						print(score)
+						score += 15
+						scoreLabel.text = str(score)
 						ArrowTopInstance27.free()
 						flagUp27 = false
 					else:
@@ -2133,8 +2133,8 @@ func _process(delta):
 			if(ArrowTopInstance28.position.x < get_viewport().size.x/3 && ArrowTopInstance28.position.x > get_viewport().size.x/9):
 				if Input.is_key_pressed(KEY_UP):
 					if(ArrowTopInstance28.position.x > get_viewport().size.x/4.2 && ArrowTopInstance28.position.x < get_viewport().size.x/3.8):
-						score += 1
-						print(score)
+						score += 15
+						scoreLabel.text = str(score)
 						ArrowTopInstance28.free()
 						flagUp28 = false
 					else:
@@ -2155,8 +2155,8 @@ func _process(delta):
 			if(ArrowMiddleInstance27.position.x < get_viewport().size.x/3 && ArrowMiddleInstance27.position.x > get_viewport().size.x/9):
 				if Input.is_key_pressed(KEY_LEFT):
 					if(ArrowMiddleInstance27.position.x > get_viewport().size.x/4.2 && ArrowMiddleInstance27.position.x < get_viewport().size.x/3.8):
-						score += 1
-						print(score)
+						score += 15
+						scoreLabel.text = str(score)
 						#ArrowMiddleInstance.hide()
 						ArrowMiddleInstance27.free()
 						flagMiddle27 = false
@@ -2180,8 +2180,8 @@ func _process(delta):
 			if(ArrowBottomInstance23.position.x < get_viewport().size.x/3 && ArrowBottomInstance23.position.x > get_viewport().size.x/9):
 				if Input.is_key_pressed(KEY_DOWN):
 					if(ArrowBottomInstance23.position.x > get_viewport().size.x/4.2 && ArrowBottomInstance23.position.x < get_viewport().size.x/3.8):
-						score += 1
-						print(score)
+						score += 15
+						scoreLabel.text = str(score)
 						#ArrowMiddleInstance.hide()
 						ArrowBottomInstance23.free()
 						flagDown23 = false
@@ -2205,8 +2205,8 @@ func _process(delta):
 #			if(ArrowTopInstance29.position.x < get_viewport().size.x/3 && ArrowTopInstance29.position.x > get_viewport().size.x/9):
 #				if Input.is_key_pressed(KEY_UP):
 #					if(ArrowTopInstance29.position.x > get_viewport().size.x/4.2 && ArrowTopInstance29.position.x < get_viewport().size.x/3.8):
-#						score += 1
-#						print(score)
+#						score += 15
+#						scoreLabel.text = str(score)
 #						ArrowTopInstance29.free()
 #						flagUp29 = false
 #					else:
@@ -2227,8 +2227,8 @@ func _process(delta):
 			if(ArrowBottomInstance24.position.x < get_viewport().size.x/3 && ArrowBottomInstance24.position.x > get_viewport().size.x/9):
 				if Input.is_key_pressed(KEY_DOWN):
 					if(ArrowBottomInstance24.position.x > get_viewport().size.x/4.2 && ArrowBottomInstance24.position.x < get_viewport().size.x/3.8):
-						score += 1
-						print(score)
+						score += 15
+						scoreLabel.text = str(score)
 						#ArrowMiddleInstance.hide()
 						ArrowBottomInstance24.free()
 						flagDown24 = false
@@ -2252,8 +2252,8 @@ func _process(delta):
 			if(ArrowBottomInstance25.position.x < get_viewport().size.x/3 && ArrowBottomInstance25.position.x > get_viewport().size.x/9):
 				if Input.is_key_pressed(KEY_DOWN):
 					if(ArrowBottomInstance25.position.x > get_viewport().size.x/4.2 && ArrowBottomInstance25.position.x < get_viewport().size.x/3.8):
-						score += 1
-						print(score)
+						score += 15
+						scoreLabel.text = str(score)
 						#ArrowMiddleInstance.hide()
 						ArrowBottomInstance25.free()
 						flagDown25 = false
@@ -2284,8 +2284,8 @@ func _process(delta):
 			if(ArrowMiddleInstance28.position.x < get_viewport().size.x/3 && ArrowMiddleInstance28.position.x > get_viewport().size.x/9):
 				if Input.is_key_pressed(KEY_LEFT):
 					if(ArrowMiddleInstance28.position.x > get_viewport().size.x/4.2 && ArrowMiddleInstance28.position.x < get_viewport().size.x/3.8):
-						score += 1
-						print(score)
+						score += 15
+						scoreLabel.text = str(score)
 						#ArrowMiddleInstance.hide()
 						ArrowMiddleInstance28.free()
 						flagMiddle28 = false
@@ -2309,8 +2309,8 @@ func _process(delta):
 			if(ArrowMiddleInstance29.position.x < get_viewport().size.x/3 && ArrowMiddleInstance29.position.x > get_viewport().size.x/9):
 				if Input.is_key_pressed(KEY_LEFT):
 					if(ArrowMiddleInstance29.position.x > get_viewport().size.x/4.2 && ArrowMiddleInstance29.position.x < get_viewport().size.x/3.8):
-						score += 1
-						print(score)
+						score += 15
+						scoreLabel.text = str(score)
 						ArrowMiddleInstance29.free()
 						flagMiddle29 = false
 					else:
@@ -2331,8 +2331,8 @@ func _process(delta):
 			if(ArrowTopInstance30.position.x < get_viewport().size.x/3 && ArrowTopInstance30.position.x > get_viewport().size.x/9):
 				if Input.is_key_pressed(KEY_UP):
 					if(ArrowTopInstance30.position.x > get_viewport().size.x/4.2 && ArrowTopInstance30.position.x < get_viewport().size.x/3.8):
-						score += 1
-						print(score)
+						score += 15
+						scoreLabel.text = str(score)
 						ArrowTopInstance30.free()
 						flagUp30 = false
 					else:
@@ -2353,8 +2353,8 @@ func _process(delta):
 			if(ArrowBottomInstance26.position.x < get_viewport().size.x/3 && ArrowBottomInstance26.position.x > get_viewport().size.x/9):
 				if Input.is_key_pressed(KEY_DOWN):
 					if(ArrowBottomInstance26.position.x > get_viewport().size.x/4.2 && ArrowBottomInstance26.position.x < get_viewport().size.x/3.8):
-						score += 1
-						print(score)
+						score += 15
+						scoreLabel.text = str(score)
 						#ArrowMiddleInstance.hide()
 						ArrowBottomInstance26.free()
 						flagDown26 = false
@@ -2378,8 +2378,8 @@ func _process(delta):
 			if(ArrowTopInstance31.position.x < get_viewport().size.x/3 && ArrowTopInstance31.position.x > get_viewport().size.x/9):
 				if Input.is_key_pressed(KEY_UP):
 					if(ArrowTopInstance31.position.x > get_viewport().size.x/4.2 && ArrowTopInstance31.position.x < get_viewport().size.x/3.8):
-						score += 1
-						print(score)
+						score += 15
+						scoreLabel.text = str(score)
 						ArrowTopInstance31.free()
 						flagUp31 = false
 					else:
@@ -2400,8 +2400,8 @@ func _process(delta):
 			if(ArrowBottomInstance27.position.x < get_viewport().size.x/3 && ArrowBottomInstance27.position.x > get_viewport().size.x/9):
 				if Input.is_key_pressed(KEY_DOWN):
 					if(ArrowBottomInstance27.position.x > get_viewport().size.x/4.2 && ArrowBottomInstance27.position.x < get_viewport().size.x/3.8):
-						score += 1
-						print(score)
+						score += 15
+						scoreLabel.text = str(score)
 						#ArrowMiddleInstance.hide()
 						ArrowBottomInstance27.free()
 						flagDown27 = false
@@ -2425,8 +2425,8 @@ func _process(delta):
 			if(ArrowMiddleInstance30.position.x < get_viewport().size.x/3 && ArrowMiddleInstance30.position.x > get_viewport().size.x/9):
 				if Input.is_key_pressed(KEY_LEFT):
 					if(ArrowMiddleInstance30.position.x > get_viewport().size.x/4.2 && ArrowMiddleInstance30.position.x < get_viewport().size.x/3.8):
-						score += 1
-						print(score)
+						score += 15
+						scoreLabel.text = str(score)
 						#ArrowMiddleInstance.hide()
 						ArrowMiddleInstance30.free()
 						flagMiddle44 = false
@@ -2476,8 +2476,8 @@ func _process(delta):
 			if(ArrowTopInstance32.position.x < get_viewport().size.x/3 && ArrowTopInstance32.position.x > get_viewport().size.x/9):
 				if Input.is_key_pressed(KEY_UP):
 					if(ArrowTopInstance32.position.x > get_viewport().size.x/4.2 && ArrowTopInstance32.position.x < get_viewport().size.x/3.8):
-						score += 1
-						print(score)
+						score += 15
+						scoreLabel.text = str(score)
 						ArrowTopInstance32.free()
 						flagUp32 = false
 					else:
@@ -2498,8 +2498,8 @@ func _process(delta):
 			if(ArrowBottomInstance28.position.x < get_viewport().size.x/3 && ArrowBottomInstance28.position.x > get_viewport().size.x/9):
 				if Input.is_key_pressed(KEY_DOWN):
 					if(ArrowBottomInstance28.position.x > get_viewport().size.x/4.2 && ArrowBottomInstance28.position.x < get_viewport().size.x/3.8):
-						score += 1
-						print(score)
+						score += 15
+						scoreLabel.text = str(score)
 						#ArrowMiddleInstance.hide()
 						ArrowBottomInstance28.free()
 						flagDown28 = false
@@ -2523,8 +2523,8 @@ func _process(delta):
 			if(ArrowTopInstance33.position.x < get_viewport().size.x/3 && ArrowTopInstance33.position.x > get_viewport().size.x/9):
 				if Input.is_key_pressed(KEY_UP):
 					if(ArrowTopInstance33.position.x > get_viewport().size.x/4.2 && ArrowTopInstance33.position.x < get_viewport().size.x/3.8):
-						score += 1
-						print(score)
+						score += 15
+						scoreLabel.text = str(score)
 						ArrowTopInstance33.free()
 						flagUp33 = false
 					else:
@@ -2545,8 +2545,8 @@ func _process(delta):
 			if(ArrowMiddleInstance44.position.x < get_viewport().size.x/3 && ArrowMiddleInstance44.position.x > get_viewport().size.x/9):
 				if Input.is_key_pressed(KEY_LEFT):
 					if(ArrowMiddleInstance44.position.x > get_viewport().size.x/4.2 && ArrowMiddleInstance44.position.x < get_viewport().size.x/3.8):
-						score += 1
-						print(score)
+						score += 15
+						scoreLabel.text = str(score)
 						#ArrowMiddleInstance.hide()
 						ArrowMiddleInstance44.free()
 						flagMiddle44 = false
@@ -2570,8 +2570,8 @@ func _process(delta):
 			if(ArrowMiddleInstance31.position.x < get_viewport().size.x/3 && ArrowMiddleInstance31.position.x > get_viewport().size.x/9):
 				if Input.is_key_pressed(KEY_LEFT):
 					if(ArrowMiddleInstance31.position.x > get_viewport().size.x/4.2 && ArrowMiddleInstance31.position.x < get_viewport().size.x/3.8):
-						score += 1
-						print(score)
+						score += 15
+						scoreLabel.text = str(score)
 						#ArrowMiddleInstance.hide()
 						ArrowMiddleInstance31.free()
 						flagMiddle31 = false
@@ -2596,8 +2596,8 @@ func _process(delta):
 			if(ArrowTopInstance34.position.x < get_viewport().size.x/3 && ArrowTopInstance34.position.x > get_viewport().size.x/9):
 				if Input.is_key_pressed(KEY_UP):
 					if(ArrowTopInstance34.position.x > get_viewport().size.x/4.2 && ArrowTopInstance34.position.x < get_viewport().size.x/3.8):
-						score += 1
-						print(score)
+						score += 15
+						scoreLabel.text = str(score)
 						ArrowTopInstance34.free()
 						flagUp34 = false
 					else:
@@ -2619,8 +2619,8 @@ func _process(delta):
 #			if(ArrowBottomInstance29.position.x < get_viewport().size.x/3 && ArrowBottomInstance29.position.x > get_viewport().size.x/9):
 #				if Input.is_key_pressed(KEY_DOWN):
 #					if(ArrowBottomInstance29.position.x > get_viewport().size.x/4.2 && ArrowBottomInstance29.position.x < get_viewport().size.x/3.8):
-#						score += 1
-#						print(score)
+#						score += 15
+#						scoreLabel.text = str(score)
 #						#ArrowMiddleInstance.hide()
 #						ArrowBottomInstance29.free()
 #						flagDown29 = false
@@ -2642,8 +2642,8 @@ func _process(delta):
 			if(ArrowBottomInstance30.position.x < get_viewport().size.x/3 && ArrowBottomInstance30.position.x > get_viewport().size.x/9):
 				if Input.is_key_pressed(KEY_DOWN):
 					if(ArrowBottomInstance30.position.x > get_viewport().size.x/4.2 && ArrowBottomInstance30.position.x < get_viewport().size.x/3.8):
-						score += 1
-						print(score)
+						score += 15
+						scoreLabel.text = str(score)
 						#ArrowMiddleInstance.hide()
 						ArrowBottomInstance30.free()
 						flagDown30 = false
@@ -2667,8 +2667,8 @@ func _process(delta):
 			if(ArrowMiddleInstance32.position.x < get_viewport().size.x/3 && ArrowMiddleInstance32.position.x > get_viewport().size.x/9):
 				if Input.is_key_pressed(KEY_LEFT):
 					if(ArrowMiddleInstance32.position.x > get_viewport().size.x/4.2 && ArrowMiddleInstance32.position.x < get_viewport().size.x/3.8):
-						score += 1
-						print(score)
+						score += 15
+						scoreLabel.text = str(score)
 						#ArrowMiddleInstance.hide()
 						ArrowMiddleInstance32.free()
 						flagMiddle32 = false
@@ -2692,8 +2692,8 @@ func _process(delta):
 			if(ArrowTopInstance35.position.x < get_viewport().size.x/3 && ArrowTopInstance35.position.x > get_viewport().size.x/9):
 				if Input.is_key_pressed(KEY_UP):
 					if(ArrowTopInstance35.position.x > get_viewport().size.x/4.2 && ArrowTopInstance35.position.x < get_viewport().size.x/3.8):
-						score += 1
-						print(score)
+						score += 15
+						scoreLabel.text = str(score)
 						ArrowTopInstance35.free()
 						flagUp35 = false
 					else:
@@ -2714,8 +2714,8 @@ func _process(delta):
 			if(ArrowBottomInstance31.position.x < get_viewport().size.x/3 && ArrowBottomInstance31.position.x > get_viewport().size.x/9):
 				if Input.is_key_pressed(KEY_DOWN):
 					if(ArrowBottomInstance31.position.x > get_viewport().size.x/4.2 && ArrowBottomInstance31.position.x < get_viewport().size.x/3.8):
-						score += 1
-						print(score)
+						score += 15
+						scoreLabel.text = str(score)
 						#ArrowMiddleInstance.hide()
 						ArrowBottomInstance31.free()
 						flagDown31 = false
@@ -2739,8 +2739,8 @@ func _process(delta):
 			if(ArrowMiddleInstance33.position.x < get_viewport().size.x/3 && ArrowMiddleInstance33.position.x > get_viewport().size.x/9):
 				if Input.is_key_pressed(KEY_LEFT):
 					if(ArrowMiddleInstance33.position.x > get_viewport().size.x/4.2 && ArrowMiddleInstance33.position.x < get_viewport().size.x/3.8):
-						score += 1
-						print(score)
+						score += 15
+						scoreLabel.text = str(score)
 						#ArrowMiddleInstance.hide()
 						ArrowMiddleInstance33.free()
 						flagMiddle33 = false
@@ -2764,8 +2764,8 @@ func _process(delta):
 			if(ArrowMiddleInstance34.position.x < get_viewport().size.x/3 && ArrowMiddleInstance34.position.x > get_viewport().size.x/9):
 				if Input.is_key_pressed(KEY_LEFT):
 					if(ArrowMiddleInstance34.position.x > get_viewport().size.x/4.2 && ArrowMiddleInstance34.position.x < get_viewport().size.x/3.8):
-						score += 1
-						print(score)
+						score += 15
+						scoreLabel.text = str(score)
 						#ArrowMiddleInstance.hide()
 						ArrowMiddleInstance34.free()
 						flagMiddle34 = false
@@ -2789,8 +2789,8 @@ func _process(delta):
 			if(ArrowTopInstance36.position.x < get_viewport().size.x/3 && ArrowTopInstance36.position.x > get_viewport().size.x/9):
 				if Input.is_key_pressed(KEY_UP):
 					if(ArrowTopInstance36.position.x > get_viewport().size.x/4.2 && ArrowTopInstance36.position.x < get_viewport().size.x/3.8):
-						score += 1
-						print(score)
+						score += 15
+						scoreLabel.text = str(score)
 						ArrowTopInstance36.free()
 						flagUp36 = false
 					else:
@@ -2811,8 +2811,8 @@ func _process(delta):
 			if(ArrowBottomInstance32.position.x < get_viewport().size.x/3 && ArrowBottomInstance32.position.x > get_viewport().size.x/9):
 				if Input.is_key_pressed(KEY_DOWN):
 					if(ArrowBottomInstance32.position.x > get_viewport().size.x/4.2 && ArrowBottomInstance32.position.x < get_viewport().size.x/3.8):
-						score += 1
-						print(score)
+						score += 15
+						scoreLabel.text = str(score)
 						#ArrowMiddleInstance.hide()
 						ArrowBottomInstance32.free()
 						flagDown32 = false
@@ -2836,8 +2836,8 @@ func _process(delta):
 			if(ArrowBottomInstance33.position.x < get_viewport().size.x/3 && ArrowBottomInstance33.position.x > get_viewport().size.x/9):
 				if Input.is_key_pressed(KEY_DOWN):
 					if(ArrowBottomInstance33.position.x > get_viewport().size.x/4.2 && ArrowBottomInstance33.position.x < get_viewport().size.x/3.8):
-						score += 1
-						print(score)
+						score += 15
+						scoreLabel.text = str(score)
 						#ArrowMiddleInstance.hide()
 						ArrowBottomInstance33.free()
 						flagDown33 = false
@@ -2861,8 +2861,8 @@ func _process(delta):
 			if(ArrowMiddleInstance35.position.x < get_viewport().size.x/3 && ArrowMiddleInstance35.position.x > get_viewport().size.x/9):
 				if Input.is_key_pressed(KEY_LEFT):
 					if(ArrowMiddleInstance35.position.x > get_viewport().size.x/4.2 && ArrowMiddleInstance35.position.x < get_viewport().size.x/3.8):
-						score += 1
-						print(score)
+						score += 15
+						scoreLabel.text = str(score)
 						#ArrowMiddleInstance.hide()
 						ArrowMiddleInstance35.free()
 						flagMiddle35 = false
@@ -2886,8 +2886,8 @@ func _process(delta):
 			if(ArrowBottomInstance34.position.x < get_viewport().size.x/3 && ArrowBottomInstance34.position.x > get_viewport().size.x/9):
 				if Input.is_key_pressed(KEY_DOWN):
 					if(ArrowBottomInstance34.position.x > get_viewport().size.x/4.2 && ArrowBottomInstance34.position.x < get_viewport().size.x/3.8):
-						score += 1
-						print(score)
+						score += 15
+						scoreLabel.text = str(score)
 						#ArrowMiddleInstance.hide()
 						ArrowBottomInstance34.free()
 						flagDown34 = false
@@ -2911,8 +2911,8 @@ func _process(delta):
 			if(ArrowMiddleInstance36.position.x < get_viewport().size.x/3 && ArrowMiddleInstance36.position.x > get_viewport().size.x/9):
 				if Input.is_key_pressed(KEY_LEFT):
 					if(ArrowMiddleInstance36.position.x > get_viewport().size.x/4.2 && ArrowMiddleInstance36.position.x < get_viewport().size.x/3.8):
-						score += 1
-						print(score)
+						score += 15
+						scoreLabel.text = str(score)
 						ArrowMiddleInstance36.free()
 						flagMiddle36 = false
 					else:
@@ -2933,8 +2933,8 @@ func _process(delta):
 			if(ArrowTopInstance37.position.x < get_viewport().size.x/3 && ArrowTopInstance37.position.x > get_viewport().size.x/9):
 				if Input.is_key_pressed(KEY_UP):
 					if(ArrowTopInstance37.position.x > get_viewport().size.x/4.2 && ArrowTopInstance37.position.x < get_viewport().size.x/3.8):
-						score += 1
-						print(score)
+						score += 15
+						scoreLabel.text = str(score)
 						ArrowTopInstance37.free()
 						flagUp37 = false
 					else:
@@ -2956,8 +2956,8 @@ func _process(delta):
 			if(ArrowBottomInstance35.position.x < get_viewport().size.x/3 && ArrowBottomInstance35.position.x > get_viewport().size.x/9):
 				if Input.is_key_pressed(KEY_DOWN):
 					if(ArrowBottomInstance35.position.x > get_viewport().size.x/4.2 && ArrowBottomInstance35.position.x < get_viewport().size.x/3.8):
-						score += 1
-						print(score)
+						score += 15
+						scoreLabel.text = str(score)
 						#ArrowMiddleInstance.hide()
 						ArrowBottomInstance35.free()
 						flagDown35 = false
@@ -2980,8 +2980,8 @@ func _process(delta):
 			if(ArrowMiddleInstance37.position.x < get_viewport().size.x/3 && ArrowMiddleInstance37.position.x > get_viewport().size.x/9):
 				if Input.is_key_pressed(KEY_LEFT):
 					if(ArrowMiddleInstance37.position.x > get_viewport().size.x/4.2 && ArrowMiddleInstance37.position.x < get_viewport().size.x/3.8):
-						score += 1
-						print(score)
+						score += 15
+						scoreLabel.text = str(score)
 						#ArrowMiddleInstance.hide()
 						ArrowMiddleInstance37.free()
 						flagMiddle37 = false
@@ -3005,8 +3005,8 @@ func _process(delta):
 			if(ArrowMiddleInstance38.position.x < get_viewport().size.x/3 && ArrowMiddleInstance38.position.x > get_viewport().size.x/9):
 				if Input.is_key_pressed(KEY_LEFT):
 					if(ArrowMiddleInstance38.position.x > get_viewport().size.x/4.2 && ArrowMiddleInstance38.position.x < get_viewport().size.x/3.8):
-						score += 1
-						print(score)
+						score += 15
+						scoreLabel.text = str(score)
 						#ArrowMiddleInstance.hide()
 						ArrowMiddleInstance38.free()
 						flagMiddle38 = false
@@ -3031,8 +3031,8 @@ func _process(delta):
 			if(ArrowBottomInstance36.position.x < get_viewport().size.x/3 && ArrowBottomInstance36.position.x > get_viewport().size.x/9):
 				if Input.is_key_pressed(KEY_DOWN):
 					if(ArrowBottomInstance36.position.x > get_viewport().size.x/4.2 && ArrowBottomInstance36.position.x < get_viewport().size.x/3.8):
-						score += 1
-						print(score)
+						score += 15
+						scoreLabel.text = str(score)
 						#ArrowMiddleInstance.hide()
 						ArrowBottomInstance36.free()
 						flagDown36 = false
@@ -3056,8 +3056,8 @@ func _process(delta):
 			if(ArrowMiddleInstance39.position.x < get_viewport().size.x/3 && ArrowMiddleInstance39.position.x > get_viewport().size.x/9):
 				if Input.is_key_pressed(KEY_LEFT):
 					if(ArrowMiddleInstance39.position.x > get_viewport().size.x/4.2 && ArrowMiddleInstance39.position.x < get_viewport().size.x/3.8):
-						score += 1
-						print(score)
+						score += 15
+						scoreLabel.text = str(score)
 						#ArrowMiddleInstance.hide()
 						ArrowMiddleInstance39.free()
 						flagMiddle39 = false
@@ -3081,8 +3081,8 @@ func _process(delta):
 			if(ArrowTopInstance38.position.x < get_viewport().size.x/3 && ArrowTopInstance38.position.x > get_viewport().size.x/9):
 				if Input.is_key_pressed(KEY_UP):
 					if(ArrowTopInstance38.position.x > get_viewport().size.x/4.2 && ArrowTopInstance38.position.x < get_viewport().size.x/3.8):
-						score += 1
-						print(score)
+						score += 15
+						scoreLabel.text = str(score)
 						ArrowTopInstance38.free()
 						flagUp38 = false
 					else:
@@ -3103,8 +3103,8 @@ func _process(delta):
 			if(ArrowBottomInstance37.position.x < get_viewport().size.x/3 && ArrowBottomInstance37.position.x > get_viewport().size.x/9):
 				if Input.is_key_pressed(KEY_DOWN):
 					if(ArrowBottomInstance37.position.x > get_viewport().size.x/4.2 && ArrowBottomInstance37.position.x < get_viewport().size.x/3.8):
-						score += 1
-						print(score)
+						score += 15
+						scoreLabel.text = str(score)
 						ArrowBottomInstance37.free()
 						flagDown37 = false
 					else:
@@ -3125,8 +3125,8 @@ func _process(delta):
 			if(ArrowMiddleInstance40.position.x < get_viewport().size.x/3 && ArrowMiddleInstance40.position.x > get_viewport().size.x/9):
 				if Input.is_key_pressed(KEY_LEFT):
 					if(ArrowMiddleInstance40.position.x > get_viewport().size.x/4.2 && ArrowMiddleInstance40.position.x < get_viewport().size.x/3.8):
-						score += 1
-						print(score)
+						score += 15
+						scoreLabel.text = str(score)
 						#ArrowMiddleInstance.hide()
 						ArrowMiddleInstance40.free()
 						flagMiddle40 = false
@@ -3150,8 +3150,8 @@ func _process(delta):
 			if(ArrowTopInstance39.position.x < get_viewport().size.x/3 && ArrowTopInstance39.position.x > get_viewport().size.x/9):
 				if Input.is_key_pressed(KEY_UP):
 					if(ArrowTopInstance39.position.x > get_viewport().size.x/4.2 && ArrowTopInstance39.position.x < get_viewport().size.x/3.8):
-						score += 1
-						print(score)
+						score += 15
+						scoreLabel.text = str(score)
 						ArrowTopInstance39.free()
 						flagUp39 = false
 					else:
@@ -3172,8 +3172,8 @@ func _process(delta):
 			if(ArrowBottomInstance38.position.x < get_viewport().size.x/3 && ArrowBottomInstance38.position.x > get_viewport().size.x/9):
 				if Input.is_key_pressed(KEY_DOWN):
 					if(ArrowBottomInstance38.position.x > get_viewport().size.x/4.2 && ArrowBottomInstance38.position.x < get_viewport().size.x/3.8):
-						score += 1
-						print(score)
+						score += 15
+						scoreLabel.text = str(score)
 						#ArrowMiddleInstance.hide()
 						ArrowBottomInstance38.free()
 						flagDown38 = false
@@ -3197,8 +3197,8 @@ func _process(delta):
 			if(ArrowBottomInstance39.position.x < get_viewport().size.x/3 && ArrowBottomInstance39.position.x > get_viewport().size.x/9):
 				if Input.is_key_pressed(KEY_DOWN):
 					if(ArrowBottomInstance39.position.x > get_viewport().size.x/4.2 && ArrowBottomInstance39.position.x < get_viewport().size.x/3.8):
-						score += 1
-						print(score)
+						score += 15
+						scoreLabel.text = str(score)
 						#ArrowMiddleInstance.hide()
 						ArrowBottomInstance39.free()
 						flagDown39 = false
@@ -3223,8 +3223,8 @@ func _process(delta):
 			if(ArrowTopInstance40.position.x < get_viewport().size.x/3 && ArrowTopInstance40.position.x > get_viewport().size.x/9):
 				if Input.is_key_pressed(KEY_UP):
 					if(ArrowTopInstance40.position.x > get_viewport().size.x/4.2 && ArrowTopInstance40.position.x < get_viewport().size.x/3.8):
-						score += 1
-						print(score)
+						score += 15
+						scoreLabel.text = str(score)
 						ArrowTopInstance40.free()
 						flagUp40 = false
 					else:
@@ -3246,8 +3246,8 @@ func _process(delta):
 			if(ArrowBottomInstance40.position.x < get_viewport().size.x/3 && ArrowBottomInstance40.position.x > get_viewport().size.x/9):
 				if Input.is_key_pressed(KEY_DOWN):
 					if(ArrowBottomInstance40.position.x > get_viewport().size.x/4.2 && ArrowBottomInstance40.position.x < get_viewport().size.x/3.8):
-						score += 1
-						print(score)
+						score += 15
+						scoreLabel.text = str(score)
 						ArrowBottomInstance40.free()
 						flagDown40 = false
 					else:
@@ -3268,8 +3268,8 @@ func _process(delta):
 			if(ArrowTopInstance41.position.x < get_viewport().size.x/3 && ArrowTopInstance41.position.x > get_viewport().size.x/9):
 				if Input.is_key_pressed(KEY_UP):
 					if(ArrowTopInstance41.position.x > get_viewport().size.x/4.2 && ArrowTopInstance41.position.x < get_viewport().size.x/3.8):
-						score += 1
-						print(score)
+						score += 15
+						scoreLabel.text = str(score)
 						ArrowTopInstance41.free()
 						flagUp41 = false
 					else:
@@ -3290,8 +3290,8 @@ func _process(delta):
 			if(ArrowMiddleInstance41.position.x < get_viewport().size.x/3 && ArrowMiddleInstance41.position.x > get_viewport().size.x/9):
 				if Input.is_key_pressed(KEY_LEFT):
 					if(ArrowMiddleInstance41.position.x > get_viewport().size.x/4.2 && ArrowMiddleInstance41.position.x < get_viewport().size.x/3.8):
-						score += 1
-						print(score)
+						score += 15
+						scoreLabel.text = str(score)
 						#ArrowMiddleInstance.hide()
 						ArrowMiddleInstance41.free()
 						flagMiddle41 = false
@@ -3315,8 +3315,8 @@ func _process(delta):
 			if(ArrowMiddleInstance42.position.x < get_viewport().size.x/3 && ArrowMiddleInstance42.position.x > get_viewport().size.x/9):
 				if Input.is_key_pressed(KEY_LEFT):
 					if(ArrowMiddleInstance42.position.x > get_viewport().size.x/4.2 && ArrowMiddleInstance42.position.x < get_viewport().size.x/3.8):
-						score += 1
-						print(score)
+						score += 15
+						scoreLabel.text = str(score)
 						#ArrowMiddleInstance.hide()
 						ArrowMiddleInstance42.free()
 						flagMiddle42 = false
@@ -3340,8 +3340,8 @@ func _process(delta):
 			if(ArrowBottomInstance41.position.x < get_viewport().size.x/3 && ArrowBottomInstance41.position.x > get_viewport().size.x/9):
 				if Input.is_key_pressed(KEY_DOWN):
 					if(ArrowBottomInstance41.position.x > get_viewport().size.x/4.2 && ArrowBottomInstance41.position.x < get_viewport().size.x/3.8):
-						score += 1
-						print(score)
+						score += 15
+						scoreLabel.text = str(score)
 						ArrowBottomInstance41.free()
 						flagDown41 = false
 					else:
@@ -3363,8 +3363,8 @@ func _process(delta):
 			if(ArrowMiddleInstance43.position.x < get_viewport().size.x/3 && ArrowMiddleInstance43.position.x > get_viewport().size.x/9):
 				if Input.is_key_pressed(KEY_LEFT):
 					if(ArrowMiddleInstance43.position.x > get_viewport().size.x/4.2 && ArrowMiddleInstance43.position.x < get_viewport().size.x/3.8):
-						score += 1
-						print(score)
+						score += 15
+						scoreLabel.text = str(score)
 						#ArrowMiddleInstance.hide()
 						ArrowMiddleInstance43.free()
 						flagMiddle43 = false
@@ -3388,8 +3388,8 @@ func _process(delta):
 			if(ArrowBottomInstance42.position.x < get_viewport().size.x/3 && ArrowBottomInstance42.position.x > get_viewport().size.x/9):
 				if Input.is_key_pressed(KEY_DOWN):
 					if(ArrowBottomInstance42.position.x > get_viewport().size.x/4.2 && ArrowBottomInstance42.position.x < get_viewport().size.x/3.8):
-						score += 1
-						print(score)
+						score += 15
+						scoreLabel.text = str(score)
 						ArrowBottomInstance42.free()
 						flagDown42 = false
 					else:
@@ -3411,8 +3411,8 @@ func _process(delta):
 			if(ArrowTopInstance42.position.x < get_viewport().size.x/3 && ArrowTopInstance42.position.x > get_viewport().size.x/9):
 				if Input.is_key_pressed(KEY_UP):
 					if(ArrowTopInstance42.position.x > get_viewport().size.x/4.2 && ArrowTopInstance42.position.x < get_viewport().size.x/3.8):
-						score += 1
-						print(score)
+						score += 15
+						scoreLabel.text = str(score)
 						ArrowTopInstance42.free()
 						flagUp42 = false
 					else:
@@ -3433,8 +3433,8 @@ func _process(delta):
 #			if(ArrowBottomInstance43.position.x < get_viewport().size.x/3 && ArrowBottomInstance43.position.x > get_viewport().size.x/9):
 #				if Input.is_key_pressed(KEY_DOWN):
 #					if(ArrowBottomInstance43.position.x > get_viewport().size.x/4.2 && ArrowBottomInstance43.position.x < get_viewport().size.x/3.8):
-#						score += 1
-#						print(score)
+#						score += 15
+#						scoreLabel.text = str(score)
 #						ArrowBottomInstance43.free()
 #						flagDown43 = false
 #					else:
@@ -3456,15 +3456,14 @@ func _process(delta):
 #			if(ArrowTopInstance43.position.x < get_viewport().size.x/3 && ArrowTopInstance43.position.x > get_viewport().size.x/9):
 #				if Input.is_key_pressed(KEY_UP):
 #					if(ArrowTopInstance43.position.x > get_viewport().size.x/4.2 && ArrowTopInstance43.position.x < get_viewport().size.x/3.8):
-#						score += 1
-#						print(score)
+#						score += 15
+#						scoreLabel.text = str(score)
 #						ArrowTopInstance43.free()
 #						flagUp43 = false
 #					else:
 #						ArrowTopInstance43.free()
 #						flagUp43 = false
 #						pass		
-
 
 
 	if Input.is_key_pressed(KEY_Q):
