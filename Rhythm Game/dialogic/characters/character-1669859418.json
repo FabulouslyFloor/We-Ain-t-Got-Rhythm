@@ -5,17 +5,17 @@
 	"display_name_bool": false,
 	"id": "character-1669859418.json",
 	"mirror_portraits": false,
-	"name": "ShowtownSnake",
+	"name": "Showtown Guard",
 	"nickname": "",
 	"nickname_bool": false,
 	"offset_x": 0,
-	"offset_y": 0,
+	"offset_y": -150,
 	"portraits": [
 		{
 			"name": "Default",
 			"path": "res://Sprites/showtune-resident.png"
 		}
 	],
-	"scale": 100,
+	"scale": 50,
 	"theme": ""
 }
