@@ -2429,12 +2429,12 @@ func _process(delta):
 						scoreLabel.text = str(score)
 						#ArrowMiddleInstance.hide()
 						ArrowMiddleInstance30.free()
-						flagMiddle44 = false
+						flagMiddle30 = false
 					else:
 						#print("LOSER YOU MISSED")	
 						#ArrowMiddleInstance.hide()
 						ArrowMiddleInstance30.free()
-						flagMiddle44 = false
+						flagMiddle30 = false
 						pass								
 
 
