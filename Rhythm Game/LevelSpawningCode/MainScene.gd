@@ -7,7 +7,9 @@ var ArrowBottomOpen = preload("res://LevelSpawningCode/ArrowOpenBottomScene.tscn
 var ArrowMiddleOpen = preload("res://LevelSpawningCode/ArrowOpenMiddleScene.tscn")
 #var ArrowTopOpen = preload("res://LevelSpawningCode/ArrowTopScene.tscn")
 var player = AudioStreamPlayer.new()
-
+var ArrowTopOpenInstance = ArrowTopOpen.instance()
+var ArrowMiddleOpenInstance = ArrowMiddleOpen.instance()
+var ArrowBottomOpenInstance = ArrowBottomOpen.instance()
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -16,9 +18,7 @@ func _ready():
 	player.stream = load("res://LevelSpawningCode/1-13 Wait For It.mp3")
 	player.play()
 
-	var ArrowTopOpenInstance = ArrowTopOpen.instance()
-	var ArrowMiddleOpenInstance = ArrowMiddleOpen.instance()
-	var ArrowBottomOpenInstance = ArrowBottomOpen.instance()
+	
 
 	#Setting Open Arrow on the top
 #	ArrowTopOpenInstance.position = Vector2(get_viewport().size.x/4, get_viewport().size.y*2/3)
@@ -51,4 +51,4 @@ func _process(_delta):
 		get_node("Spawner/scoreLabel").set_position(Vector2(375,200))
 		if Input.is_mouse_button_pressed(1):
 			get_tree().change_scene("res://Overworld/Overworld.tscn")
-		
+
