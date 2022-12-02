@@ -1,8 +1,9 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://LevelSpawningCode/MainScene.gd" type="Script" id=1]
 [ext_resource path="res://LevelSpawningCode/Node2D.gd" type="Script" id=2]
 [ext_resource path="res://Menus/UI Assets/fonts/handwritten-setting-60.tres" type="DynamicFont" id=3]
+[ext_resource path="res://LevelSpawningCode/Timers.gd" type="Script" id=4]
 [ext_resource path="res://LevelSpawningCode/left.png" type="Texture" id=6]
 
 [node name="Node2D" type="Node2D"]
@@ -42,3 +43,6 @@ custom_fonts/font = ExtResource( 3 )
 text = "0"
 align = 1
 valign = 2
+
+[node name="Timer" type="Timer" parent="Spawner"]
+script = ExtResource( 4 )

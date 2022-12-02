@@ -284,14 +284,22 @@ var ArrowTopInstance = ArrowTop.instance()
 var ArrowMiddleInstance = ArrowMiddle.instance()
 var ArrowBottomInstance = ArrowBottom.instance()
 
+var time_passed = OS.get_ticks_msec()
+var time_nows = OS.get_ticks_msec()
+var time_elapseds = time_nows - time_start - time_passed
+
 func _ready():
 	set_process(true)
+	print(time_passed)
+	print(time_nows)
+	print(time_start)
+	print(time_elapseds)
 	
 
 func _process(delta):
 	var scoreLabel = get_node("scoreLabel")
 	var time_now = OS.get_ticks_msec()
-	var time_elapsed = time_now - time_start
+	var time_elapsed = time_now - time_start - time_passed + 400
 	#print(time_elapsed)
 	if Input.is_key_pressed(KEY_SPACE):
 		print(time_elapsed)
