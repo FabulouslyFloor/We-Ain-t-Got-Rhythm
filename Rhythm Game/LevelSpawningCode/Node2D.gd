@@ -284,6 +284,8 @@ var ArrowTopInstance = ArrowTop.instance()
 var ArrowMiddleInstance = ArrowMiddle.instance()
 var ArrowBottomInstance = ArrowBottom.instance()
 
+var time_passed = OS.get_ticks_msec()
+
 func _ready():
 	set_process(true)
 	
@@ -291,11 +293,7 @@ func _ready():
 func _process(delta):
 	var scoreLabel = get_node("scoreLabel")
 	var time_now = OS.get_ticks_msec()
-<<<<<<< Updated upstream
-	var time_elapsed = time_now - time_start
-=======
 	var time_elapsed = time_now - time_start - time_passed + 325
->>>>>>> Stashed changes
 	#print(time_elapsed)
 	if Input.is_key_pressed(KEY_SPACE):
 		print(time_elapsed)
