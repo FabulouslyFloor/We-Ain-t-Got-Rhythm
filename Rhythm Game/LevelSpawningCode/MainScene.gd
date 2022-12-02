@@ -10,7 +10,7 @@ var player = AudioStreamPlayer.new()
 var ArrowTopOpenInstance = ArrowTopOpen.instance()
 var ArrowMiddleOpenInstance = ArrowMiddleOpen.instance()
 var ArrowBottomOpenInstance = ArrowBottomOpen.instance()
-
+var time_passed = OS.get_ticks_msec()
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	set_process(true)
@@ -20,25 +20,11 @@ func _ready():
 
 	
 
-	#Setting Open Arrow on the top
-#	ArrowTopOpenInstance.position = Vector2(get_viewport().size.x/4, get_viewport().size.y*2/3)
-#	ArrowTopOpenInstance.scale = Vector2(0.8,0.8)
-#	add_child(ArrowTopOpenInstance)
-#
-#	#Setting Open Arrow on the Middle
-#	ArrowMiddleOpenInstance.position = Vector2(get_viewport().size.x/4, get_viewport().size.y/2)
-#	ArrowMiddleOpenInstance.scale = Vector2(0.8,0.8)
-#	add_child(ArrowMiddleOpenInstance)
-#
-#	#Setting Open Arrow on the Bottom
-#	ArrowBottomOpenInstance.position = Vector2(get_viewport().size.x/4, get_viewport().size.y/3)
-#	ArrowBottomOpenInstance.scale = Vector2(0.8,0.8)
-#	add_child(ArrowBottomOpenInstance)
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta):
 	var time_now = OS.get_ticks_msec()
-	var time_elapsed = time_now - time_start
+	var time_elapsed = time_now - time_start - time_passed + 325
 	
 	if time_elapsed > 158140:
 		player.stop()
