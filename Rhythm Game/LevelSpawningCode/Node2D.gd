@@ -320,7 +320,7 @@ func _process(delta):
 
 	#ArrowTop 1
 	if time_elapsed > 1000:
-		if time_elapsed > 1317 && time_elapsed < 1337: #|| time_elapsed > 9000 && time_elapsed < 9020:
+		if time_elapsed > 1317 && time_elapsed < 1327: #|| time_elapsed > 9000 && time_elapsed < 9020:
 			flagUp1 = true
 			ArrowTopInstance1 = ArrowTop.instance()	#create a new instance
 			ArrowTopInstance1.position = Vector2(get_viewport().size.x, get_viewport().size.y*2/3)
