@@ -61,10 +61,6 @@ margin_right = 574.0
 margin_bottom = 512.0
 text = "quit"
 
-[node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2( 511, 298 )
-current = true
-
 [connection signal="pressed" from="settings" to="." method="_on_settings_pressed"]
 [connection signal="pressed" from="startGame" to="." method="_on_startGame_pressed"]
 [connection signal="pressed" from="quit" to="." method="_on_quit_pressed"]
