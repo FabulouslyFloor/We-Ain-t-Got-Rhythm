@@ -3129,12 +3129,9 @@ func _process(delta):
 					if(ArrowMiddleInstance40.position.x > get_viewport().size.x/4.2 && ArrowMiddleInstance40.position.x < get_viewport().size.x/3.8):
 						score += 15
 						scoreLabel.text = str(score)
-						#ArrowMiddleInstance.hide()
 						ArrowMiddleInstance40.free()
 						flagMiddle40 = false
 					else:
-						#print("LOSER YOU MISSED")	
-						#ArrowMiddleInstance.hide()
 						ArrowMiddleInstance40.free()
 						flagMiddle40 = false
 						pass						
@@ -3471,58 +3468,6 @@ func _process(delta):
 	if Input.is_key_pressed(KEY_Q):
 		get_tree().quit()
 	
-#	if time_elapsed > 1000:
-#		if score < 0:
-#			stop the game	
-#	if time_elapsed > 10000:		
-#		if score < 6:
-#			stop the game
-#	if time_elapsed > 20000:		
-#		if score < 17:
-#			stop the game
-#	if time_elapsed > 30000:		
-#		if score < 27:
-#			stop the game
-#	if time_elapsed > 40000:		
-#		if score < 36:
-#			stop the game
-#	if time_elapsed > 50000:		
-#		if score < 45:
-#			stop the game
-#	if time_elapsed > 60000:		
-#		if score < 52:
-#			stop the game
-#	if time_elapsed > 70000:		
-#		if score < 59:
-#			stop the game
-#	if time_elapsed > 80000:		
-#		if score < 66:
-#			stop the game
-#	if time_elapsed > 90000:		
-#		if score < 73:
-#			stop the game
-#	if time_elapsed > 100000:		
-#		if score < 78:
-#			stop the game
-#	if time_elapsed > 110000:		
-#		if score < 85:
-#			stop the game
-#	if time_elapsed > 120000:		
-#		if score < 93:
-#			stop the game
-#	if time_elapsed > 130000:		
-#		if score < 101:
-#			stop the game
-#	if time_elapsed > 140000:		
-#		if score < 108:
-#			stop the game
-#	if time_elapsed > 150000:		
-#		if score < 115:
-#			stop the game
-#	if time_elapsed > 160000:		
-#		if score < 121:
-#			stop the game
-					
 
 
 
