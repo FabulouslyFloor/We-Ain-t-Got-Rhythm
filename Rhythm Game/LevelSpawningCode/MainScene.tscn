@@ -35,7 +35,6 @@ texture = ExtResource( 6 )
 script = ExtResource( 2 )
 
 [node name="finalScoreLabel" type="Label" parent="Spawner"]
-visible = false
 margin_right = 1024.0
 margin_bottom = 600.0
 custom_fonts/font = ExtResource( 3 )
@@ -56,21 +55,3 @@ custom_fonts/font = ExtResource( 3 )
 text = "0"
 align = 1
 valign = 2
-
-[node name="DuringGameExitLabel" type="Label" parent="Spawner"]
-margin_left = 19.0
-margin_top = 22.0
-margin_right = 113.0
-margin_bottom = 43.0
-text = "Press Q to Exit Game"
-
-[node name="AfterGameExitLabel" type="Label" parent="Spawner"]
-visible = false
-margin_left = 390.0
-margin_top = 347.0
-margin_right = 625.0
-margin_bottom = 361.0
-text = "Click to Exit Stage Back To Overworld"
-
-[node name="Camera (not active)" type="Camera2D" parent="."]
-position = Vector2( 514, 297 )

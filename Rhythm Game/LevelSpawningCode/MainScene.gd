@@ -42,13 +42,6 @@ func _process(_delta):
 	
 	if time_elapsed > 158140:
 		player.stop()
-		get_node("Spawner/DuringGameExitLabel").set_position(Vector2(440,400))
-		get_node("ArrowOpenBottom").hide()
-		get_node("ArrowOpenMiddle").hide()
-		get_node("ArrowOpenTop").hide()
-		get_node("Spawner/finalScoreLabel").show()
-		get_node("Spawner/AfterGameExitLabel").show()
-		get_node("Spawner/scoreLabel").set_position(Vector2(375,200))
-		if Input.is_mouse_button_pressed(1):
-			get_tree().change_scene("res://Overworld/Overworld.tscn")
-
+		ArrowBottomOpenInstance.hide()
+		ArrowMiddleOpenInstance.hide()
+		ArrowTopOpenInstance.hide()
