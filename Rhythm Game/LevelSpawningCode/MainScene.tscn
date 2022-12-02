@@ -1,7 +1,7 @@
 [gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://LevelSpawningCode/MainScene.gd" type="Script" id=1]
-[ext_resource path="res://LevelSpawningCode/Node2D.gd" type="Script" id=2]
+[ext_resource path="res://LevelSpawningCode/Spawner.gd" type="Script" id=2]
 [ext_resource path="res://Menus/UI Assets/fonts/handwritten-setting-60.tres" type="DynamicFont" id=3]
 [ext_resource path="res://LevelSpawningCode/rhythm-background.png" type="Texture" id=4]
 [ext_resource path="res://LevelSpawningCode/left.png" type="Texture" id=6]
@@ -14,25 +14,25 @@ script = ExtResource( 1 )
 size_flags_stretch_ratio = 0.0
 texture = ExtResource( 4 )
 
-[node name="ArrowOpenTop" type="Sprite" parent="."]
+[node name="Spawner" type="Node2D" parent="."]
+script = ExtResource( 2 )
+
+[node name="ArrowOpenTop" type="Sprite" parent="Spawner"]
 position = Vector2( 269, 400 )
 rotation = 1.55954
 scale = Vector2( 0.803435, 0.787151 )
 texture = ExtResource( 6 )
 
-[node name="ArrowOpenBottom" type="Sprite" parent="."]
+[node name="ArrowOpenBottom" type="Sprite" parent="Spawner"]
 position = Vector2( 268, 202 )
 rotation = -1.56102
 scale = Vector2( 0.783829, 0.788125 )
 texture = ExtResource( 6 )
 
-[node name="ArrowOpenMiddle" type="Sprite" parent="."]
+[node name="ArrowOpenMiddle" type="Sprite" parent="Spawner"]
 position = Vector2( 268, 301 )
 scale = Vector2( 0.78125, 0.789062 )
 texture = ExtResource( 6 )
-
-[node name="Spawner" type="Node2D" parent="."]
-script = ExtResource( 2 )
 
 [node name="finalScoreLabel" type="Label" parent="Spawner"]
 visible = false
