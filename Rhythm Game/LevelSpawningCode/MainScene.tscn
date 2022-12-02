@@ -34,6 +34,14 @@ texture = ExtResource( 6 )
 [node name="Spawner" type="Node2D" parent="."]
 script = ExtResource( 2 )
 
+[node name="finalScoreLabel" type="Label" parent="Spawner"]
+margin_right = 1024.0
+margin_bottom = 600.0
+custom_fonts/font = ExtResource( 3 )
+text = "THIS IS THE FINAL SCORE"
+align = 1
+valign = 1
+
 [node name="scoreLabel" type="Label" parent="Spawner"]
 anchor_top = 1.0
 anchor_bottom = 1.0
