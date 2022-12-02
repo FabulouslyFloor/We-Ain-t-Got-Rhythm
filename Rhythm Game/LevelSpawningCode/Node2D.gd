@@ -288,17 +288,26 @@ var time_passed = OS.get_ticks_msec()
 
 func _ready():
 	set_process(true)
-	
 
 func _process(delta):
 	var scoreLabel = get_node("scoreLabel")
+	var finalScoreLabel = get_node("finalScoreLabel")
+	
+	
 	var time_now = OS.get_ticks_msec()
 	var time_elapsed = time_now - time_start - time_passed + 325
-	#print(time_elapsed)
+
 	if Input.is_key_pressed(KEY_SPACE):
 		print(time_elapsed)
 		print(" ")
-	
+		
+	if time_elapsed < 158140:
+		finalScoreLabel.hide()
+		
+	if time_elapsed > 158140:
+		finalScoreLabel.show()
+		
+		
 	
 
 
