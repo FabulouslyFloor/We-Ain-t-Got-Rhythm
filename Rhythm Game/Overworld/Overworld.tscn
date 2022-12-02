@@ -127,26 +127,26 @@ texture = ExtResource( 5 )
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ShowtuneResident/Area2D"]
 shape = SubResource( 3 )
 
-[node name="KinematicBody2D" type="KinematicBody2D" parent="."]
+[node name="MainCharacter" type="KinematicBody2D" parent="."]
 position = Vector2( 582, 322 )
 rotation = 3.14159
 scale = Vector2( 0.197, -0.189 )
 script = ExtResource( 4 )
 
-[node name="SoundWalk" type="AudioStreamPlayer2D" parent="KinematicBody2D"]
+[node name="SoundWalk" type="AudioStreamPlayer2D" parent="MainCharacter"]
 stream = ExtResource( 8 )
 volume_db = -12.0
 bus = "Sound Effect"
 
-[node name="animated_sprite" type="AnimatedSprite" parent="KinematicBody2D"]
+[node name="animated_sprite" type="AnimatedSprite" parent="MainCharacter"]
 frames = SubResource( 4 )
 animation = "idle"
 frame = 1
 
-[node name="RemoteTransform2D" type="RemoteTransform2D" parent="KinematicBody2D/animated_sprite"]
+[node name="RemoteTransform2D" type="RemoteTransform2D" parent="MainCharacter/animated_sprite"]
 remote_path = NodePath("../../../Camera2D")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="KinematicBody2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="MainCharacter"]
 shape = SubResource( 1 )
 
 [node name="Camera2D" type="Camera2D" parent="."]
@@ -193,5 +193,5 @@ shape = SubResource( 8 )
 [connection signal="draw" from="PondMan/SpeechBubble" to="PondMan" method="_on_SpeechBubble_draw"]
 [connection signal="body_entered" from="PondMan/Area2D" to="PondMan" method="_on_Area2D_body_entered"]
 [connection signal="body_exited" from="PondMan/Area2D" to="PondMan" method="_on_Area2D_body_exited"]
-[connection signal="area_entered" from="ShowtuneResident/Area2D" to="KinematicBody2D" method="_on_Area2D_area_entered"]
-[connection signal="body_entered" from="ShowtuneResident/Area2D" to="KinematicBody2D" method="_on_Area2D_body_entered"]
+[connection signal="area_entered" from="ShowtuneResident/Area2D" to="MainCharacter" method="_on_Area2D_area_entered"]
+[connection signal="body_entered" from="ShowtuneResident/Area2D" to="MainCharacter" method="_on_Area2D_body_entered"]
