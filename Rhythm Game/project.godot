@@ -82,7 +82,8 @@ _global_script_class_icons={
 
 config/name="Rhythm Game Overworld Test"
 run/main_scene="res://Menus/Title Menu/titleMenu.tscn"
-config/icon="res://icon.png"
+config/icon="res://Sprites/showtune-city-ROUGH.png"
+config/windows_native_icon="res://showtune-city-ROUGH.ico"
 
 [audio]
 
