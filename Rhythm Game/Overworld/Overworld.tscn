@@ -1,4 +1,4 @@
-[gd_scene load_steps=32 format=2]
+[gd_scene load_steps=34 format=2]
 
 [ext_resource path="res://Sprites/Tiles/OverworldTileSet.tres" type="TileSet" id=1]
 [ext_resource path="res://Overworld/Interaction.gd" type="Script" id=2]
@@ -6,6 +6,7 @@
 [ext_resource path="res://Overworld/MainCharacter.gd" type="Script" id=4]
 [ext_resource path="res://Sprites/showtune-resident.png" type="Texture" id=5]
 [ext_resource path="res://Sprites/radio-head.png" type="Texture" id=6]
+[ext_resource path="res://Sprites/Animations/E Frames/001.png" type="Texture" id=7]
 [ext_resource path="res://Sounds/Single-footstep-in-grass-G-www.fesliyanstudios.com.mp3" type="AudioStream" id=8]
 [ext_resource path="res://Sprites/Animations/mc-idle-frame1.png" type="Texture" id=9]
 [ext_resource path="res://Sprites/Animations/mc-run-frame3.png" type="Texture" id=10]
@@ -18,7 +19,7 @@
 [ext_resource path="res://Sprites/Animations/mc-idle-frame2.png" type="Texture" id=17]
 [ext_resource path="res://Sounds/Goofy-Mischief.mp3" type="AudioStream" id=18]
 [ext_resource path="res://Menus/Pause Menu/PauseMenu.tscn" type="PackedScene" id=19]
-[ext_resource path="res://Sprites/E.png" type="Texture" id=23]
+[ext_resource path="res://Sprites/Animations/E Frames/000.png" type="Texture" id=20]
 
 [sub_resource type="RectangleShape2D" id=10]
 extents = Vector2( 185.279, 354.497 )
@@ -52,6 +53,14 @@ animations = [ {
 "loop": true,
 "name": "run",
 "speed": 8.0
+} ]
+
+[sub_resource type="SpriteFrames" id=16]
+animations = [ {
+"frames": [ ExtResource( 20 ), ExtResource( 7 ) ],
+"loop": true,
+"name": "Flash",
+"speed": 2.5
 } ]
 
 [sub_resource type="RectangleShape2D" id=5]
@@ -96,7 +105,6 @@ script = ExtResource( 2 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="PathMan/Area2D"]
 position = Vector2( -12.6904, 0 )
-scale = Vector2( 1, 1 )
 shape = SubResource( 10 )
 
 [node name="CrossroadsMan" type="Sprite" parent="."]
@@ -122,7 +130,6 @@ script = ExtResource( 2 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="GoldMan/Area2D"]
 position = Vector2( -0.000488281, -5.29102 )
-scale = Vector2( 1, 1 )
 shape = SubResource( 15 )
 
 [node name="PondMan" type="Sprite" parent="."]
@@ -135,7 +142,6 @@ script = ExtResource( 2 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="PondMan/Area2D"]
 position = Vector2( -0.000732422, 5.29156 )
-scale = Vector2( 1, 1 )
 shape = SubResource( 11 )
 
 [node name="ShowtuneResident" type="Sprite" parent="."]
@@ -147,7 +153,6 @@ script = ExtResource( 2 )
 [node name="Area2D" type="Area2D" parent="ShowtuneResident" groups=["Showtown"]]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ShowtuneResident/Area2D"]
-scale = Vector2( 1, 1 )
 shape = SubResource( 12 )
 
 [node name="KinematicBody2D" type="KinematicBody2D" parent="."]
@@ -160,7 +165,6 @@ script = ExtResource( 4 )
 shape = SubResource( 1 )
 
 [node name="Area2D" type="Area2D" parent="KinematicBody2D" groups=["fuck"]]
-scale = Vector2( 1, 1 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="KinematicBody2D/Area2D"]
 shape = SubResource( 13 )
@@ -179,10 +183,11 @@ frame = 1
 position = Vector2( -5.07617, 10.582 )
 remote_path = NodePath("../../../Camera2D")
 
-[node name="EIndicator" type="Sprite" parent="KinematicBody2D"]
+[node name="EIndicator" type="AnimatedSprite" parent="KinematicBody2D"]
 visible = false
 position = Vector2( 274.111, -312.17 )
-texture = ExtResource( 23 )
+frames = SubResource( 16 )
+animation = "Flash"
 flip_h = true
 
 [node name="Camera2D" type="Camera2D" parent="."]

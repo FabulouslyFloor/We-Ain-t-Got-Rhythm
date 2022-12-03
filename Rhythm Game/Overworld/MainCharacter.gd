@@ -69,6 +69,7 @@ func _process(delta):
 
 func _on_Area2D_area_entered(area):
 	get_node("EIndicator").show()
+	get_node("EIndicator").play("Flash")
 
 
 func _on_Area2D_area_exited(area):
