@@ -113,7 +113,7 @@
 			"text": ">_>"
 		},
 		{
-			"character": "",
+			"character": "character-1670037437.json",
 			"event_id": "dialogic_010",
 			"options": [
 
@@ -145,7 +145,7 @@
 			"character": "character-1670037437.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
-			"text": "...\nJust keep your trap shut alright? I promise I'm much more confident then my brothers."
+			"text": "...\nJust keep your trap shut alright? I promise I'm much more competent then my brothers."
 		},
 		{
 			"event_id": "dialogic_013"
