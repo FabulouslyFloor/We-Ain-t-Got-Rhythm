@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/path-tile9.png-1bb17aa7a1e78223f0ced9acaa198800.stex"
+path="res://.import/E.png-ccd5dc2f515d095aa7852001588b72e3.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Overworld/path-tile9.png"
-dest_files=[ "res://.import/path-tile9.png-1bb17aa7a1e78223f0ced9acaa198800.stex" ]
+source_file="res://Sprites/E.png"
+dest_files=[ "res://.import/E.png-ccd5dc2f515d095aa7852001588b72e3.stex" ]
 
 [params]
 

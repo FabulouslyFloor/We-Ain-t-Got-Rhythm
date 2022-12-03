@@ -1,0 +1,73 @@
+{
+	"events": [
+		{
+			"animation": "[Default]",
+			"animation_length": 0,
+			"change_mirror_portrait": false,
+			"change_z_index": false,
+			"character": "character-1670037332.json",
+			"event_id": "dialogic_002",
+			"mirror_portrait": false,
+			"portrait": "Default",
+			"portrait_definition": "",
+			"position": {
+				"0": true,
+				"1": false,
+				"2": false,
+				"3": false,
+				"4": false
+			},
+			"type": 0,
+			"z_index": 0
+		},
+		{
+			"animation": "[Default]",
+			"animation_length": 0,
+			"change_mirror_portrait": false,
+			"change_z_index": false,
+			"character": "character-1669861006.json",
+			"event_id": "dialogic_002",
+			"mirror_portrait": false,
+			"portrait": "Default",
+			"portrait_definition": "",
+			"position": {
+				"0": false,
+				"1": false,
+				"2": false,
+				"3": false,
+				"4": true
+			},
+			"type": 0,
+			"z_index": 0
+		},
+		{
+			"character": "character-1670037332.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "You looking for directions?"
+		},
+		{
+			"character": "character-1669861006.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Yes! \nWhere is the nearest kingdom?"
+		},
+		{
+			"character": "character-1670037332.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Nearest kingdom? Well the showtune kingdom is nearby, just keep heading right.\nNo kingdom up yonder. No point in going that way, nothing happening up there at all. Nothing suspicious. Nope."
+		},
+		{
+			"character": "character-1669861006.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Okay... thank you?"
+		}
+	],
+	"metadata": {
+		"dialogic-version": "1.4.5",
+		"file": "timeline-1670036411.json",
+		"name": "CrossroadsInteraction"
+	}
+}

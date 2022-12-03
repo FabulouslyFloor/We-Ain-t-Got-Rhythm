@@ -284,10 +284,15 @@ var ArrowTopInstance = ArrowTop.instance()
 var ArrowMiddleInstance = ArrowMiddle.instance()
 var ArrowBottomInstance = ArrowBottom.instance()
 
+var player = AudioStreamPlayer.new()
+
 var time_passed = OS.get_ticks_msec()
 
 func _ready():
 	set_process(true)
+	self.add_child(player)
+	player.stream = load("res://LevelSpawningCode/1-13 Wait For It.mp3")
+	player.play()
 
 func _process(delta):
 	var scoreLabel = get_node("scoreLabel")
@@ -302,10 +307,26 @@ func _process(delta):
 		print(" ")
 		
 	if time_elapsed < 158140:
+		get_node("scoreLabel").set_position(Vector2(375,75))
+		get_node("DuringGameExitLabel").set_position(Vector2(25,25))
+		get_node("AfterGameExitLabel").hide()
 		finalScoreLabel.hide()
+		get_node("ArrowOpenBottom").show()
+		get_node("ArrowOpenMiddle").show()
+		get_node("ArrowOpenTop").show()
+		
 		
 	if time_elapsed > 158140:
+		player.stop()
 		finalScoreLabel.show()
+		get_node("ArrowOpenBottom").hide()
+		get_node("ArrowOpenMiddle").hide()
+		get_node("ArrowOpenTop").hide()
+		get_node("AfterGameExitLabel").show()
+		get_node("scoreLabel").set_position(Vector2(375,200))
+		get_node("DuringGameExitLabel").set_position(Vector2(440,400))
+		if Input.is_mouse_button_pressed(1):
+			get_tree().change_scene("res://Overworld/Overworld.tscn")
 		
 		
 	
@@ -320,7 +341,7 @@ func _process(delta):
 
 	#ArrowTop 1
 	if time_elapsed > 1000:
-		if time_elapsed > 1317 && time_elapsed < 1327: #|| time_elapsed > 9000 && time_elapsed < 9020:
+		if time_elapsed > 1317 && time_elapsed < 1337: #|| time_elapsed > 9000 && time_elapsed < 9020:
 			flagUp1 = true
 			ArrowTopInstance1 = ArrowTop.instance()	#create a new instance
 			ArrowTopInstance1.position = Vector2(get_viewport().size.x, get_viewport().size.y*2/3)

@@ -1,0 +1,21 @@
+{
+	"color": "#ffff0000",
+	"description": "",
+	"display_name": "",
+	"display_name_bool": false,
+	"id": "character-1670037332.json",
+	"mirror_portraits": false,
+	"name": "Random Stranger",
+	"nickname": "",
+	"nickname_bool": false,
+	"offset_x": 0,
+	"offset_y": -150,
+	"portraits": [
+		{
+			"name": "Default",
+			"path": "res://Sprites/radio-head.png"
+		}
+	],
+	"scale": 50,
+	"theme": ""
+}

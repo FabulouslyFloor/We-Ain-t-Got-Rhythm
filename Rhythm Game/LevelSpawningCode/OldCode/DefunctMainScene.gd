@@ -14,9 +14,9 @@ var time_passed = OS.get_ticks_msec()
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	set_process(true)
-	self.add_child(player)
-	player.stream = load("res://LevelSpawningCode/1-13 Wait For It.mp3")
-	player.play()
+	#self.add_child(player)
+	#player.stream = load("res://LevelSpawningCode/1-13 Wait For It.mp3")
+	#player.play()
 
 	
 
@@ -27,7 +27,7 @@ func _process(_delta):
 	var time_elapsed = time_now - time_start - time_passed + 325
 	
 	if time_elapsed > 158140:
-		player.stop()
-		ArrowBottomOpenInstance.hide()
-		ArrowMiddleOpenInstance.hide()
-		ArrowTopOpenInstance.hide()
+		#player.stop()
+		#if Input.is_mouse_button_pressed(1):
+			#get_tree().change_scene("res://Overworld/Overworld.tscn")
+		pass

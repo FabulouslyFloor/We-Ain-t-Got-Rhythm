@@ -1,0 +1,159 @@
+{
+	"events": [
+		{
+			"animation": "[Default]",
+			"animation_length": 0,
+			"change_mirror_portrait": false,
+			"change_z_index": false,
+			"character": "character-1670037437.json",
+			"event_id": "dialogic_002",
+			"mirror_portrait": false,
+			"portrait": "Default",
+			"portrait_definition": "",
+			"position": {
+				"0": true,
+				"1": false,
+				"2": false,
+				"3": false,
+				"4": false
+			},
+			"type": 0,
+			"z_index": 0
+		},
+		{
+			"animation": "[Default]",
+			"animation_length": 0,
+			"change_mirror_portrait": false,
+			"change_z_index": false,
+			"character": "character-1669861006.json",
+			"event_id": "dialogic_002",
+			"mirror_portrait": false,
+			"portrait": "Default",
+			"portrait_definition": "",
+			"position": {
+				"0": false,
+				"1": false,
+				"2": false,
+				"3": false,
+				"4": true
+			},
+			"type": 0,
+			"z_index": 0
+		},
+		{
+			"character": "character-1670037437.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "*Whistling Happily*"
+		},
+		{
+			"character": "character-1669861006.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "What are you doing?"
+		},
+		{
+			"character": "character-1670037437.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Ah! How did you find me? "
+		},
+		{
+			"character": "character-1669861006.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "I... walked along the path?"
+		},
+		{
+			"character": "character-1670037437.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "No one stopped you?"
+		},
+		{
+			"character": "character-1669861006.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "No."
+		},
+		{
+			"character": "character-1670037437.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "*Sigh*\nYou can't trust anyone but yourself..."
+		},
+		{
+			"character": "character-1669861006.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Is that gold? Are you panning for gold in this pond?"
+		},
+		{
+			"character": "character-1670037437.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "No! Uh... fine. Yes. There is gold in this river. "
+		},
+		{
+			"character": "character-1669861006.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "That's amazing!"
+		},
+		{
+			"character": "character-1670037437.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Yeah, it is. And we want it. For ourselves. You understand?"
+		},
+		{
+			"character": "character-1669861006.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": ">_>"
+		},
+		{
+			"character": "",
+			"event_id": "dialogic_010",
+			"options": [
+
+			],
+			"portrait": "",
+			"question": "You drive a hard bargain kid. If I give you a piece of gold, will you promise not to tell anyone about our pond?"
+		},
+		{
+			"choice": "Yes!",
+			"condition": "",
+			"definition": "",
+			"event_id": "dialogic_011",
+			"value": ""
+		},
+		{
+			"character": "character-1670037437.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Good. Here you go, and keep this location to yourself. Or else you'll find a fish head in your bed."
+		},
+		{
+			"choice": "No!",
+			"condition": "",
+			"definition": "",
+			"event_id": "dialogic_011",
+			"value": ""
+		},
+		{
+			"character": "character-1670037437.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "...\nJust keep your trap shut alright? I promise I'm much more confident then my brothers."
+		},
+		{
+			"event_id": "dialogic_013"
+		}
+	],
+	"metadata": {
+		"dialogic-version": "1.4.5",
+		"file": "timeline-1670036433.json",
+		"name": "GoldInteraction"
+	}
+}
