@@ -5,27 +5,7 @@
 			"animation_length": 0,
 			"change_mirror_portrait": false,
 			"change_z_index": false,
-			"character": "character-1669859418.json",
-			"event_id": "dialogic_002",
-			"mirror_portrait": false,
-			"portrait": "Default",
-			"portrait_definition": "",
-			"position": {
-				"0": false,
-				"1": false,
-				"2": false,
-				"3": false,
-				"4": true
-			},
-			"type": 0,
-			"z_index": 0
-		},
-		{
-			"animation": "[Default]",
-			"animation_length": 0,
-			"change_mirror_portrait": false,
-			"change_z_index": false,
-			"character": "character-1669861006.json",
+			"character": "character-1670037400.json",
 			"event_id": "dialogic_002",
 			"mirror_portrait": false,
 			"portrait": "Default",
@@ -41,87 +21,77 @@
 			"z_index": 0
 		},
 		{
-			"character": "character-1669859418.json",
+			"animation": "[Default]",
+			"animation_length": 0,
+			"change_mirror_portrait": false,
+			"change_z_index": false,
+			"character": "character-1669861006.json",
+			"event_id": "dialogic_002",
+			"mirror_portrait": false,
+			"portrait": "Default",
+			"portrait_definition": "",
+			"position": {
+				"0": false,
+				"1": false,
+				"2": false,
+				"3": false,
+				"4": true
+			},
+			"type": 0,
+			"z_index": 0
+		},
+		{
+			"character": "character-1670037400.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
-			"text": "Who are you?"
+			"text": "Ayyyyyye what are you doing here?"
 		},
 		{
 			"character": "character-1669861006.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
-			"text": "I'm Lil'Man, I need to speak to someone about all the soldiers running around."
+			"text": "I'm just looking around."
 		},
 		{
-			"character": "character-1669859418.json",
+			"character": "character-1670037400.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
-			"text": "Nope! No non-citizens shall enter the kingdom. Queens orders!"
+			"text": "Best you go back the other way, lil'man"
 		},
 		{
 			"character": "character-1669861006.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
-			"text": "I just want to know what's going on, an army destroyed my farm."
+			"text": "*Gasp* how do you know my name?"
 		},
 		{
-			"character": "character-1669859418.json",
-			"event_id": "dialogic_010",
-			"options": [
-
-			],
+			"character": "character-1670037400.json",
+			"event_id": "dialogic_001",
 			"portrait": "",
-			"question": "If you don't leave me be I will have to make you leave."
-		},
-		{
-			"choice": "Leave",
-			"condition": "",
-			"definition": "",
-			"event_id": "dialogic_011",
-			"value": ""
+			"text": "What? Your name - I have my ways kid. Now scram."
 		},
 		{
 			"character": "character-1669861006.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
-			"text": "Fine, I'll leave"
+			"text": "...\nCan you actually stop me?"
 		},
 		{
-			"character": "character-1669859418.json",
+			"character": "character-1670037400.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
-			"text": "Good."
-		},
-		{
-			"choice": "Don't Leave",
-			"condition": "",
-			"definition": "",
-			"event_id": "dialogic_011",
-			"value": ""
+			"text": "Of course I can!\n...\nNo, actually."
 		},
 		{
 			"character": "character-1669861006.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
-			"text": "I'm not leaving."
-		},
-		{
-			"character": "character-1669859418.json",
-			"event_id": "dialogic_001",
-			"portrait": "",
-			"text": "You leave me no choice."
-		},
-		{
-			"change_scene": "res://LevelSpawningCode/MainScene.tscn",
-			"event_id": "dialogic_041"
-		},
-		{
-			"event_id": "dialogic_013"
+			"text": ">_>"
 		}
 	],
 	"metadata": {
 		"dialogic-version": "1.4.5",
-		"file": "timeline-1669860942.json",
-		"name": "ShowtownInteraction"
+		"file": "timeline-1670036424.json",
+		"name": "PathInteraction"
 	}
 }

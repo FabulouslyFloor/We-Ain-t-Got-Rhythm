@@ -284,10 +284,15 @@ var ArrowTopInstance = ArrowTop.instance()
 var ArrowMiddleInstance = ArrowMiddle.instance()
 var ArrowBottomInstance = ArrowBottom.instance()
 
+var player = AudioStreamPlayer.new()
+
 var time_passed = OS.get_ticks_msec()
 
 func _ready():
 	set_process(true)
+	self.add_child(player)
+	player.stream = load("res://LevelSpawningCode/1-13 Wait For It.mp3")
+	player.play()
 
 func _process(delta):
 	var scoreLabel = get_node("scoreLabel")
@@ -312,6 +317,7 @@ func _process(delta):
 		
 		
 	if time_elapsed > 158140:
+		player.stop()
 		finalScoreLabel.show()
 		get_node("ArrowOpenBottom").hide()
 		get_node("ArrowOpenMiddle").hide()
@@ -319,6 +325,8 @@ func _process(delta):
 		get_node("AfterGameExitLabel").show()
 		get_node("scoreLabel").set_position(Vector2(375,200))
 		get_node("DuringGameExitLabel").set_position(Vector2(440,400))
+		if Input.is_mouse_button_pressed(1):
+			get_tree().change_scene("res://Overworld/Overworld.tscn")
 		
 		
 	
