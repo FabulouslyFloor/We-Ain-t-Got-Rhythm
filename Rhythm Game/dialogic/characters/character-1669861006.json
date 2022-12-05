@@ -9,13 +9,25 @@
 	"nickname": "",
 	"nickname_bool": false,
 	"offset_x": 0,
-	"offset_y": -150,
+	"offset_y": 0,
 	"portraits": [
 		{
 			"name": "Default",
-			"path": "res://Sprites/mc-idle-frame1.png"
+			"path": "res://Sprites/DialogueSprites/lil-man-neutral.png"
+		},
+		{
+			"name": "Angry",
+			"path": "res://Sprites/DialogueSprites/lil-man-angry.png"
+		},
+		{
+			"name": "Concerned",
+			"path": "res://Sprites/DialogueSprites/lil-man-concerned.png"
+		},
+		{
+			"name": "Nervous",
+			"path": "res://Sprites/DialogueSprites/lil-man-nervous.png"
 		}
 	],
-	"scale": 50,
+	"scale": 125,
 	"theme": ""
 }

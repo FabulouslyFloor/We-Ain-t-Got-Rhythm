@@ -27,8 +27,8 @@
 			"change_z_index": false,
 			"character": "character-1669861006.json",
 			"event_id": "dialogic_002",
-			"mirror_portrait": false,
-			"portrait": "Default",
+			"mirror_portrait": true,
+			"portrait": "Neutral",
 			"portrait_definition": "",
 			"position": {
 				"0": false,
@@ -73,7 +73,7 @@
 		{
 			"character": "character-1669861006.json",
 			"event_id": "dialogic_001",
-			"portrait": "",
+			"portrait": "Nervous",
 			"text": "No."
 		},
 		{
@@ -85,7 +85,7 @@
 		{
 			"character": "character-1669861006.json",
 			"event_id": "dialogic_001",
-			"portrait": "",
+			"portrait": "Default",
 			"text": "Is that gold? Are you panning for gold in this pond?"
 		},
 		{
@@ -145,7 +145,7 @@
 			"character": "character-1670037437.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
-			"text": "...\nJust keep your trap shut alright? I promise I'm much more competent then my brothers."
+			"text": "...\nJust keep your trap shut alright? I promise I'm much more competent than my brothers."
 		},
 		{
 			"event_id": "dialogic_013"

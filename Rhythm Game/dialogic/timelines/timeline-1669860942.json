@@ -8,7 +8,7 @@
 			"character": "character-1669859418.json",
 			"event_id": "dialogic_002",
 			"mirror_portrait": false,
-			"portrait": "Default",
+			"portrait": "Angry",
 			"portrait_definition": "",
 			"position": {
 				"0": false,
@@ -55,13 +55,13 @@
 		{
 			"character": "character-1669859418.json",
 			"event_id": "dialogic_001",
-			"portrait": "",
+			"portrait": "Stern",
 			"text": "Nope! No non-citizens shall enter the kingdom. Queens orders!"
 		},
 		{
 			"character": "character-1669861006.json",
 			"event_id": "dialogic_001",
-			"portrait": "",
+			"portrait": "Concerned",
 			"text": "I just want to know what's going on, an army destroyed my farm."
 		},
 		{
@@ -83,13 +83,13 @@
 		{
 			"character": "character-1669861006.json",
 			"event_id": "dialogic_001",
-			"portrait": "",
+			"portrait": "Nervous",
 			"text": "Fine, I'll leave"
 		},
 		{
 			"character": "character-1669859418.json",
 			"event_id": "dialogic_001",
-			"portrait": "",
+			"portrait": "Angry",
 			"text": "Good."
 		},
 		{
@@ -102,13 +102,13 @@
 		{
 			"character": "character-1669861006.json",
 			"event_id": "dialogic_001",
-			"portrait": "",
+			"portrait": "Angry",
 			"text": "I'm not leaving."
 		},
 		{
 			"character": "character-1669859418.json",
 			"event_id": "dialogic_001",
-			"portrait": "",
+			"portrait": "Angry",
 			"text": "You leave me no choice."
 		},
 		{

@@ -27,7 +27,7 @@
 			"change_z_index": false,
 			"character": "character-1669861006.json",
 			"event_id": "dialogic_002",
-			"mirror_portrait": false,
+			"mirror_portrait": true,
 			"portrait": "Default",
 			"portrait_definition": "",
 			"position": {
@@ -61,7 +61,7 @@
 		{
 			"character": "character-1669861006.json",
 			"event_id": "dialogic_001",
-			"portrait": "",
+			"portrait": "Nervous",
 			"text": "Okay... thank you?"
 		}
 	],
