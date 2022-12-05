@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/showtune-city-ROUGH.png-9272820b9e02a0354397f905c32a5db4.stex"
+path="res://.import/lil-man-farm-ROUGH.png-4fc65bead4ebd899b29dc4cc7cd1a993.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Overworld/showtune-city-ROUGH.png"
-dest_files=[ "res://.import/showtune-city-ROUGH.png-9272820b9e02a0354397f905c32a5db4.stex" ]
+source_file="res://Sprites/lil-man-farm-ROUGH.png"
+dest_files=[ "res://.import/lil-man-farm-ROUGH.png-4fc65bead4ebd899b29dc4cc7cd1a993.stex" ]
 
 [params]
 
