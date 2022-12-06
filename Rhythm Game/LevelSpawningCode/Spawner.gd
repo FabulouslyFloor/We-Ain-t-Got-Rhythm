@@ -327,22 +327,11 @@ func _process(delta):
 		get_node("DuringGameExitLabel").set_position(Vector2(440,400))
 		if Input.is_mouse_button_pressed(1):
 			get_tree().change_scene("res://Overworld/Overworld.tscn")
-		
-		
-	
-
-	if ArrowTopInstance1.position >= Vector2(get_viewport().size.x, get_viewport().size.y*2/3):
-		ArrowTopInstance1.hide()
-
-#START START START START START START
-#START START START START START START
-#START START START START START START
-#START START START START START START
 
 
 	#ArrowTop 1
 	if time_elapsed > 1000:
-		if time_elapsed > 1317 && time_elapsed < 1337: #|| time_elapsed > 9000 && time_elapsed < 9020:
+		if time_elapsed > 1317 && time_elapsed < 1337:
 			flagUp1 = true
 			ArrowTopInstance1 = ArrowTop.instance()	#create a new instance
 			ArrowTopInstance1.position = Vector2(get_viewport().size.x, get_viewport().size.y*2/3)
@@ -378,12 +367,9 @@ func _process(delta):
 					if(ArrowBottomInstance1.position.x > get_viewport().size.x/4.2 && ArrowBottomInstance1.position.x < get_viewport().size.x/3.8):
 						score += 15
 						scoreLabel.text = str(score)
-						#ArrowMiddleInstance.hide()
 						ArrowBottomInstance1.free()
 						flagDown1 = false
 					else:
-						#print("LOSER YOU MISSED")	
-						#ArrowMiddleInstance.hide()
 						ArrowBottomInstance1.free()
 						flagDown1 = false
 						pass						
@@ -391,7 +377,7 @@ func _process(delta):
 											
 	#ArrowTop 2
 	if time_elapsed > 1000:
-		if time_elapsed > 2534 && time_elapsed < 2554: #|| time_elapsed > 9000 && time_elapsed < 9020:
+		if time_elapsed > 2534 && time_elapsed < 2554:
 			flagUp2 = true
 			ArrowTopInstance2 = ArrowTop.instance()	#create a new instance
 			ArrowTopInstance2.position = Vector2(get_viewport().size.x, get_viewport().size.y*2/3)
@@ -426,12 +412,9 @@ func _process(delta):
 					if(ArrowMiddleInstance1.position.x > get_viewport().size.x/4.2 && ArrowMiddleInstance1.position.x < get_viewport().size.x/3.8):
 						score += 15
 						scoreLabel.text = str(score)
-						#ArrowMiddleInstance.hide()
 						ArrowMiddleInstance1.free()
 						flagMiddle1 = false
 					else:
-						#print("LOSER YOU MISSED")	
-						#ArrowMiddleInstance.hide()
 						ArrowMiddleInstance1.free()
 						flagMiddle1 = false
 						pass		
@@ -451,12 +434,9 @@ func _process(delta):
 					if(ArrowBottomInstance2.position.x > get_viewport().size.x/4.2 && ArrowBottomInstance2.position.x < get_viewport().size.x/3.8):
 						score += 15
 						scoreLabel.text = str(score)
-						#ArrowMiddleInstance.hide()
 						ArrowBottomInstance2.free()
 						flagDown2 = false
 					else:
-						#print("LOSER YOU MISSED")	
-						#ArrowMiddleInstance.hide()
 						ArrowBottomInstance2.free()
 						flagDown2 = false
 						pass						
@@ -477,12 +457,9 @@ func _process(delta):
 					if(ArrowMiddleInstance2.position.x > get_viewport().size.x/4.2 && ArrowMiddleInstance2.position.x < get_viewport().size.x/3.8):
 						score += 15
 						scoreLabel.text = str(score)
-						#ArrowMiddleInstance.hide()
 						ArrowMiddleInstance2.free()
 						flagMiddle2 = false
 					else:
-						#print("LOSER YOU MISSED")	
-						#ArrowMiddleInstance.hide()
 						ArrowMiddleInstance2.free()
 						flagMiddle2 = false
 						pass		
@@ -504,12 +481,9 @@ func _process(delta):
 					if(ArrowBottomInstance3.position.x > get_viewport().size.x/4.2 && ArrowBottomInstance3.position.x < get_viewport().size.x/3.8):
 						score += 15
 						scoreLabel.text = str(score)
-						#ArrowMiddleInstance.hide()
 						ArrowBottomInstance3.free()
 						flagDown3 = false
 					else:
-						#print("LOSER YOU MISSED")	
-						#ArrowMiddleInstance.hide()
 						ArrowBottomInstance3.free()
 						flagDown3 = false
 						pass						
@@ -517,7 +491,7 @@ func _process(delta):
 						
 	#ArrowTop 3
 	if time_elapsed > 1000:
-		if time_elapsed > 7634 && time_elapsed < 7654: #|| time_elapsed > 9000 && time_elapsed < 9020:
+		if time_elapsed > 7634 && time_elapsed < 7654:
 			flagUp3 = true
 			ArrowTopInstance3 = ArrowTop.instance()	#create a new instance
 			ArrowTopInstance3.position = Vector2(get_viewport().size.x, get_viewport().size.y*2/3)
@@ -539,7 +513,7 @@ func _process(delta):
 			
 	#Arrow Top 4					
 	if time_elapsed > 1000:
-		if time_elapsed > 8867 && time_elapsed < 8887: #|| time_elapsed > 9000 && time_elapsed < 9020:
+		if time_elapsed > 8867 && time_elapsed < 8887: 
 			flagUp4 = true
 			ArrowTopInstance4 = ArrowTop.instance()	#create a new instance
 			ArrowTopInstance4.position = Vector2(get_viewport().size.x, get_viewport().size.y*2/3)
@@ -574,12 +548,9 @@ func _process(delta):
 					if(ArrowMiddleInstance3.position.x > get_viewport().size.x/4.2 && ArrowMiddleInstance3.position.x < get_viewport().size.x/3.8):
 						score += 15
 						scoreLabel.text = str(score)
-						#ArrowMiddleInstance.hide()
 						ArrowMiddleInstance3.free()
 						flagMiddle3 = false
 					else:
-						#print("LOSER YOU MISSED")	
-						#ArrowMiddleInstance.hide()
 						ArrowMiddleInstance3.free()
 						flagMiddle3 = false
 						pass	
@@ -587,7 +558,7 @@ func _process(delta):
 			
 	#ArrowTop 5					
 	if time_elapsed > 1000:
-		if time_elapsed > 10117 && time_elapsed < 10137: #|| time_elapsed > 9000 && time_elapsed < 9020:
+		if time_elapsed > 10117 && time_elapsed < 10137:
 			flagUp5 = true
 			ArrowTopInstance5 = ArrowTop.instance()	#create a new instance
 			ArrowTopInstance5.position = Vector2(get_viewport().size.x, get_viewport().size.y*2/3)
@@ -623,12 +594,9 @@ func _process(delta):
 					if(ArrowBottomInstance4.position.x > get_viewport().size.x/4.2 && ArrowBottomInstance4.position.x < get_viewport().size.x/3.8):
 						score += 15
 						scoreLabel.text = str(score)
-						#ArrowMiddleInstance.hide()
 						ArrowBottomInstance4.free()
 						flagDown4 = false
 					else:
-						#print("LOSER YOU MISSED")	
-						#ArrowMiddleInstance.hide()
 						ArrowBottomInstance4.free()
 						flagDown4 = false
 						pass					
@@ -636,7 +604,7 @@ func _process(delta):
 					
 	#ArrowTop 6				
 	if time_elapsed > 1000:
-		if time_elapsed > 12667 && time_elapsed < 12687: #|| time_elapsed > 9000 && time_elapsed < 9020:
+		if time_elapsed > 12667 && time_elapsed < 12687: 
 			flagUp6 = true
 			ArrowTopInstance6 = ArrowTop.instance()	#create a new instance
 			ArrowTopInstance6.position = Vector2(get_viewport().size.x, get_viewport().size.y*2/3)
@@ -671,19 +639,16 @@ func _process(delta):
 					if(ArrowBottomInstance5.position.x > get_viewport().size.x/4.2 && ArrowBottomInstance5.position.x < get_viewport().size.x/3.8):
 						score += 15
 						scoreLabel.text = str(score)
-						#ArrowMiddleInstance.hide()
 						ArrowBottomInstance5.free()
 						flagDown5 = false
 					else:
-						#print("LOSER YOU MISSED")	
-						#ArrowMiddleInstance.hide()
 						ArrowBottomInstance5.free()
 						flagDown5 = false
 						pass						
 									
 	#ArrowTop 7					
 	if time_elapsed > 1000:
-		if time_elapsed > 13967 && time_elapsed < 13987: #|| time_elapsed > 9000 && time_elapsed < 9020:
+		if time_elapsed > 13967 && time_elapsed < 13987:
 			flagUp7 = true
 			ArrowTopInstance7 = ArrowTop.instance()	#create a new instance
 			ArrowTopInstance7.position = Vector2(get_viewport().size.x, get_viewport().size.y*2/3)
@@ -719,12 +684,9 @@ func _process(delta):
 					if(ArrowMiddleInstance4.position.x > get_viewport().size.x/4.2 && ArrowMiddleInstance4.position.x < get_viewport().size.x/3.8):
 						score += 15
 						scoreLabel.text = str(score)
-						#ArrowMiddleInstance.hide()
 						ArrowMiddleInstance4.free()
 						flagMiddle4 = false
 					else:
-						#print("LOSER YOU MISSED")	
-						#ArrowMiddleInstance.hide()
 						ArrowMiddleInstance4.free()
 						flagMiddle4 = false
 						pass		
@@ -744,19 +706,16 @@ func _process(delta):
 					if(ArrowBottomInstance6.position.x > get_viewport().size.x/4.2 && ArrowBottomInstance6.position.x < get_viewport().size.x/3.8):
 						score += 15
 						scoreLabel.text = str(score)
-						#ArrowMiddleInstance.hide()
 						ArrowBottomInstance6.free()
 						flagDown6 = false
 					else:
-						#print("LOSER YOU MISSED")	
-						#ArrowMiddleInstance.hide()
 						ArrowBottomInstance6.free()
 						flagDown6 = false
 						pass										
 									
 	#ArrowTop 8					
 	if time_elapsed > 1000:
-		if time_elapsed > 16517 && time_elapsed < 16537: #|| time_elapsed > 9000 && time_elapsed < 9020:
+		if time_elapsed > 16517 && time_elapsed < 16537: 
 			flagUp8 = true
 			ArrowTopInstance8 = ArrowTop.instance()	#create a new instance
 			ArrowTopInstance8.position = Vector2(get_viewport().size.x, get_viewport().size.y*2/3)
@@ -777,7 +736,7 @@ func _process(delta):
 						pass					
 	#ArrowTop 9					
 	if time_elapsed > 1000:
-		if time_elapsed > 17817 && time_elapsed < 17837: #|| time_elapsed > 9000 && time_elapsed < 9020:
+		if time_elapsed > 17817 && time_elapsed < 17837:
 			flagUp9 = true
 			ArrowTopInstance9 = ArrowTop.instance()	#create a new instance
 			ArrowTopInstance9.position = Vector2(get_viewport().size.x, get_viewport().size.y*2/3)
@@ -813,12 +772,9 @@ func _process(delta):
 					if(ArrowMiddleInstance5.position.x > get_viewport().size.x/4.2 && ArrowMiddleInstance5.position.x < get_viewport().size.x/3.8):
 						score += 15
 						scoreLabel.text = str(score)
-						#ArrowMiddleInstance.hide()
 						ArrowMiddleInstance5.free()
 						flagMiddle5 = false
 					else:
-						#print("LOSER YOU MISSED")	
-						#ArrowMiddleInstance.hide()
 						ArrowMiddleInstance5.free()
 						flagMiddle5 = false
 						pass		
@@ -838,12 +794,9 @@ func _process(delta):
 					if(ArrowBottomInstance7.position.x > get_viewport().size.x/4.2 && ArrowBottomInstance7.position.x < get_viewport().size.x/3.8):
 						score += 15
 						scoreLabel.text = str(score)
-						#ArrowMiddleInstance.hide()
 						ArrowBottomInstance7.free()
 						flagDown7 = false
 					else:
-						#print("LOSER YOU MISSED")	
-						#ArrowMiddleInstance.hide()
 						ArrowBottomInstance7.free()
 						flagDown7 = false
 						pass	
@@ -863,19 +816,16 @@ func _process(delta):
 					if(ArrowMiddleInstance6.position.x > get_viewport().size.x/4.2 && ArrowMiddleInstance6.position.x < get_viewport().size.x/3.8):
 						score += 15
 						scoreLabel.text = str(score)
-						#ArrowMiddleInstance.hide()
 						ArrowMiddleInstance6.free()
 						flagMiddle6 = false
 					else:
-						#print("LOSER YOU MISSED")	
-						#ArrowMiddleInstance.hide()
 						ArrowMiddleInstance6.free()
 						flagMiddle6 = false
 						pass		
 						
 		#ArrowTop 10					
 	if time_elapsed > 1000:
-		if time_elapsed > 20367 && time_elapsed < 20387: #|| time_elapsed > 9000 && time_elapsed < 9020:
+		if time_elapsed > 20367 && time_elapsed < 20387:
 			flagUp10 = true
 			ArrowTopInstance10 = ArrowTop.instance()	#create a new instance
 			ArrowTopInstance10.position = Vector2(get_viewport().size.x, get_viewport().size.y*2/3)
@@ -910,12 +860,9 @@ func _process(delta):
 					if(ArrowMiddleInstance7.position.x > get_viewport().size.x/4.2 && ArrowMiddleInstance7.position.x < get_viewport().size.x/3.8):
 						score += 15
 						scoreLabel.text = str(score)
-						#ArrowMiddleInstance.hide()
 						ArrowMiddleInstance7.free()
 						flagMiddle7 = false
 					else:
-						#print("LOSER YOU MISSED")	
-						#ArrowMiddleInstance.hide()
 						ArrowMiddleInstance7.free()
 						flagMiddle7 = false
 						pass						
@@ -936,12 +883,9 @@ func _process(delta):
 					if(ArrowMiddleInstance8.position.x > get_viewport().size.x/4.2 && ArrowMiddleInstance8.position.x < get_viewport().size.x/3.8):
 						score += 15
 						scoreLabel.text = str(score)
-						#ArrowMiddleInstance.hide()
 						ArrowMiddleInstance8.free()
 						flagMiddle8 = false
 					else:
-						#print("LOSER YOU MISSED")	
-						#ArrowMiddleInstance.hide()
 						ArrowMiddleInstance8.free()
 						flagMiddle8 = false
 						pass						
@@ -961,19 +905,16 @@ func _process(delta):
 					if(ArrowBottomInstance8.position.x > get_viewport().size.x/4.2 && ArrowBottomInstance8.position.x < get_viewport().size.x/3.8):
 						score += 15
 						scoreLabel.text = str(score)
-						#ArrowMiddleInstance.hide()
 						ArrowBottomInstance8.free()
 						flagDown8 = false
 					else:
-						#print("LOSER YOU MISSED")	
-						#ArrowMiddleInstance.hide()
 						ArrowBottomInstance8.free()
 						flagDown8 = false
 						pass						
 									
 	#ArrowTop 11					
 	if time_elapsed > 1000:
-		if time_elapsed > 25467 && time_elapsed < 25487: #|| time_elapsed > 9000 && time_elapsed < 9020:
+		if time_elapsed > 25467 && time_elapsed < 25487:
 			flagUp11 = true
 			ArrowTopInstance11 = ArrowTop.instance()	#create a new instance
 			ArrowTopInstance11.position = Vector2(get_viewport().size.x, get_viewport().size.y*2/3)
@@ -1008,12 +949,9 @@ func _process(delta):
 					if(ArrowMiddleInstance9.position.x > get_viewport().size.x/4.2 && ArrowMiddleInstance9.position.x < get_viewport().size.x/3.8):
 						score += 15
 						scoreLabel.text = str(score)
-						#ArrowMiddleInstance.hide()
 						ArrowMiddleInstance9.free()
 						flagMiddle9 = false
 					else:
-						#print("LOSER YOU MISSED")	
-						#ArrowMiddleInstance.hide()
 						ArrowMiddleInstance9.free()
 						flagMiddle9 = false
 						pass		
@@ -1033,12 +971,9 @@ func _process(delta):
 					if(ArrowMiddleInstance10.position.x > get_viewport().size.x/4.2 && ArrowMiddleInstance10.position.x < get_viewport().size.x/3.8):
 						score += 15
 						scoreLabel.text = str(score)
-						#ArrowMiddleInstance.hide()
 						ArrowMiddleInstance10.free()
 						flagMiddle10 = false
 					else:
-						#print("LOSER YOU MISSED")	
-						#ArrowMiddleInstance.hide()
 						ArrowMiddleInstance10.free()
 						flagMiddle10 = false
 						pass										
@@ -1058,12 +993,9 @@ func _process(delta):
 					if(ArrowBottomInstance9.position.x > get_viewport().size.x/4.2 && ArrowBottomInstance9.position.x < get_viewport().size.x/3.8):
 						score += 15
 						scoreLabel.text = str(score)
-						#ArrowMiddleInstance.hide()
 						ArrowBottomInstance9.free()
 						flagDown9 = false
 					else:
-						#print("LOSER YOU MISSED")	
-						#ArrowMiddleInstance.hide()
 						ArrowBottomInstance9.free()
 						flagDown9 = false
 						pass		
@@ -1083,12 +1015,9 @@ func _process(delta):
 					if(ArrowMiddleInstance11.position.x > get_viewport().size.x/4.2 && ArrowMiddleInstance11.position.x < get_viewport().size.x/3.8):
 						score += 15
 						scoreLabel.text = str(score)
-						#ArrowMiddleInstance.hide()
 						ArrowMiddleInstance11.free()
 						flagMiddle11 = false
 					else:
-						#print("LOSER YOU MISSED")	
-						#ArrowMiddleInstance.hide()
 						ArrowMiddleInstance11.free()
 						flagMiddle11 = false
 						pass						
@@ -1108,12 +1037,9 @@ func _process(delta):
 					if(ArrowBottomInstance10.position.x > get_viewport().size.x/4.2 && ArrowBottomInstance10.position.x < get_viewport().size.x/3.8):
 						score += 15
 						scoreLabel.text = str(score)
-						#ArrowMiddleInstance.hide()
 						ArrowBottomInstance10.free()
 						flagDown10 = false
 					else:
-						#print("LOSER YOU MISSED")	
-						#ArrowMiddleInstance.hide()
 						ArrowBottomInstance10.free()
 						flagDown10 = false
 						pass										
@@ -1133,19 +1059,16 @@ func _process(delta):
 					if(ArrowMiddleInstance12.position.x > get_viewport().size.x/4.2 && ArrowMiddleInstance12.position.x < get_viewport().size.x/3.8):
 						score += 15
 						scoreLabel.text = str(score)
-						#ArrowMiddleInstance.hide()
 						ArrowMiddleInstance12.free()
 						flagMiddle12 = false
 					else:
-						#print("LOSER YOU MISSED")	
-						#ArrowMiddleInstance.hide()
 						ArrowMiddleInstance12.free()
 						flagMiddle12 = false
 						pass								
 						
 #	#ArrowTop 12
 	if time_elapsed > 1000:
-		if time_elapsed > 33167 && time_elapsed < 33187: #|| time_elapsed > 9000 && time_elapsed < 9020:
+		if time_elapsed > 33167 && time_elapsed < 33187: 
 			flagUp12 = true
 			ArrowTopInstance12 = ArrowTop.instance()	#create a new instance
 			ArrowTopInstance12.position = Vector2(get_viewport().size.x, get_viewport().size.y*2/3)
@@ -1181,12 +1104,9 @@ func _process(delta):
 					if(ArrowBottomInstance11.position.x > get_viewport().size.x/4.2 && ArrowBottomInstance11.position.x < get_viewport().size.x/3.8):
 						score += 15
 						scoreLabel.text = str(score)
-						#ArrowMiddleInstance.hide()
 						ArrowBottomInstance11.free()
 						flagDown11 = false
 					else:
-						#print("LOSER YOU MISSED")	
-						#ArrowMiddleInstance.hide()
 						ArrowBottomInstance11.free()
 						flagDown11 = false
 						pass		
@@ -1206,19 +1126,16 @@ func _process(delta):
 					if(ArrowMiddleInstance13.position.x > get_viewport().size.x/4.2 && ArrowMiddleInstance13.position.x < get_viewport().size.x/3.8):
 						score += 15
 						scoreLabel.text = str(score)
-						#ArrowMiddleInstance.hide()
 						ArrowMiddleInstance13.free()
 						flagMiddle13 = false
 					else:
-						#print("LOSER YOU MISSED")	
-						#ArrowMiddleInstance.hide()
 						ArrowMiddleInstance13.free()
 						flagMiddle13 = false
 						pass							
 #
 #	#ArrowTop 13
 	if time_elapsed > 1000:
-		if time_elapsed > 35717 && time_elapsed < 35737: #|| time_elapsed > 9000 && time_elapsed < 9020:
+		if time_elapsed > 35717 && time_elapsed < 35737: 
 			flagUp13 = true
 			ArrowTopInstance13 = ArrowTop.instance()	#create a new instance
 			ArrowTopInstance13.position = Vector2(get_viewport().size.x, get_viewport().size.y*2/3)
@@ -1254,19 +1171,16 @@ func _process(delta):
 					if(ArrowBottomInstance12.position.x > get_viewport().size.x/4.2 && ArrowBottomInstance12.position.x < get_viewport().size.x/3.8):
 						score += 15
 						scoreLabel.text = str(score)
-						#ArrowMiddleInstance.hide()
 						ArrowBottomInstance12.free()
 						flagDown12 = false
 					else:
-						#print("LOSER YOU MISSED")	
-						#ArrowMiddleInstance.hide()
 						ArrowBottomInstance12.free()
 						flagDown12 = false
 						pass					
 #
 #	#ArrowTop 14
 	if time_elapsed > 1000:
-		if time_elapsed > 37016 && time_elapsed < 37036: #|| time_elapsed > 9000 && time_elapsed < 9020:
+		if time_elapsed > 37016 && time_elapsed < 37036: 
 			flagUp14 = true
 			ArrowTopInstance14 = ArrowTop.instance()	#create a new instance
 			ArrowTopInstance14.position = Vector2(get_viewport().size.x, get_viewport().size.y*2/3)
@@ -1288,7 +1202,7 @@ func _process(delta):
 #
 #	#ArrowTop 15
 	if time_elapsed > 1000:
-		if time_elapsed > 38216 && time_elapsed < 38236: #|| time_elapsed > 9000 && time_elapsed < 9020:
+		if time_elapsed > 38216 && time_elapsed < 38236: 
 			flagUp15 = true
 			ArrowTopInstance15 = ArrowTop.instance()	#create a new instance
 			ArrowTopInstance15.position = Vector2(get_viewport().size.x, get_viewport().size.y*2/3)
@@ -1323,19 +1237,16 @@ func _process(delta):
 					if(ArrowMiddleInstance14.position.x > get_viewport().size.x/4.2 && ArrowMiddleInstance14.position.x < get_viewport().size.x/3.8):
 						score += 15
 						scoreLabel.text = str(score)
-						#ArrowMiddleInstance.hide()
 						ArrowMiddleInstance14.free()
 						flagMiddle14 = false
 					else:
-						#print("LOSER YOU MISSED")	
-						#ArrowMiddleInstance.hide()
 						ArrowMiddleInstance14.free()
 						flagMiddle14 = false
 						pass					
 #
 #	#ArrowTop 16
 	if time_elapsed > 1000:
-		if time_elapsed > 40818 && time_elapsed < 40838: #|| time_elapsed > 9000 && time_elapsed < 9020:
+		if time_elapsed > 40818 && time_elapsed < 40838: 
 			flagUp16 = true
 			ArrowTopInstance16 = ArrowTop.instance()	#create a new instance
 			ArrowTopInstance16.position = Vector2(get_viewport().size.x, get_viewport().size.y*2/3)
@@ -1370,12 +1281,9 @@ func _process(delta):
 					if(ArrowMiddleInstance15.position.x > get_viewport().size.x/4.2 && ArrowMiddleInstance15.position.x < get_viewport().size.x/3.8):
 						score += 15
 						scoreLabel.text = str(score)
-						#ArrowMiddleInstance.hide()
 						ArrowMiddleInstance15.free()
 						flagMiddle15 = false
 					else:
-						#print("LOSER YOU MISSED")	
-						#ArrowMiddleInstance.hide()
 						ArrowMiddleInstance15.free()
 						flagMiddle15 = false
 						pass	
@@ -1395,12 +1303,9 @@ func _process(delta):
 					if(ArrowMiddleInstance16.position.x > get_viewport().size.x/4.2 && ArrowMiddleInstance16.position.x < get_viewport().size.x/3.8):
 						score += 15
 						scoreLabel.text = str(score)
-						#ArrowMiddleInstance.hide()
 						ArrowMiddleInstance16.free()
 						flagMiddle16 = false
 					else:
-						#print("LOSER YOU MISSED")	
-						#ArrowMiddleInstance.hide()
 						ArrowMiddleInstance16.free()
 						flagMiddle16 = false
 						pass						
@@ -1420,12 +1325,9 @@ func _process(delta):
 					if(ArrowBottomInstance13.position.x > get_viewport().size.x/4.2 && ArrowBottomInstance13.position.x < get_viewport().size.x/3.8):
 						score += 15
 						scoreLabel.text = str(score)
-						#ArrowMiddleInstance.hide()
 						ArrowBottomInstance13.free()
 						flagDown13 = false
 					else:
-						#print("LOSER YOU MISSED")	
-						#ArrowMiddleInstance.hide()
 						ArrowBottomInstance13.free()
 						flagDown13 = false
 						pass		
@@ -1445,12 +1347,9 @@ func _process(delta):
 					if(ArrowBottomInstance14.position.x > get_viewport().size.x/4.2 && ArrowBottomInstance14.position.x < get_viewport().size.x/3.8):
 						score += 15
 						scoreLabel.text = str(score)
-						#ArrowMiddleInstance.hide()
 						ArrowBottomInstance14.free()
 						flagDown14 = false
 					else:
-						#print("LOSER YOU MISSED")	
-						#ArrowMiddleInstance.hide()
 						ArrowBottomInstance14.free()
 						flagDown14 = false
 						pass								
@@ -1471,12 +1370,9 @@ func _process(delta):
 					if(ArrowMiddleInstance18.position.x > get_viewport().size.x/4.2 && ArrowMiddleInstance18.position.x < get_viewport().size.x/3.8):
 						score += 15
 						scoreLabel.text = str(score)
-						#ArrowMiddleInstance.hide()
 						ArrowMiddleInstance18.free()
 						flagMiddle18 = false
 					else:
-						#print("LOSER YOU MISSED")	
-						#ArrowMiddleInstance.hide()
 						ArrowMiddleInstance18.free()
 						flagMiddle18 = false
 						pass						
@@ -1496,12 +1392,9 @@ func _process(delta):
 					if(ArrowBottomInstance15.position.x > get_viewport().size.x/4.2 && ArrowBottomInstance15.position.x < get_viewport().size.x/3.8):
 						score += 15
 						scoreLabel.text = str(score)
-						#ArrowMiddleInstance.hide()
 						ArrowBottomInstance15.free()
 						flagDown15 = false
 					else:
-						#print("LOSER YOU MISSED")	
-						#ArrowMiddleInstance.hide()
 						ArrowBottomInstance15.free()
 						flagDown15 = false
 						pass				
@@ -1509,7 +1402,7 @@ func _process(delta):
 #
 #	#ArrowTop 18
 	if time_elapsed > 1000:
-		if time_elapsed > 49817 && time_elapsed < 49837: #|| time_elapsed > 9000 && time_elapsed < 9020:
+		if time_elapsed > 49817 && time_elapsed < 49837: 
 			flagUp18 = true
 			ArrowTopInstance18 = ArrowTop.instance()	#create a new instance
 			ArrowTopInstance18.position = Vector2(get_viewport().size.x, get_viewport().size.y*2/3)
@@ -1530,17 +1423,9 @@ func _process(delta):
 						pass					
 
 
-
-
-
-
-
-#NEW NEW NEW NEW NEW NEW NEW NEW
-
-
 #	#ArrowTop 17
 	if time_elapsed > 1000:
-		if time_elapsed > 51000 && time_elapsed < 51020: #|| time_elapsed > 9000 && time_elapsed < 9020:
+		if time_elapsed > 51000 && time_elapsed < 51020: 
 			flagUp17 = true
 			ArrowTopInstance17 = ArrowTop.instance()	#create a new instance
 			ArrowTopInstance17.position = Vector2(get_viewport().size.x, get_viewport().size.y*2/3)
@@ -1567,7 +1452,7 @@ func _process(delta):
 
 	#ArrowTop 19
 	if time_elapsed > 1000:
-		if time_elapsed > 52375 && time_elapsed < 52395: #|| time_elapsed > 9000 && time_elapsed < 9020:
+		if time_elapsed > 52375 && time_elapsed < 52395: 
 			flagUp19 = true
 			ArrowTopInstance19 = ArrowTop.instance()	#create a new instance
 			ArrowTopInstance19.position = Vector2(get_viewport().size.x, get_viewport().size.y*2/3)
@@ -1602,12 +1487,9 @@ func _process(delta):
 					if(ArrowMiddleInstance19.position.x > get_viewport().size.x/4.2 && ArrowMiddleInstance19.position.x < get_viewport().size.x/3.8):
 						score += 15
 						scoreLabel.text = str(score)
-						#ArrowMiddleInstance.hide()
 						ArrowMiddleInstance19.free()
 						flagMiddle19 = false
 					else:
-						#print("LOSER YOU MISSED")	
-						#ArrowMiddleInstance.hide()
 						ArrowMiddleInstance19.free()
 						flagMiddle19 = false
 						pass	
@@ -1627,12 +1509,9 @@ func _process(delta):
 					if(ArrowBottomInstance16.position.x > get_viewport().size.x/4.2 && ArrowBottomInstance16.position.x < get_viewport().size.x/3.8):
 						score += 15
 						scoreLabel.text = str(score)
-						#ArrowMiddleInstance.hide()
 						ArrowBottomInstance16.free()
 						flagDown16 = false
 					else:
-						#print("LOSER YOU MISSED")	
-						#ArrowMiddleInstance.hide()
 						ArrowBottomInstance16.free()
 						flagDown16 = false
 						pass	
@@ -1652,19 +1531,16 @@ func _process(delta):
 					if(ArrowMiddleInstance20.position.x > get_viewport().size.x/4.2 && ArrowMiddleInstance20.position.x < get_viewport().size.x/3.8):
 						score += 15
 						scoreLabel.text = str(score)
-						#ArrowMiddleInstance.hide()
 						ArrowMiddleInstance20.free()
 						flagMiddle20 = false
 					else:
-						#print("LOSER YOU MISSED")	
-						#ArrowMiddleInstance.hide()
 						ArrowMiddleInstance20.free()
 						flagMiddle20 = false
 						pass						
 
 #	#ArrowTop 20
 	if time_elapsed > 1000:
-		if time_elapsed > 57409 && time_elapsed < 57429: #|| time_elapsed > 9000 && time_elapsed < 9020:
+		if time_elapsed > 57409 && time_elapsed < 57429:
 			flagUp20 = true
 			ArrowTopInstance20 = ArrowTop.instance()	#create a new instance
 			ArrowTopInstance20.position = Vector2(get_viewport().size.x, get_viewport().size.y*2/3)
@@ -1699,19 +1575,16 @@ func _process(delta):
 					if(ArrowBottomInstance17.position.x > get_viewport().size.x/4.2 && ArrowBottomInstance17.position.x < get_viewport().size.x/3.8):
 						score += 15
 						scoreLabel.text = str(score)
-						#ArrowMiddleInstance.hide()
 						ArrowBottomInstance17.free()
 						flagDown17 = false
 					else:
-						#print("LOSER YOU MISSED")	
-						#ArrowMiddleInstance.hide()
 						ArrowBottomInstance17.free()
 						flagDown17 = false
 						pass			
 #
 #	#ArrowTop 21
 	if time_elapsed > 1000:
-		if time_elapsed > 60043 && time_elapsed < 60063: #|| time_elapsed > 9000 && time_elapsed < 9020:
+		if time_elapsed > 60043 && time_elapsed < 60063: 
 			flagUp21 = true
 			ArrowTopInstance21 = ArrowTop.instance()	#create a new instance
 			ArrowTopInstance21.position = Vector2(get_viewport().size.x, get_viewport().size.y*2/3)
@@ -1746,19 +1619,16 @@ func _process(delta):
 					if(ArrowMiddleInstance21.position.x > get_viewport().size.x/4.2 && ArrowMiddleInstance21.position.x < get_viewport().size.x/3.8):
 						score += 15
 						scoreLabel.text = str(score)
-						#ArrowMiddleInstance.hide()
 						ArrowMiddleInstance21.free()
 						flagMiddle21 = false
 					else:
-						#print("LOSER YOU MISSED")	
-						#ArrowMiddleInstance.hide()
 						ArrowMiddleInstance21.free()
 						flagMiddle21 = false
 						pass			
 #
 #	#ArrowTop 22
 	if time_elapsed > 1000:
-		if time_elapsed > 61326 && time_elapsed < 61346: #|| time_elapsed > 9000 && time_elapsed < 9020:
+		if time_elapsed > 61326 && time_elapsed < 61346:
 			flagUp22 = true
 			ArrowTopInstance22 = ArrowTop.instance()	#create a new instance
 			ArrowTopInstance22.position = Vector2(get_viewport().size.x, get_viewport().size.y*2/3)
@@ -1793,12 +1663,9 @@ func _process(delta):
 					if(ArrowMiddleInstance22.position.x > get_viewport().size.x/4.2 && ArrowMiddleInstance22.position.x < get_viewport().size.x/3.8):
 						score += 15
 						scoreLabel.text = str(score)
-						#ArrowMiddleInstance.hide()
 						ArrowMiddleInstance22.free()
 						flagMiddle22 = false
 					else:
-						#print("LOSER YOU MISSED")	
-						#ArrowMiddleInstance.hide()
 						ArrowMiddleInstance22.free()
 						flagMiddle22 = false
 						pass	
@@ -1818,12 +1685,9 @@ func _process(delta):
 					if(ArrowMiddleInstance23.position.x > get_viewport().size.x/4.2 && ArrowMiddleInstance23.position.x < get_viewport().size.x/3.8):
 						score += 15
 						scoreLabel.text = str(score)
-						#ArrowMiddleInstance.hide()
 						ArrowMiddleInstance23.free()
 						flagMiddle23 = false
 					else:
-						#print("LOSER YOU MISSED")	
-						#ArrowMiddleInstance.hide()
 						ArrowMiddleInstance23.free()
 						flagMiddle23 = false
 						pass	
@@ -1843,12 +1707,9 @@ func _process(delta):
 					if(ArrowMiddleInstance24.position.x > get_viewport().size.x/4.2 && ArrowMiddleInstance24.position.x < get_viewport().size.x/3.8):
 						score += 15
 						scoreLabel.text = str(score)
-						#ArrowMiddleInstance.hide()
 						ArrowMiddleInstance24.free()
 						flagMiddle24 = false
 					else:
-						#print("LOSER YOU MISSED")	
-						#ArrowMiddleInstance.hide()
 						ArrowMiddleInstance24.free()
 						flagMiddle24 = false
 						pass		
@@ -1868,12 +1729,9 @@ func _process(delta):
 					if(ArrowMiddleInstance17.position.x > get_viewport().size.x/4.2 && ArrowMiddleInstance17.position.x < get_viewport().size.x/3.8):
 						score += 15
 						scoreLabel.text = str(score)
-						#ArrowMiddleInstance.hide()
 						ArrowMiddleInstance17.free()
 						flagMiddle17 = false
 					else:
-						#print("LOSER YOU MISSED")	
-						#ArrowMiddleInstance.hide()
 						ArrowMiddleInstance17.free()
 						flagMiddle17 = false
 						pass					
@@ -1893,12 +1751,9 @@ func _process(delta):
 					if(ArrowBottomInstance19.position.x > get_viewport().size.x/4.2 && ArrowBottomInstance19.position.x < get_viewport().size.x/3.8):
 						score += 15
 						scoreLabel.text = str(score)
-						#ArrowMiddleInstance.hide()
 						ArrowBottomInstance19.free()
 						flagDown19 = false
 					else:
-						#print("LOSER YOU MISSED")	
-						#ArrowMiddleInstance.hide()
 						ArrowBottomInstance19.free()
 						flagDown19 = false
 						pass								
@@ -1906,7 +1761,7 @@ func _process(delta):
 #
 #	#ArrowTop 23
 	if time_elapsed > 1000:
-		if time_elapsed > 68926 && time_elapsed < 68946: #|| time_elapsed > 9000 && time_elapsed < 9020:
+		if time_elapsed > 68926 && time_elapsed < 68946:
 			flagUp23 = true
 			ArrowTopInstance23 = ArrowTop.instance()	#create a new instance
 			ArrowTopInstance23.position = Vector2(get_viewport().size.x, get_viewport().size.y*2/3)
@@ -1941,19 +1796,16 @@ func _process(delta):
 					if(ArrowBottomInstance18.position.x > get_viewport().size.x/4.2 && ArrowBottomInstance18.position.x < get_viewport().size.x/3.8):
 						score += 15
 						scoreLabel.text = str(score)
-						#ArrowMiddleInstance.hide()
 						ArrowBottomInstance18.free()
 						flagDown18 = false
 					else:
-						#print("LOSER YOU MISSED")	
-						#ArrowMiddleInstance.hide()
 						ArrowBottomInstance18.free()
 						flagDown18 = false
 						pass	
 
 #	#ArrowTop 24
 	if time_elapsed > 1000:
-		if time_elapsed > 71492 && time_elapsed < 71512: #|| time_elapsed > 9000 && time_elapsed < 9020:
+		if time_elapsed > 71492 && time_elapsed < 71512:
 			flagUp24 = true
 			ArrowTopInstance24 = ArrowTop.instance()	#create a new instance
 			ArrowTopInstance24.position = Vector2(get_viewport().size.x, get_viewport().size.y*2/3)
@@ -1997,7 +1849,7 @@ func _process(delta):
 #
 #	#ArrowTop 25
 	if time_elapsed > 1000:
-		if time_elapsed > 74109 && time_elapsed < 74129: #|| time_elapsed > 9000 && time_elapsed < 9020:
+		if time_elapsed > 74109 && time_elapsed < 74129: 
 			flagUp25 = true
 			ArrowTopInstance25 = ArrowTop.instance()	#create a new instance
 			ArrowTopInstance25.position = Vector2(get_viewport().size.x, get_viewport().size.y*2/3)
@@ -2042,7 +1894,7 @@ func _process(delta):
 
 #	#ArrowTop 26
 	if time_elapsed > 1000:
-		if time_elapsed > 76610 && time_elapsed < 76630: #|| time_elapsed > 9000 && time_elapsed < 9020:
+		if time_elapsed > 76610 && time_elapsed < 76630: 
 			flagUp26 = true
 			ArrowTopInstance26 = ArrowTop.instance()	#create a new instance
 			ArrowTopInstance26.position = Vector2(get_viewport().size.x, get_viewport().size.y*2/3)
@@ -2121,19 +1973,16 @@ func _process(delta):
 					if(ArrowMiddleInstance26.position.x > get_viewport().size.x/4.2 && ArrowMiddleInstance26.position.x < get_viewport().size.x/3.8):
 						score += 15
 						scoreLabel.text = str(score)
-						#ArrowMiddleInstance.hide()
 						ArrowMiddleInstance26.free()
 						flagMiddle26 = false
 					else:
-						#print("LOSER YOU MISSED")	
-						#ArrowMiddleInstance.hide()
 						ArrowMiddleInstance26.free()
 						flagMiddle26 = false
 						pass														
 #
 #	#ArrowTop 27
 	if time_elapsed > 1000:
-		if time_elapsed > 81760 && time_elapsed < 81780: #|| time_elapsed > 9000 && time_elapsed < 9020:
+		if time_elapsed > 81760 && time_elapsed < 81780:
 			flagUp27 = true
 			ArrowTopInstance27 = ArrowTop.instance()	#create a new instance
 			ArrowTopInstance27.position = Vector2(get_viewport().size.x, get_viewport().size.y*2/3)
@@ -2155,7 +2004,7 @@ func _process(delta):
 #
 #	#ArrowTop 28
 	if time_elapsed > 1000:
-		if time_elapsed > 82977 && time_elapsed < 82997: #|| time_elapsed > 9000 && time_elapsed < 9020:
+		if time_elapsed > 82977 && time_elapsed < 82997:
 			flagUp28 = true
 			ArrowTopInstance28 = ArrowTop.instance()	#create a new instance
 			ArrowTopInstance28.position = Vector2(get_viewport().size.x, get_viewport().size.y*2/3)
@@ -2190,12 +2039,9 @@ func _process(delta):
 					if(ArrowMiddleInstance27.position.x > get_viewport().size.x/4.2 && ArrowMiddleInstance27.position.x < get_viewport().size.x/3.8):
 						score += 15
 						scoreLabel.text = str(score)
-						#ArrowMiddleInstance.hide()
 						ArrowMiddleInstance27.free()
 						flagMiddle27 = false
 					else:
-						#print("LOSER YOU MISSED")	
-						#ArrowMiddleInstance.hide()
 						ArrowMiddleInstance27.free()
 						flagMiddle27 = false
 						pass	
@@ -2215,37 +2061,12 @@ func _process(delta):
 					if(ArrowBottomInstance23.position.x > get_viewport().size.x/4.2 && ArrowBottomInstance23.position.x < get_viewport().size.x/3.8):
 						score += 15
 						scoreLabel.text = str(score)
-						#ArrowMiddleInstance.hide()
 						ArrowBottomInstance23.free()
 						flagDown23 = false
 					else:
-						#print("LOSER YOU MISSED")	
-						#ArrowMiddleInstance.hide()
 						ArrowBottomInstance23.free()
 						flagDown23 = false
 						pass	
-#
-#	#ArrowTop 29
-#	if time_elapsed > 1000:
-#		if time_elapsed > 86760 && time_elapsed < 86780: #|| time_elapsed > 9000 && time_elapsed < 9020:
-#			flagUp29 = true
-#			ArrowTopInstance29 = ArrowTop.instance()	#create a new instance
-#			ArrowTopInstance29.position = Vector2(get_viewport().size.x, get_viewport().size.y*2/3)
-#			ArrowTopInstance29.scale = Vector2(0.17,0.17)
-#			add_child(ArrowTopInstance29)
-#		if flagUp29 == true:	
-#			ArrowTopInstance29.translate(Vector2(-100 * delta*1.8,0))
-#			if(ArrowTopInstance29.position.x < get_viewport().size.x/3 && ArrowTopInstance29.position.x > get_viewport().size.x/9):
-#				if Input.is_key_pressed(KEY_UP):
-#					if(ArrowTopInstance29.position.x > get_viewport().size.x/4.2 && ArrowTopInstance29.position.x < get_viewport().size.x/3.8):
-#						score += 15
-#						scoreLabel.text = str(score)
-#						ArrowTopInstance29.free()
-#						flagUp29 = false
-#					else:
-#						ArrowTopInstance29.free()
-#						flagUp29 = false
-#						pass
 
 	#Arrow Bottom 24
 	if time_elapsed > 1000:
@@ -2262,12 +2083,9 @@ func _process(delta):
 					if(ArrowBottomInstance24.position.x > get_viewport().size.x/4.2 && ArrowBottomInstance24.position.x < get_viewport().size.x/3.8):
 						score += 15
 						scoreLabel.text = str(score)
-						#ArrowMiddleInstance.hide()
 						ArrowBottomInstance24.free()
 						flagDown24 = false
 					else:
-						#print("LOSER YOU MISSED")	
-						#ArrowMiddleInstance.hide()
 						ArrowBottomInstance24.free()
 						flagDown24 = false
 						pass
@@ -2287,22 +2105,12 @@ func _process(delta):
 					if(ArrowBottomInstance25.position.x > get_viewport().size.x/4.2 && ArrowBottomInstance25.position.x < get_viewport().size.x/3.8):
 						score += 15
 						scoreLabel.text = str(score)
-						#ArrowMiddleInstance.hide()
 						ArrowBottomInstance25.free()
 						flagDown25 = false
 					else:
-						#print("LOSER YOU MISSED")	
-						#ArrowMiddleInstance.hide()
 						ArrowBottomInstance25.free()
 						flagDown25 = false
 						pass		
-#
-
-
-
-#NEW NEW NEW NEW NEW NEW
-
-
 
 	#Arrow Middle 28
 	if time_elapsed > 0:
@@ -2319,12 +2127,9 @@ func _process(delta):
 					if(ArrowMiddleInstance28.position.x > get_viewport().size.x/4.2 && ArrowMiddleInstance28.position.x < get_viewport().size.x/3.8):
 						score += 15
 						scoreLabel.text = str(score)
-						#ArrowMiddleInstance.hide()
 						ArrowMiddleInstance28.free()
 						flagMiddle28 = false
 					else:
-						#print("LOSER YOU MISSED")	
-						#ArrowMiddleInstance.hide()
 						ArrowMiddleInstance28.free()
 						flagMiddle28 = false
 						pass			
@@ -2353,7 +2158,7 @@ func _process(delta):
 #
 #	#ArrowTop 30
 	if time_elapsed > 1000:
-		if time_elapsed > 93188 && time_elapsed < 93208: #|| time_elapsed > 9000 && time_elapsed < 9020:
+		if time_elapsed > 93188 && time_elapsed < 93208:
 			flagUp30 = true
 			ArrowTopInstance30 = ArrowTop.instance()	#create a new instance
 			ArrowTopInstance30.position = Vector2(get_viewport().size.x, get_viewport().size.y*2/3)
@@ -2388,19 +2193,16 @@ func _process(delta):
 					if(ArrowBottomInstance26.position.x > get_viewport().size.x/4.2 && ArrowBottomInstance26.position.x < get_viewport().size.x/3.8):
 						score += 15
 						scoreLabel.text = str(score)
-						#ArrowMiddleInstance.hide()
 						ArrowBottomInstance26.free()
 						flagDown26 = false
 					else:
-						#print("LOSER YOU MISSED")	
-						#ArrowMiddleInstance.hide()
 						ArrowBottomInstance26.free()
 						flagDown26 = false
 						pass	
 #
 #	#ArrowTop 31
 	if time_elapsed > 1000:
-		if time_elapsed > 95737 && time_elapsed < 95757: #|| time_elapsed > 9000 && time_elapsed < 9020:
+		if time_elapsed > 95737 && time_elapsed < 95757: 
 			flagUp31 = true
 			ArrowTopInstance31 = ArrowTop.instance()	#create a new instance
 			ArrowTopInstance31.position = Vector2(get_viewport().size.x, get_viewport().size.y*2/3)
@@ -2435,12 +2237,9 @@ func _process(delta):
 					if(ArrowBottomInstance27.position.x > get_viewport().size.x/4.2 && ArrowBottomInstance27.position.x < get_viewport().size.x/3.8):
 						score += 15
 						scoreLabel.text = str(score)
-						#ArrowMiddleInstance.hide()
 						ArrowBottomInstance27.free()
 						flagDown27 = false
 					else:
-						#print("LOSER YOU MISSED")	
-						#ArrowMiddleInstance.hide()
 						ArrowBottomInstance27.free()
 						flagDown27 = false
 						pass		
@@ -2460,45 +2259,17 @@ func _process(delta):
 					if(ArrowMiddleInstance30.position.x > get_viewport().size.x/4.2 && ArrowMiddleInstance30.position.x < get_viewport().size.x/3.8):
 						score += 15
 						scoreLabel.text = str(score)
-						#ArrowMiddleInstance.hide()
 						ArrowMiddleInstance30.free()
 						flagMiddle30 = false
 					else:
-						#print("LOSER YOU MISSED")	
-						#ArrowMiddleInstance.hide()
 						ArrowMiddleInstance30.free()
 						flagMiddle30 = false
 						pass								
 
 
-
-
-
-
-
-
-
-
-#NEW NEW NEW NEW
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 #	#ArrowTop 32
 	if time_elapsed > 1000:
-		if time_elapsed > 99545 && time_elapsed < 99565: #|| time_elapsed > 9000 && time_elapsed < 9020:
+		if time_elapsed > 99545 && time_elapsed < 99565: 
 			flagUp32 = true
 			ArrowTopInstance32 = ArrowTop.instance()	#create a new instance
 			ArrowTopInstance32.position = Vector2(get_viewport().size.x, get_viewport().size.y*2/3)
@@ -2533,19 +2304,16 @@ func _process(delta):
 					if(ArrowBottomInstance28.position.x > get_viewport().size.x/4.2 && ArrowBottomInstance28.position.x < get_viewport().size.x/3.8):
 						score += 15
 						scoreLabel.text = str(score)
-						#ArrowMiddleInstance.hide()
 						ArrowBottomInstance28.free()
 						flagDown28 = false
 					else:
-						#print("LOSER YOU MISSED")	
-						#ArrowMiddleInstance.hide()
 						ArrowBottomInstance28.free()
 						flagDown28 = false
 						pass				
 #
 #	#ArrowTop 33
 	if time_elapsed > 1000:
-		if time_elapsed > 102095 && time_elapsed < 102115: #|| time_elapsed > 9000 && time_elapsed < 9020:
+		if time_elapsed > 102095 && time_elapsed < 102115: 
 			flagUp33 = true
 			ArrowTopInstance33 = ArrowTop.instance()	#create a new instance
 			ArrowTopInstance33.position = Vector2(get_viewport().size.x, get_viewport().size.y*2/3)
@@ -2580,12 +2348,9 @@ func _process(delta):
 					if(ArrowMiddleInstance44.position.x > get_viewport().size.x/4.2 && ArrowMiddleInstance44.position.x < get_viewport().size.x/3.8):
 						score += 15
 						scoreLabel.text = str(score)
-						#ArrowMiddleInstance.hide()
 						ArrowMiddleInstance44.free()
 						flagMiddle44 = false
 					else:
-						#print("LOSER YOU MISSED")	
-						#ArrowMiddleInstance.hide()
 						ArrowMiddleInstance44.free()
 						flagMiddle44 = false
 						pass		
@@ -2605,12 +2370,9 @@ func _process(delta):
 					if(ArrowMiddleInstance31.position.x > get_viewport().size.x/4.2 && ArrowMiddleInstance31.position.x < get_viewport().size.x/3.8):
 						score += 15
 						scoreLabel.text = str(score)
-						#ArrowMiddleInstance.hide()
 						ArrowMiddleInstance31.free()
 						flagMiddle31 = false
 					else:
-						#print("LOSER YOU MISSED")	
-						#ArrowMiddleInstance.hide()
 						ArrowMiddleInstance31.free()
 						flagMiddle31 = false
 						pass						
@@ -2618,7 +2380,7 @@ func _process(delta):
 #
 #	#ArrowTop 34
 	if time_elapsed > 1000:
-		if time_elapsed > 105928 && time_elapsed < 105948: #|| time_elapsed > 9000 && time_elapsed < 9020:
+		if time_elapsed > 105928 && time_elapsed < 105948:
 			flagUp34 = true
 			ArrowTopInstance34 = ArrowTop.instance()	#create a new instance
 			ArrowTopInstance34.position = Vector2(get_viewport().size.x, get_viewport().size.y*2/3)
@@ -2639,29 +2401,6 @@ func _process(delta):
 						pass	
 
 
-#	#Arrow Bottom 29
-#	if time_elapsed > 1000:
-#		if time_elapsed > 107245 && time_elapsed < 107265:
-#			flagDown29 = true
-#			ArrowBottomInstance29 = ArrowBottom.instance()	#create a new instance
-#			ArrowBottomInstance29.position = Vector2(get_viewport().size.x, get_viewport().size.y/3)
-#			ArrowBottomInstance29.scale = Vector2(0.17,0.17)
-#			add_child(ArrowBottomInstance29)
-#		if flagDown29 == true:	
-#			ArrowBottomInstance29.translate(Vector2(-100 * delta*1.8,0))
-#			if(ArrowBottomInstance29.position.x < get_viewport().size.x/3 && ArrowBottomInstance29.position.x > get_viewport().size.x/9):
-#				if Input.is_key_pressed(KEY_DOWN):
-#					if(ArrowBottomInstance29.position.x > get_viewport().size.x/4.2 && ArrowBottomInstance29.position.x < get_viewport().size.x/3.8):
-#						score += 15
-#						scoreLabel.text = str(score)
-#						#ArrowMiddleInstance.hide()
-#						ArrowBottomInstance29.free()
-#						flagDown29 = false
-#					else:
-#						ArrowBottomInstance29.free()
-#						flagDown29 = false
-#						pass			
-
 	#Arrow Bottom 30
 	if time_elapsed > 1000:
 		if time_elapsed > 108478 && time_elapsed < 108498:
@@ -2677,12 +2416,9 @@ func _process(delta):
 					if(ArrowBottomInstance30.position.x > get_viewport().size.x/4.2 && ArrowBottomInstance30.position.x < get_viewport().size.x/3.8):
 						score += 15
 						scoreLabel.text = str(score)
-						#ArrowMiddleInstance.hide()
 						ArrowBottomInstance30.free()
 						flagDown30 = false
 					else:
-						#print("LOSER YOU MISSED")	
-						#ArrowMiddleInstance.hide()
 						ArrowBottomInstance30.free()
 						flagDown30 = false
 						pass		
@@ -2702,19 +2438,16 @@ func _process(delta):
 					if(ArrowMiddleInstance32.position.x > get_viewport().size.x/4.2 && ArrowMiddleInstance32.position.x < get_viewport().size.x/3.8):
 						score += 15
 						scoreLabel.text = str(score)
-						#ArrowMiddleInstance.hide()
 						ArrowMiddleInstance32.free()
 						flagMiddle32 = false
 					else:
-						#print("LOSER YOU MISSED")	
-						#ArrowMiddleInstance.hide()
 						ArrowMiddleInstance32.free()
 						flagMiddle32 = false
 						pass											
 #
 #	#ArrowTop 35
 	if time_elapsed > 1000:
-		if time_elapsed > 110895 && time_elapsed < 110915: #|| time_elapsed > 9000 && time_elapsed < 9020:
+		if time_elapsed > 110895 && time_elapsed < 110915: 
 			flagUp35 = true
 			ArrowTopInstance35 = ArrowTop.instance()	#create a new instance
 			ArrowTopInstance35.position = Vector2(get_viewport().size.x, get_viewport().size.y*2/3)
@@ -2749,12 +2482,9 @@ func _process(delta):
 					if(ArrowBottomInstance31.position.x > get_viewport().size.x/4.2 && ArrowBottomInstance31.position.x < get_viewport().size.x/3.8):
 						score += 15
 						scoreLabel.text = str(score)
-						#ArrowMiddleInstance.hide()
 						ArrowBottomInstance31.free()
 						flagDown31 = false
 					else:
-						#print("LOSER YOU MISSED")	
-						#ArrowMiddleInstance.hide()
 						ArrowBottomInstance31.free()
 						flagDown31 = false
 						pass		
@@ -2774,12 +2504,9 @@ func _process(delta):
 					if(ArrowMiddleInstance33.position.x > get_viewport().size.x/4.2 && ArrowMiddleInstance33.position.x < get_viewport().size.x/3.8):
 						score += 15
 						scoreLabel.text = str(score)
-						#ArrowMiddleInstance.hide()
 						ArrowMiddleInstance33.free()
 						flagMiddle33 = false
 					else:
-						#print("LOSER YOU MISSED")	
-						#ArrowMiddleInstance.hide()
 						ArrowMiddleInstance33.free()
 						flagMiddle33 = false
 						pass		
@@ -2799,19 +2526,16 @@ func _process(delta):
 					if(ArrowMiddleInstance34.position.x > get_viewport().size.x/4.2 && ArrowMiddleInstance34.position.x < get_viewport().size.x/3.8):
 						score += 15
 						scoreLabel.text = str(score)
-						#ArrowMiddleInstance.hide()
 						ArrowMiddleInstance34.free()
 						flagMiddle34 = false
 					else:
-						#print("LOSER YOU MISSED")	
-						#ArrowMiddleInstance.hide()
 						ArrowMiddleInstance34.free()
 						flagMiddle34 = false
 						pass											
 #
 #	#ArrowTop 36
 	if time_elapsed > 1000:
-		if time_elapsed > 116128 && time_elapsed < 116148: #|| time_elapsed > 9000 && time_elapsed < 9020:
+		if time_elapsed > 116128 && time_elapsed < 116148: 
 			flagUp36 = true
 			ArrowTopInstance36 = ArrowTop.instance()	#create a new instance
 			ArrowTopInstance36.position = Vector2(get_viewport().size.x, get_viewport().size.y*2/3)
@@ -2846,12 +2570,9 @@ func _process(delta):
 					if(ArrowBottomInstance32.position.x > get_viewport().size.x/4.2 && ArrowBottomInstance32.position.x < get_viewport().size.x/3.8):
 						score += 15
 						scoreLabel.text = str(score)
-						#ArrowMiddleInstance.hide()
 						ArrowBottomInstance32.free()
 						flagDown32 = false
 					else:
-						#print("LOSER YOU MISSED")	
-						#ArrowMiddleInstance.hide()
 						ArrowBottomInstance32.free()
 						flagDown32 = false
 						pass		
@@ -2871,12 +2592,9 @@ func _process(delta):
 					if(ArrowBottomInstance33.position.x > get_viewport().size.x/4.2 && ArrowBottomInstance33.position.x < get_viewport().size.x/3.8):
 						score += 15
 						scoreLabel.text = str(score)
-						#ArrowMiddleInstance.hide()
 						ArrowBottomInstance33.free()
 						flagDown33 = false
 					else:
-						#print("LOSER YOU MISSED")	
-						#ArrowMiddleInstance.hide()
 						ArrowBottomInstance33.free()
 						flagDown33 = false
 						pass		
@@ -2896,12 +2614,9 @@ func _process(delta):
 					if(ArrowMiddleInstance35.position.x > get_viewport().size.x/4.2 && ArrowMiddleInstance35.position.x < get_viewport().size.x/3.8):
 						score += 15
 						scoreLabel.text = str(score)
-						#ArrowMiddleInstance.hide()
 						ArrowMiddleInstance35.free()
 						flagMiddle35 = false
 					else:
-						#print("LOSER YOU MISSED")	
-						#ArrowMiddleInstance.hide()
 						ArrowMiddleInstance35.free()
 						flagMiddle35 = false
 						pass						
@@ -2921,12 +2636,9 @@ func _process(delta):
 					if(ArrowBottomInstance34.position.x > get_viewport().size.x/4.2 && ArrowBottomInstance34.position.x < get_viewport().size.x/3.8):
 						score += 15
 						scoreLabel.text = str(score)
-						#ArrowMiddleInstance.hide()
 						ArrowBottomInstance34.free()
 						flagDown34 = false
 					else:
-						#print("LOSER YOU MISSED")	
-						#ArrowMiddleInstance.hide()
 						ArrowBottomInstance34.free()
 						flagDown34 = false
 						pass		
@@ -2955,7 +2667,7 @@ func _process(delta):
 #
 #	#ArrowTop 37
 	if time_elapsed > 1000:
-		if time_elapsed > 123879 && time_elapsed < 123899: #|| time_elapsed > 9000 && time_elapsed < 9020:
+		if time_elapsed > 123879 && time_elapsed < 123899: 
 			flagUp37 = true
 			ArrowTopInstance37 = ArrowTop.instance()	#create a new instance
 			ArrowTopInstance37.position = Vector2(get_viewport().size.x, get_viewport().size.y*2/3)
@@ -2991,12 +2703,9 @@ func _process(delta):
 					if(ArrowBottomInstance35.position.x > get_viewport().size.x/4.2 && ArrowBottomInstance35.position.x < get_viewport().size.x/3.8):
 						score += 15
 						scoreLabel.text = str(score)
-						#ArrowMiddleInstance.hide()
 						ArrowBottomInstance35.free()
 						flagDown35 = false
 					else:
-						#print("LOSER YOU MISSED")	
-						#ArrowMiddleInstance.hide()
 						ArrowBottomInstance35.free()
 						flagDown35 = false
 						pass	
@@ -3015,12 +2724,9 @@ func _process(delta):
 					if(ArrowMiddleInstance37.position.x > get_viewport().size.x/4.2 && ArrowMiddleInstance37.position.x < get_viewport().size.x/3.8):
 						score += 15
 						scoreLabel.text = str(score)
-						#ArrowMiddleInstance.hide()
 						ArrowMiddleInstance37.free()
 						flagMiddle37 = false
 					else:
-						#print("LOSER YOU MISSED")	
-						#ArrowMiddleInstance.hide()
 						ArrowMiddleInstance37.free()
 						flagMiddle37 = false
 						pass		
@@ -3040,12 +2746,9 @@ func _process(delta):
 					if(ArrowMiddleInstance38.position.x > get_viewport().size.x/4.2 && ArrowMiddleInstance38.position.x < get_viewport().size.x/3.8):
 						score += 15
 						scoreLabel.text = str(score)
-						#ArrowMiddleInstance.hide()
 						ArrowMiddleInstance38.free()
 						flagMiddle38 = false
 					else:
-						#print("LOSER YOU MISSED")	
-						#ArrowMiddleInstance.hide()
 						ArrowMiddleInstance38.free()
 						flagMiddle38 = false
 						pass										
@@ -3066,12 +2769,9 @@ func _process(delta):
 					if(ArrowBottomInstance36.position.x > get_viewport().size.x/4.2 && ArrowBottomInstance36.position.x < get_viewport().size.x/3.8):
 						score += 15
 						scoreLabel.text = str(score)
-						#ArrowMiddleInstance.hide()
 						ArrowBottomInstance36.free()
 						flagDown36 = false
 					else:
-						#print("LOSER YOU MISSED")	
-						#ArrowMiddleInstance.hide()
 						ArrowBottomInstance36.free()
 						flagDown36 = false
 						pass		
@@ -3091,19 +2791,16 @@ func _process(delta):
 					if(ArrowMiddleInstance39.position.x > get_viewport().size.x/4.2 && ArrowMiddleInstance39.position.x < get_viewport().size.x/3.8):
 						score += 15
 						scoreLabel.text = str(score)
-						#ArrowMiddleInstance.hide()
 						ArrowMiddleInstance39.free()
 						flagMiddle39 = false
 					else:
-						#print("LOSER YOU MISSED")	
-						#ArrowMiddleInstance.hide()
 						ArrowMiddleInstance39.free()
 						flagMiddle39 = false
 						pass										
 #
 #	#ArrowTop 38
 	if time_elapsed > 1000:
-		if time_elapsed > 134112 && time_elapsed < 134132: #|| time_elapsed > 9000 && time_elapsed < 9020:
+		if time_elapsed > 134112 && time_elapsed < 134132: 
 			flagUp38 = true
 			ArrowTopInstance38 = ArrowTop.instance()	#create a new instance
 			ArrowTopInstance38.position = Vector2(get_viewport().size.x, get_viewport().size.y*2/3)
@@ -3169,7 +2866,7 @@ func _process(delta):
 #
 #	#ArrowTop 39
 	if time_elapsed > 1000:
-		if time_elapsed > 138429 && time_elapsed < 138449: #|| time_elapsed > 9000 && time_elapsed < 9020:
+		if time_elapsed > 138429 && time_elapsed < 138449:
 			flagUp39 = true
 			ArrowTopInstance39 = ArrowTop.instance()	#create a new instance
 			ArrowTopInstance39.position = Vector2(get_viewport().size.x, get_viewport().size.y*2/3)
@@ -3204,12 +2901,9 @@ func _process(delta):
 					if(ArrowBottomInstance38.position.x > get_viewport().size.x/4.2 && ArrowBottomInstance38.position.x < get_viewport().size.x/3.8):
 						score += 15
 						scoreLabel.text = str(score)
-						#ArrowMiddleInstance.hide()
 						ArrowBottomInstance38.free()
 						flagDown38 = false
 					else:
-						#print("LOSER YOU MISSED")	
-						#ArrowMiddleInstance.hide()
 						ArrowBottomInstance38.free()
 						flagDown38 = false
 						pass		
@@ -3229,12 +2923,9 @@ func _process(delta):
 					if(ArrowBottomInstance39.position.x > get_viewport().size.x/4.2 && ArrowBottomInstance39.position.x < get_viewport().size.x/3.8):
 						score += 15
 						scoreLabel.text = str(score)
-						#ArrowMiddleInstance.hide()
 						ArrowBottomInstance39.free()
 						flagDown39 = false
 					else:
-						#print("LOSER YOU MISSED")	
-						#ArrowMiddleInstance.hide()
 						ArrowBottomInstance39.free()
 						flagDown39 = false
 						pass							
@@ -3322,12 +3013,9 @@ func _process(delta):
 					if(ArrowMiddleInstance41.position.x > get_viewport().size.x/4.2 && ArrowMiddleInstance41.position.x < get_viewport().size.x/3.8):
 						score += 15
 						scoreLabel.text = str(score)
-						#ArrowMiddleInstance.hide()
 						ArrowMiddleInstance41.free()
 						flagMiddle41 = false
 					else:
-						#print("LOSER YOU MISSED")	
-						#ArrowMiddleInstance.hide()
 						ArrowMiddleInstance41.free()
 						flagMiddle41 = false
 						pass	
@@ -3347,12 +3035,9 @@ func _process(delta):
 					if(ArrowMiddleInstance42.position.x > get_viewport().size.x/4.2 && ArrowMiddleInstance42.position.x < get_viewport().size.x/3.8):
 						score += 15
 						scoreLabel.text = str(score)
-						#ArrowMiddleInstance.hide()
 						ArrowMiddleInstance42.free()
 						flagMiddle42 = false
 					else:
-						#print("LOSER YOU MISSED")	
-						#ArrowMiddleInstance.hide()
 						ArrowMiddleInstance42.free()
 						flagMiddle42 = false
 						pass	
@@ -3395,12 +3080,9 @@ func _process(delta):
 					if(ArrowMiddleInstance43.position.x > get_viewport().size.x/4.2 && ArrowMiddleInstance43.position.x < get_viewport().size.x/3.8):
 						score += 15
 						scoreLabel.text = str(score)
-						#ArrowMiddleInstance.hide()
 						ArrowMiddleInstance43.free()
 						flagMiddle43 = false
 					else:
-						#print("LOSER YOU MISSED")	
-						#ArrowMiddleInstance.hide()
 						ArrowMiddleInstance43.free()
 						flagMiddle43 = false
 						pass						
@@ -3449,52 +3131,6 @@ func _process(delta):
 						ArrowTopInstance42.free()
 						flagUp42 = false
 						pass							
-#
-#	#Arrow Bottom 43
-#	if time_elapsed > 1000:
-#		if time_elapsed > 152545 && time_elapsed < 152565:
-#			flagDown43 = true
-#			ArrowBottomInstance43 = ArrowBottom.instance()	#create a new instance
-#			ArrowBottomInstance43.position = Vector2(get_viewport().size.x, get_viewport().size.y/3)
-#			ArrowBottomInstance43.scale = Vector2(0.17,0.17)
-#			add_child(ArrowBottomInstance43)
-#		if flagDown43 == true:	
-#			ArrowBottomInstance43.translate(Vector2(-100 * delta*1.8,0))
-#			if(ArrowBottomInstance43.position.x < get_viewport().size.x/3 && ArrowBottomInstance43.position.x > get_viewport().size.x/9):
-#				if Input.is_key_pressed(KEY_DOWN):
-#					if(ArrowBottomInstance43.position.x > get_viewport().size.x/4.2 && ArrowBottomInstance43.position.x < get_viewport().size.x/3.8):
-#						score += 15
-#						scoreLabel.text = str(score)
-#						ArrowBottomInstance43.free()
-#						flagDown43 = false
-#					else:
-#						ArrowBottomInstance43.free()
-#						flagDown43 = false
-#						pass	
-#
-#
-##	#ArrowTop 43
-#	if time_elapsed > 1000:
-#		if time_elapsed > 152545 && time_elapsed < 152565:
-#			flagUp43 = true
-#			ArrowTopInstance43 = ArrowTop.instance()	#create a new instance
-#			ArrowTopInstance43.position = Vector2(get_viewport().size.x, get_viewport().size.y*2/3)
-#			ArrowTopInstance43.scale = Vector2(0.17,0.17)
-#			add_child(ArrowTopInstance43)
-#		if flagUp43 == true:	
-#			ArrowTopInstance43.translate(Vector2(-100 * delta*1.8,0))
-#			if(ArrowTopInstance43.position.x < get_viewport().size.x/3 && ArrowTopInstance43.position.x > get_viewport().size.x/9):
-#				if Input.is_key_pressed(KEY_UP):
-#					if(ArrowTopInstance43.position.x > get_viewport().size.x/4.2 && ArrowTopInstance43.position.x < get_viewport().size.x/3.8):
-#						score += 15
-#						scoreLabel.text = str(score)
-#						ArrowTopInstance43.free()
-#						flagUp43 = false
-#					else:
-#						ArrowTopInstance43.free()
-#						flagUp43 = false
-#						pass		
-
 
 	if Input.is_key_pressed(KEY_Q):
 		get_tree().quit()
