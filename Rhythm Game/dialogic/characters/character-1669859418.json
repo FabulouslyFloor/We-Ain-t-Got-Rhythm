@@ -8,14 +8,22 @@
 	"name": "Showtown Guard",
 	"nickname": "",
 	"nickname_bool": false,
-	"offset_x": 0,
-	"offset_y": -150,
+	"offset_x": -75,
+	"offset_y": 0,
 	"portraits": [
 		{
 			"name": "Default",
-			"path": "res://Sprites/showtune-resident.png"
+			"path": ""
+		},
+		{
+			"name": "Angry",
+			"path": "res://Sprites/DialogueSprites/showtune-guard-angry.png"
+		},
+		{
+			"name": "Stern",
+			"path": "res://Sprites/DialogueSprites/showtune-guard-stern.png"
 		}
 	],
-	"scale": 50,
+	"scale": 125,
 	"theme": ""
 }

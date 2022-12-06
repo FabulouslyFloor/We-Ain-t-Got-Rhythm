@@ -1,4 +1,4 @@
-[gd_scene load_steps=34 format=2]
+[gd_scene load_steps=35 format=2]
 
 [ext_resource path="res://Sprites/Tiles/OverworldTileSet.tres" type="TileSet" id=1]
 [ext_resource path="res://Overworld/Interaction.gd" type="Script" id=2]
@@ -20,6 +20,7 @@
 [ext_resource path="res://Sounds/Goofy-Mischief.mp3" type="AudioStream" id=18]
 [ext_resource path="res://Menus/Pause Menu/PauseMenu.tscn" type="PackedScene" id=19]
 [ext_resource path="res://Sprites/Animations/E Frames/000.png" type="Texture" id=20]
+[ext_resource path="res://Sprites/lil-man-farm-ROUGH.png" type="Texture" id=21]
 
 [sub_resource type="RectangleShape2D" id=10]
 extents = Vector2( 185.279, 354.497 )
@@ -89,6 +90,11 @@ tile_set = ExtResource( 1 )
 format = 1
 tile_data = PoolIntArray( -720899, 2, 0, -786432, 2, 0, -786429, 2, 0, -786426, 2, 0, -786423, 13, 0, -786420, 2, 0, -786417, 2, 0, -786414, 2, 0, -786411, 2, 0, -786408, 2, 0, -786405, 2, 0, -786402, 2, 0, -786399, 2, 0, -786396, 2, 0, -524291, 1, 0, -589824, 536870927, 0, -589821, 8, 0, -589818, 16, 0, -589815, 6, 0, -589812, 16, 0, -589809, 16, 0, -589806, 536870921, 0, -589803, 2, 0, -589800, 2, 0, -589797, 1, 0, -589794, 2, 0, -589791, 2, 0, -589788, 2, 0, -327683, 2, 0, -393216, 0, 0, -393213, 0, 0, -393210, 9, 0, -393207, 536870919, 0, -393204, 2, 0, -393201, 0, 0, -393198, 5, 0, -393195, 2, 0, -393192, 2, 0, -393189, 4, 0, -393186, 3, 0, -393183, 2, 0, -393180, 3, 0, -131075, 2, 0, -196608, 2, 0, -196605, 2, 0, -196602, 7, 0, -196599, 15, 0, -196596, 2, 0, -196593, 2, 0, -196590, 5, 0, -196587, 2, 0, -196584, 2, 0, -196581, 9, 0, -196578, 16, 0, -196575, 15, 0, -196572, 4, 0, 65533, 2, 0, 0, 2, 0, 3, 2, 0, 6, 4, 0, 9, 1, 0, 12, 4, 0, 15, 2, 0, 18, 5, 0, 21, 2, 0, 24, 0, 0, 27, 5, 0, 30, 0, 0, 33, 2, 0, 36, 2, 0, 262141, 2, 0, 196608, 2, 0, 196611, 536870927, 0, 196614, 16, 0, 196617, 8, 0, 196620, 16, 0, 196623, 8, 0, 196626, 11, 0, 196629, 8, 0, 196632, 16, 0, 196635, 536870919, 0, 196638, 2, 0, 196641, 2, 0, 196644, 2, 0, 458749, 2, 0, 393216, 0, 0, 393219, 2, 0, 393222, 2, 0, 393225, 2, 0, 393228, 2, 0, 393231, 2, 0, 393234, 0, 0, 393237, 2, 0, 393240, 2, 0, 393243, 2, 0, 393246, 2, 0, 393249, 2, 0, 393252, 2, 0 )
 script = ExtResource( 3 )
+
+[node name="LilManFarm" type="Sprite" parent="."]
+position = Vector2( 23, 186 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 21 )
 
 [node name="ShowtuneCity" type="Sprite" parent="."]
 position = Vector2( 2166, -381 )

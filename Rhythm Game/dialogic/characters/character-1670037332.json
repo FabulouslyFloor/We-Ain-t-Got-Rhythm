@@ -8,14 +8,14 @@
 	"name": "Random Stranger",
 	"nickname": "",
 	"nickname_bool": false,
-	"offset_x": 0,
-	"offset_y": -150,
+	"offset_x": 50,
+	"offset_y": 150,
 	"portraits": [
 		{
 			"name": "Default",
 			"path": "res://Sprites/radio-head.png"
 		}
 	],
-	"scale": 50,
+	"scale": 100,
 	"theme": ""
 }

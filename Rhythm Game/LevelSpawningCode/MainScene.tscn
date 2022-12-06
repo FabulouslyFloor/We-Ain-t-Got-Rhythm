@@ -9,8 +9,9 @@
 [node name="Node2D" type="Node2D"]
 position = Vector2( 0, -1 )
 
-[node name="TextureRect" type="TextureRect" parent="."]
-size_flags_stretch_ratio = 0.0
+[node name="Background" type="Sprite" parent="."]
+position = Vector2( 506, 303 )
+scale = Vector2( 1.10243, 1.10243 )
 texture = ExtResource( 4 )
 
 [node name="Spawner" type="Node2D" parent="."]
