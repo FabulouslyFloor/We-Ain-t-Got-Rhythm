@@ -331,7 +331,8 @@ func _process(delta):
 		
 	
 
-
+	if ArrowTopInstance1.position >= Vector2(get_viewport().size.x, get_viewport().size.y*2/3):
+		ArrowTopInstance1.hide()
 
 #START START START START START START
 #START START START START START START
