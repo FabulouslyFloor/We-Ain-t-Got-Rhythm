@@ -326,7 +326,7 @@ func _process(delta):
 		get_node("scoreLabel").set_position(Vector2(375,200))
 		get_node("DuringGameExitLabel").set_position(Vector2(440,400))
 		if Input.is_mouse_button_pressed(1):
-			get_tree().change_scene("res://Overworld/Overworld.tscn")
+			get_tree().change_scene("res://Menus/Title Menu/titleMenu.tscn")
 
 
 	#ArrowTop 1
