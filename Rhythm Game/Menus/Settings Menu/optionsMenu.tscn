@@ -488,8 +488,8 @@ text = "Back"
 flat = true
 
 [connection signal="value_changed" from="Auditory/master-volume" to="." method="_on_mastervolume_value_changed"]
-[connection signal="value_changed" from="Auditory/background-volume" to="." method="_on_musicvolume_value_changed"]
 [connection signal="value_changed" from="Auditory/background-volume" to="." method="_on_backgroundvolume_value_changed"]
+[connection signal="value_changed" from="Auditory/background-volume" to="." method="_on_musicvolume_value_changed"]
 [connection signal="value_changed" from="Auditory/sound-effect" to="." method="_on_soundeffect_value_changed"]
 [connection signal="value_changed" from="Auditory/music-volume" to="." method="_on_musicvolume_value_changed"]
 [connection signal="pressed" from="backButton" to="." method="_on_backButton_pressed"]

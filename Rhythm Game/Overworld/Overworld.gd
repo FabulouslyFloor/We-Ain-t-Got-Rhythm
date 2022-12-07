@@ -2,8 +2,13 @@ extends TileMap
 
 # First time the scene enters the scene tree
 func _ready():
+<<<<<<< Updated upstream
+=======
+	# Enables audio listener functionality
+>>>>>>> Stashed changes
 	get_viewport().audio_listener_enable_2d = true
 
+# Plays/loops background music
 func _BG_Music():
 	if !$OverworldMusic.is_Playing():
 		$OverworldMusic.play()
